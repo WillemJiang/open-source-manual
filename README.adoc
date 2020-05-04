@@ -1,9 +1,15 @@
-= Open Source Manual Project
+# Open Source Manual Project
 
 A ebook project that demonstrates how to build a open source project from scratch, we will show you some best practices
 and tools to help your homebrew open source projects and introduce some background information about open source cultural.
 
-== Usage
+Now we are leverage [AsciiDoc](https://asciidoctor.org) to processing the adoc file and generate HTML5 files.
+You can find the builded html here.
+
+[OpenSourceManual.adoc](src/docs/asciidoc/OpenSourceManual.adoc) is the index file, it includes other files as chapters.
+ Each chapter can also include other adoc file.
+ 
+## Usage
 
 Convert the AsciiDoc to HTML5 by invoking the `process-resources` goal (configured as the default goal):
 
