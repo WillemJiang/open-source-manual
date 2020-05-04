@@ -1,0 +1,12 @@
+= Open Source Manual Project
+
+A ebook project that demonstrates how to build a open source project from scratch, we will show you some best practices
+and tools to help your homebrew open source projects and introduce some background information about open source cultural.
+
+== Usage
+
+Convert the AsciiDoc to HTML5 by invoking the `process-resources` goal (configured as the default goal):
+
+ $ mvn
+
+Open the file _target/generated-docs/OpenSourceManual.html_ in your browser to see the generated HTML file.
