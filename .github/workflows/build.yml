@@ -23,12 +23,12 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Set up JDK 1.8
-      uses: actions/setup-java@v2
-      with: 
+      uses: actions/setup-java@v1
+      with:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-   
+
     # Just deploy the builded script
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
