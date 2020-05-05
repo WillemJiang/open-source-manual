@@ -438,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left">
+<body class="book toc2 toc-left">
 <div id="header">
 <h1>开源手册</h1>
 <div class="details">
@@ -449,19 +449,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
+<ul class="sectlevel0">
+<li><a href="#准备开源">准备开源</a>
 <ul class="sectlevel1">
-<li><a href="#准备开源">1. 准备开源</a>
+<li><a href="#开源最佳实践">1. 开源最佳实践</a>
 <ul class="sectlevel2">
-<li><a href="#开源架构最佳实践">1.1. 开源架构最佳实践</a></li>
-<li><a href="#知识产权与合规">1.2. 知识产权与合规</a></li>
-<li><a href="#项目命名与商标">1.3. 项目命名与商标</a></li>
+<li><a href="#上游优先的开发方式">1.1. 上游优先的开发方式</a></li>
+<li><a href="#可插拔软件体系架构">1.2. 可插拔软件体系架构</a></li>
+<li><a href="#mvp原则">1.3. MVP原则</a></li>
+<li><a href="#撰写有吸引力readme文档">1.4. 撰写有吸引力README文档</a></li>
 </ul>
 </li>
-<li><a href="#开源实施">2. 开源实施</a>
+<li><a href="#知识产权与合规">2. 知识产权与合规</a>
 <ul class="sectlevel2">
-<li><a href="#开源基础设施">2.1. 开源基础设施</a></li>
-<li><a href="#开源质量">2.2. 开源质量</a></li>
-<li><a href="#开源协作">2.3. 开源协作</a></li>
+<li><a href="#版权基础知识">2.1. 版权基础知识</a></li>
+<li><a href="#开源license的选择">2.2. 开源License的选择</a></li>
+<li><a href="#第三方依赖license">2.3. 第三方依赖License</a></li>
+</ul>
+</li>
+<li><a href="#项目命名与商标">3. 项目命名与商标</a>
+<ul class="sectlevel2">
+<li><a href="#项目命名">3.1. 项目命名</a></li>
+<li><a href="#商标注册">3.2. 商标注册</a></li>
+<li><a href="#域名申请">3.3. 域名申请</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#基础设施">基础设施</a>
+<ul class="sectlevel1">
+<li><a href="#邮件列表">4. 邮件列表</a></li>
+<li><a href="#代码仓库">5. 代码仓库</a></li>
+<li><a href="#项目网站搭建">6. 项目网站搭建</a></li>
+<li><a href="#持续集成系统">7. 持续集成系统</a></li>
+<li><a href="#问题追踪系统">8. 问题追踪系统</a></li>
+<li><a href="#自动持续构建系统">9. 自动持续构建系统</a></li>
+<li><a href="#自动测试代码">10. 自动测试代码</a></li>
+<li><a href="#功能测试代码">11. 功能测试代码</a></li>
+<li><a href="#代码风格检查">12. 代码风格检查</a></li>
+<li><a href="#第三方依赖跟踪">13. 第三方依赖跟踪</a></li>
+<li><a href="#社区治理模型">14. 社区治理模型</a></li>
+<li><a href="#开源开发协作流程">15. 开源开发协作流程</a></li>
+<li><a href="#维护者的最佳实践">16. 维护者的最佳实践</a></li>
 </ul>
 </li>
 </ul>
@@ -471,13 +500,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>在二十年前，开源（Open Source）这一词汇被 <a href="https://opensource.org">Open Source Initiative</a> 提出。随着越来越多的开源项目成为我们信息化社会的基石，开源作为一个高效的软件协同开发方式逐渐被世人接受。开源的本质是开放与协作，人们可以借助开源的手段开发软件，开发硬件，编写手册。</p>
+<p>这是一本通过开源的方式撰写的指导手册，在这里我们将依托社区的力量帮助大家了解开源协作的背景知识，介绍相关的协作开发工具，以及开源协作中的最佳实践。</p>
+</div>
+<div class="paragraph">
+<p>在二十年前，<a href="https://en.wikipedia.org/wiki/Open_source">开源（Open Source）</a>这一词汇被 <a href="https://opensource.org">Open Source Initiative</a> 提出。随着越来越多的开源项目成为我们信息化社会的基石，开源作为一个高效的软件协同开发方式逐渐被世人接受。开源的本质是开放与协作，人们可以借助开源的手段开发软件，开发硬件，编写手册。</p>
 </div>
 <div class="paragraph">
 <p>以往我们作为开源的消费方，开源项目更像是一份免费的午餐，我们不需要知道午餐是怎么做出来的，我们只需要吃好这份午餐（了解开源项目是如何使用）就可以了；随着我们深入参与开源，成为"免费午餐"的生产方，想通过开源来为我们创新的步伐助力的时候，我们会发现我们知之甚少，急切需要有一份详尽的手册帮助我们了解开源，做好开源。</p>
-</div>
-<div class="paragraph">
-<p>这是一本通过开源的方式撰写的指导手册，在这里我们将依托社区的力量帮助大家了解开源协作的背景知识，介绍相关的协作开发工具，以及开源协作中的最佳实践。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -485,7 +514,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>如果你刚刚接触开源，可以从手册中开源的文化背景，开源协作的社交礼仪入手，通过参与现实的开源社区项目来体验开源的魅力。</p>
 </li>
 <li>
-<p>如果你有一个不错的想法想解决业界的难题，并且想通过开源项目的方式邀请更多与你有同样想法的人与你协作的话，本手册将向你介绍如何依托市面的开源工具以及协作平台来提高开源协作效率。</p>
+<p>如果你有一个不错的想法来解决业界的难题，并且想通过开源项目的方式邀请更多与你有同样想法的人与你协作的话，本手册将向你介绍如何依托市面的开源工具以及协作平台来提高开源协作效率。</p>
 </li>
 <li>
 <p>如果你正在为开源项目运营而苦恼，那通过本手册你将会了解如何通过透明公开方式来孕育社区项目，让项目具备持续发展的生命力。</p>
@@ -496,75 +525,117 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p>这是一本探讨社区协作的手册，我们也将会采用社区协作的方式来完善这本手册。如果你觉得这本手册的立意不错，欢迎加入我们的讨论区，通过创建issue的方式反馈你的意见建议，通过PR的方式帮助我们修正手册中的错误。
+<p>这是一本探讨社区协作的开源手册，我们也将会采用社区协作的方式来完善这本手册。如果你觉得这本手册的立意不错，欢迎加入我们的 <a href="https://github.com/willemjiang/open-source-manual/issues">讨论区</a>，通过创建issue的方式反馈你的意见建议，通过PR的方式帮助我们修正手册中的错误。
 最后希望这本手册很够帮助到更多想实际参与到开源项目开发的人们。</p>
 </div>
 </div>
 </div>
+<h1 id="准备开源" class="sect0"><a class="anchor" href="#准备开源"></a><a class="link" href="#准备开源">准备开源</a></h1>
 <div class="sect1">
-<h2 id="准备开源"><a class="anchor" href="#准备开源"></a>1. 准备开源</h2>
+<h2 id="开源最佳实践"><a class="anchor" href="#开源最佳实践"></a><a class="link" href="#开源最佳实践">1. 开源最佳实践</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="开源架构最佳实践"><a class="anchor" href="#开源架构最佳实践"></a>1.1. 开源架构最佳实践</h3>
-<div class="sect3">
-<h4 id="上游优先的开发方式"><a class="anchor" href="#上游优先的开发方式"></a>1.1.1. 上游优先的开发方式</h4>
-
-</div>
-<div class="sect3">
-<h4 id="可插拔软件体系架构"><a class="anchor" href="#可插拔软件体系架构"></a>1.1.2. 可插拔软件体系架构</h4>
-
-</div>
-<div class="sect3">
-<h4 id="第三方依赖与扩展解耦化"><a class="anchor" href="#第三方依赖与扩展解耦化"></a>1.1.3. 第三方依赖与扩展解耦化</h4>
-
-</div>
-</div>
-<div class="sect2">
-<h3 id="知识产权与合规"><a class="anchor" href="#知识产权与合规"></a>1.2. 知识产权与合规</h3>
-<div class="sect3">
-<h4 id="版权基础知识"><a class="anchor" href="#版权基础知识"></a>1.2.1. 版权基础知识</h4>
-
-</div>
-<div class="sect3">
-<h4 id="开源license的选择"><a class="anchor" href="#开源license的选择"></a>1.2.2. 开源License的选择</h4>
-
-</div>
-<div class="sect3">
-<h4 id="第三方依赖license"><a class="anchor" href="#第三方依赖license"></a>1.2.3. 第三方依赖License</h4>
-
-</div>
-</div>
-<div class="sect2">
-<h3 id="项目命名与商标"><a class="anchor" href="#项目命名与商标"></a>1.3. 项目命名与商标</h3>
-<div class="sect3">
-<h4 id="项目名称检索"><a class="anchor" href="#项目名称检索"></a>1.3.1. 项目名称检索</h4>
-
-</div>
-<div class="sect3">
-<h4 id="商标注册"><a class="anchor" href="#商标注册"></a>1.3.2. 商标注册</h4>
-
-</div>
-<div class="sect3">
-<h4 id="域名申请"><a class="anchor" href="#域名申请"></a>1.3.3. 域名申请</h4>
-
-</div>
-<div class="sect3">
-<h4 id="代码托管平台申请"><a class="anchor" href="#代码托管平台申请"></a>1.3.4. 代码托管平台申请</h4>
-
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="开源实施"><a class="anchor" href="#开源实施"></a>2. 开源实施</h2>
-<div class="sectionbody">
+<h3 id="上游优先的开发方式"><a class="anchor" href="#上游优先的开发方式"></a><a class="link" href="#上游优先的开发方式">1.1. 上游优先的开发方式</a></h3>
 <div class="paragraph">
-<p>介绍章节内容</p>
+<p>开源项目之间是相互依赖包含构成了一个完整的生态体系。一个开源项目可能会使用到很多第三方的开源项目，这个开源项目也可能被第三方项目引用包含到其它的开源或者非开源的项目中。通常我们会把被依赖的项目称为上游项目，对上游项目产生依赖的项目为下游项目。上游项目提供了具体的功能实现，下游项目一般通过调用上游项目实现相关的功能。</p>
+</div>
+<div class="paragraph">
+<p>上游优先的开发式是指开源开发者为了实现自己的需求把对上游项目的修改都回合到上游社区项目中，通过升级上游项目版本的方式获取最新的功能， 而不是只是在自己的项目中进行自己的需求修改。这样做有以下方面的好处：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>把代码修改合入上游，维护成本最低的协作方式。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>开源项目的有很多的贡献者，大家之所以能够在一起协作的根基是代码开放的， 这样每个人都可以在别人的基础上添加自己的工作。为了达到高效的协作需要保证大家的相互修改不应该产生副作用，或者说我们需要有一个协调机制保证大家修改过的代码放在一起还能够工作。 如果大家把修改都提交到一个上游版本中，在代码提交之前只需要一次解决修改冲突问题，这是最省力也是最有效的协作方式。</p>
+</div>
+<div class="paragraph">
+<p>Fork上游代码看上去挺简单的，我的修改我做主。但是从fork的那天开始你就要背负维护这个fork版本的生老病死的所有的责任。一旦你的代码与上游代码差异越大， 你的代码想要合并上游的更新的代价也就越大。这样带来的直接问题就是无法及时享受到上游代码更新带来的好处。 明智的开发往往会在自己修改代码之后，努力将自己的修改推进上游代码以降低自己的维护成本。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>回合上游代码之后，随时可以使用上游代码的最新更新。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>上游项目发布新版本了，我能在第一时间将上游项目集成到我的扩展项目中吗？这个和你如何引用上游代码有很大的关系。 一般来说如果你只是片段引用上游代码或者直接fork上游代码， 你需要自己做所有的修改适配。如果上游项目发展不是很快的话，你可以能花几天的时间就适配好了，但是如果项目发展很快，三个月出一个版本的话，你的适配步伐很难跟上上游的开发速度的。 一般来说fork版本的维护只有一个人， 而上游的开发可能是4~5个人， 同时社区还会有很多贡献者也在合入代码， 在这种情况下fork之后的版本往往采用的方式就是不会合入上游新开发的特性和功能的而自己独自地走下去。</p>
+</div>
+<div class="paragraph">
+<p>如果你还想继续享受到上游开发带来的好处， 请将你的代码回合到上游代码中，因为这样做你仍然可以以0成本的方式使用上游最新的代码。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>回合上游代码，可以让更多的人受益，推动项目成功。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>众人拾柴火焰高， 一个成功的开源项目背后必然有一个蓬勃发展的社区。依托于社区我们可以做到很多平时一个人在公司无法实现的目标。 在开源项目社区中，大家共同的目标就是把这款开源软件做得更好。这里有用户报系统的bug，有贡献者将自己的使用心得转换成patch提到社区中了，有维护人员不断的添加新的功能并及时得到用户的反馈而又继续开发更炫酷的功能。开源项目依托于社区只所以可以不断发展壮大，正因为大家是相互协作的，力气都往一处使，每个人在贡献自己的力量的同时也为大家节省了很多开发协作的时间，依托于一个社区大家可以共享工作成果。 假如你想借助开源完善丰富你的产品的话，维护一个统一的社区比将社区分裂要好很多。</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="开源基础设施"><a class="anchor" href="#开源基础设施"></a>2.1. 开源基础设施</h3>
-<div class="sect3">
-<h4 id="邮件列表"><a class="anchor" href="#邮件列表"></a>2.1.1. 邮件列表</h4>
+<h3 id="可插拔软件体系架构"><a class="anchor" href="#可插拔软件体系架构"></a><a class="link" href="#可插拔软件体系架构">1.2. 可插拔软件体系架构</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="mvp原则"><a class="anchor" href="#mvp原则"></a><a class="link" href="#mvp原则">1.3. MVP原则</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="撰写有吸引力readme文档"><a class="anchor" href="#撰写有吸引力readme文档"></a><a class="link" href="#撰写有吸引力readme文档">1.4. 撰写有吸引力README文档</a></h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="知识产权与合规"><a class="anchor" href="#知识产权与合规"></a><a class="link" href="#知识产权与合规">2. 知识产权与合规</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="版权基础知识"><a class="anchor" href="#版权基础知识"></a><a class="link" href="#版权基础知识">2.1. 版权基础知识</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="开源license的选择"><a class="anchor" href="#开源license的选择"></a><a class="link" href="#开源license的选择">2.2. 开源License的选择</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="第三方依赖license"><a class="anchor" href="#第三方依赖license"></a><a class="link" href="#第三方依赖license">2.3. 第三方依赖License</a></h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="项目命名与商标"><a class="anchor" href="#项目命名与商标"></a><a class="link" href="#项目命名与商标">3. 项目命名与商标</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="项目命名"><a class="anchor" href="#项目命名"></a><a class="link" href="#项目命名">3.1. 项目命名</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="商标注册"><a class="anchor" href="#商标注册"></a><a class="link" href="#商标注册">3.2. 商标注册</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="域名申请"><a class="anchor" href="#域名申请"></a><a class="link" href="#域名申请">3.3. 域名申请</a></h3>
+
+</div>
+</div>
+</div>
+<h1 id="基础设施" class="sect0"><a class="anchor" href="#基础设施"></a><a class="link" href="#基础设施">基础设施</a></h1>
+<div class="openblock partintro">
+<div class="content">
+开源项目的需要基础设施的帮助。
+</div>
+</div>
+<div class="sect1">
+<h2 id="邮件列表"><a class="anchor" href="#邮件列表"></a><a class="link" href="#邮件列表">4. 邮件列表</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -576,8 +647,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="代码仓库"><a class="anchor" href="#代码仓库"></a>2.1.2. 代码仓库</h4>
+</div>
+<div class="sect1">
+<h2 id="代码仓库"><a class="anchor" href="#代码仓库"></a><a class="link" href="#代码仓库">5. 代码仓库</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -589,8 +662,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="项目网站搭建"><a class="anchor" href="#项目网站搭建"></a>2.1.3. 项目网站搭建</h4>
+</div>
+<div class="sect1">
+<h2 id="项目网站搭建"><a class="anchor" href="#项目网站搭建"></a><a class="link" href="#项目网站搭建">6. 项目网站搭建</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -602,8 +677,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="持续集成系统"><a class="anchor" href="#持续集成系统"></a>2.1.4. 持续集成系统</h4>
+</div>
+<div class="sect1">
+<h2 id="持续集成系统"><a class="anchor" href="#持续集成系统"></a><a class="link" href="#持续集成系统">7. 持续集成系统</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -618,8 +695,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="问题追踪系统"><a class="anchor" href="#问题追踪系统"></a>2.1.5. 问题追踪系统</h4>
+</div>
+<div class="sect1">
+<h2 id="问题追踪系统"><a class="anchor" href="#问题追踪系统"></a><a class="link" href="#问题追踪系统">8. 问题追踪系统</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -632,10 +711,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="开源质量"><a class="anchor" href="#开源质量"></a>2.2. 开源质量</h3>
-<div class="sect3">
-<h4 id="自动持续构建系统"><a class="anchor" href="#自动持续构建系统"></a>2.2.1. 自动持续构建系统</h4>
+<div class="sect1">
+<h2 id="自动持续构建系统"><a class="anchor" href="#自动持续构建系统"></a><a class="link" href="#自动持续构建系统">9. 自动持续构建系统</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -656,8 +734,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="自动测试代码"><a class="anchor" href="#自动测试代码"></a>2.2.2. 自动测试代码</h4>
+</div>
+<div class="sect1">
+<h2 id="自动测试代码"><a class="anchor" href="#自动测试代码"></a><a class="link" href="#自动测试代码">10. 自动测试代码</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -669,8 +749,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="功能测试代码"><a class="anchor" href="#功能测试代码"></a>2.2.3. 功能测试代码</h4>
+</div>
+<div class="sect1">
+<h2 id="功能测试代码"><a class="anchor" href="#功能测试代码"></a><a class="link" href="#功能测试代码">11. 功能测试代码</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -682,8 +764,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="代码风格检查"><a class="anchor" href="#代码风格检查"></a>2.2.4. 代码风格检查</h4>
+</div>
+<div class="sect1">
+<h2 id="代码风格检查"><a class="anchor" href="#代码风格检查"></a><a class="link" href="#代码风格检查">12. 代码风格检查</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -695,47 +779,71 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="第三方依赖跟踪"><a class="anchor" href="#第三方依赖跟踪"></a>2.2.5. 第三方依赖跟踪</h4>
+</div>
+<div class="sect1">
+<h2 id="第三方依赖跟踪"><a class="anchor" href="#第三方依赖跟踪"></a><a class="link" href="#第三方依赖跟踪">13. 第三方依赖跟踪</a></h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
 <p>第三方依赖License检查的意义</p>
 </li>
 <li>
-<p>常见的第三方依赖检查工具有哪些</p>
+<p>常见的第三方依赖检查工具有哪些
+== 开源社交礼仪</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="开源协作"><a class="anchor" href="#开源协作"></a>2.3. 开源协作</h3>
-<div class="sect3">
-<h4 id="开源社交礼仪"><a class="anchor" href="#开源社交礼仪"></a>2.3.1. 开源社交礼仪</h4>
-
-</div>
-<div class="sect3">
-<h4 id="社区治理模型"><a class="anchor" href="#社区治理模型"></a>2.3.2. 社区治理模型</h4>
-
-</div>
-<div class="sect3">
-<h4 id="开源开发协作流程"><a class="anchor" href="#开源开发协作流程"></a>2.3.3. 开源开发协作流程</h4>
-
-</div>
-<div class="sect3">
-<h4 id="维护者的最佳实践"><a class="anchor" href="#维护者的最佳实践"></a>2.3.4. 维护者的最佳实践</h4>
+<div class="sect1">
+<h2 id="社区治理模型"><a class="anchor" href="#社区治理模型"></a><a class="link" href="#社区治理模型">14. 社区治理模型</a></h2>
+<div class="sectionbody">
 
 </div>
 </div>
+<div class="sect1">
+<h2 id="开源开发协作流程"><a class="anchor" href="#开源开发协作流程"></a><a class="link" href="#开源开发协作流程">15. 开源开发协作流程</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="维护者的最佳实践"><a class="anchor" href="#维护者的最佳实践"></a><a class="link" href="#维护者的最佳实践">16. 维护者的最佳实践</a></h2>
+<div class="sectionbody">
+
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0-SNAPSHOT<br>
-Last updated 2020-05-05 07:08:07 UTC
+Last updated 2020-05-05 08:37:49 UTC
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
