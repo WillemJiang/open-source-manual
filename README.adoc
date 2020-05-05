@@ -6,7 +6,7 @@ and tools to help your homebrew open source projects and introduce some backgrou
 Now we are leverage https://asciidoctor.org[AsciiDoc] to processing the adoc file and generate HTML5 files.
 The builded html https://willemjiang.github.io/open-source-manual/OpenSourceManual.html[here].
 
-src/docs/asciidoc/OpenSourceManual.adoc[OpenSourceManual.adoc] is the index file, it includes other files as chapters.
+link:src/docs/asciidoc/OpenSourceManual.adoc[OpenSourceManual.adoc] is the index file, it includes other files as chapters.
 Each chapter can also include other adoc file.
 
 You can find more information about how to write the AsciiDoc document by checking out https://asciidoctor.org/docs/asciidoc-writers-guide/[this link].
