@@ -1,10 +1,10 @@
 # Open Source Manual Project
 
 A ebook project that demonstrates how to build a open source project from scratch, we will show you some best practices
-and tools to help your homebrew open source projects and introduce some background information about open source cultural.
+and tools to help your homebrew open source projects from scratch and introduce some background information about open source cultural.
 
 Now we are leverage https://asciidoctor.org[AsciiDoc] to processing the adoc file and generate HTML5 files.
-The builded html https://willemjiang.github.io/open-source-manual/OpenSourceManual.html[here].
+The built html https://willemjiang.github.io/open-source-manual/OpenSourceManual.html[here].
 
 link:src/docs/asciidoc/OpenSourceManual.adoc[OpenSourceManual.adoc] is the index file, it includes other files as chapters.
 Each chapter can also include other adoc file.
