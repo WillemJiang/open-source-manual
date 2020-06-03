@@ -29,9 +29,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    # Just deploy the builded script
+    # Just deploy built pages if it's the push event
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
+      if: github.event == 'push'
       with:
        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
        publish_dir: ./target/generated-docs
