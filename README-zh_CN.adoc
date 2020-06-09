@@ -1,0 +1,17 @@
+# 开源手册项目
+
+这是一本从零开始创建开源项目的电子书，我们将向您展示一些最佳实践和工具，以帮助您从头开始搭建开源项目并介绍一些有关开源的文化和背景
+
+目前，我们利用 https://asciidoctor.org[AsciiDoc] 处理 adoc 文件并生成 HTML5 文件。生成的 html https://willemjiang.github.io/open-source-manual/OpenSourceManual.html[在这里]。
+
+link:src/docs/asciidoc/OpenSourceManual.adoc[OpenSourceManual.adoc] 是一个索引文件, 她包含其它章节文件。每个章节文件也可以包含其它 adoc 文件。
+
+您可以在 https://asciidoctor.org/docs/asciidoc-writers-guide/[这里] 找到编写AsciiDoc文档的指南。
+
+## 用法
+
+编译时通过调用 `process-resources` 生成 HTML5 文件（默认 goal 已配置）:
+
+ $ mvn
+
+用浏览器打开生成的 HTML 文件 _target/generated-docs/OpenSourceManual.html_ 。
