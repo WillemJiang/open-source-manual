@@ -462,6 +462,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#项目命名">3.1. 项目命名</a></li>
 <li><a href="#商标注册">3.2. 商标注册</a></li>
 <li><a href="#域名申请">3.3. 域名申请</a></li>
+<li><a href="#参考材料">3.4. 参考材料</a></li>
 </ul>
 </li>
 </ul>
@@ -526,7 +527,168 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="撰写有吸引力readme文档"><a class="anchor" href="#撰写有吸引力readme文档"></a>1.4. 撰写有吸引力README文档</h3>
+<div class="paragraph">
+<p>README ，中文常常翻译为自述文件[1]，在软件开发的历史上，自述文件出现的时期也算很早了，上世纪70年代就有人关注项目中的自我描述文件的重要性了。甚至这是作为一名hacker
+必须做到的事情[3]。</p>
+</div>
+<div class="paragraph">
+<p>当然在GitHub出现之前大家确实没怎么在意，即使有的项目做的蛮好的，比如Hacking，GitHub 的创始人之一Tom Perston-Werner曾经专门撰文描述[2]其对于自述文件的理解：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>最重要的是，你有了一次全面思考整个项目的机会，而不必额外去思考为了代码应该如何组织或者需要提供哪些具体的公共 API 所进行的代码修改。记住那种你第一次写自动测试脚本，并意识到你发现了很多将有可能进入你代码库 bug 的感觉。如果你在写具体代码之前写下自叙文档，你将拥有完全相同的感觉。</p>
+</li>
+<li>
+<p>作为为了知道你想实现什么而写下自叙文档的副产品，你的面前将会有一份非常棒的文档。你将发现你在项目开始前写下自叙文档会非常简单，因为当时你热情高涨。如果是项目开始后，追溯补充一个自叙文档一定是一个绝对的错误，这个时候你一定会错过所有重要的细节。</p>
+</li>
+<li>
+<p>如果你正在参加团队开发，你的自叙文档将获取更多里程。如果其他成员在你开发完成前获取了这些信息，他们可以更有自信的在别的项目上与你的代码进行交互。没有定义任何接口，你必须以串行的方式编码或者面对大量代码的重构。</p>
+</li>
+<li>
+<p>基于文档的讨论也会更简单。没有文档的讨论问题容易陷入无休止和绕圈。写下提议的解决方案这么一个简单的动作能让所有人都有一个明确的想法可以讨论和迭代。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>随着GitHub 的日渐流行，自述文件成为了一个项目仓库的重要展示，无论从用户体验的角度，让第一次接触项目的人有一个良好的第一印象，还是从开发者自己打造归属感，都是非常
+重要的，所以撰写一份优秀的自述文件，可以有效帮助项目的认可度、加强认同感，从而让项目成功的几率更高些。</p>
+</div>
+<div class="paragraph">
+<p>cURL 是颇为经典的例子了：</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/README-cURL.png/440px-README-cURL.png" alt="440px README cURL">
+</div>
+</div>
+<div class="paragraph">
+<p>下面我们就来逐一说明一下，自述文件应该包含哪些内容，并举一个做的非常好的项目的例子。</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Hacker&#8217;s-eye introduction traditionally included in the top-level directory of a Unix source distribution, containing a pointer to more detailed documentation, credits, miscellaneous revision history, notes, etc.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Eric S. Raymond，The Jargon File: README-file
+</div>
+</div>
+<div class="sect3">
+<h4 id="项目名称"><a class="anchor" href="#项目名称"></a>1.4.1. 项目名称</h4>
+<div class="paragraph">
+<p>对，你的项目较什么名字，可以带上logo更佳。如 <a href="https://gitee.com/openeuler/iSulad">iSulad</a>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/images/isulad-project-name.png" alt="isulad project name">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="徽章和标志"><a class="anchor" href="#徽章和标志"></a>1.4.2. 徽章和标志</h4>
+<div class="paragraph">
+<p>这些酷酷的小玩意，起到的作用是出乎我们意料之外的，正如现在社交媒体使用的Emoji一样：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>程序构建（持续集成）如（ <a href="http://travis-ci.org/">Travis</a>、 <a href="https://circleci.com/">CircleCI</a>、 <a href="https://www.jetbrains.com/teamcity/">TeamCity</a>)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://miro.medium.com/max/294/1*XKOHKSYuycUjo7Bqh2H6Cg.png" alt="1*XKOHKSYuycUjo7Bqh2H6Cg">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>代码覆盖（ <a href="http://coveralls.io/">Coveralls</a>）</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://miro.medium.com/max/324/1*psOVJ_DE6PLBUZjuqyfbCA.png" alt="1*psOVJ DE6PLBUZjuqyfbCA">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>版本号</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://badge.fury.io/js/badge-list.svg" alt="NPM verison">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://badge.fury.io/gh/boennemann%2Fbadges.svg" alt="GitHub version">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://badge.fury.io/bo/badges.svg" alt="Bower Version">
+</div>
+</div>
+<div class="paragraph">
+<p>更多内容请参考 <a href="https://github.com/boennemann/badges">GitHub 徽章</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="项目描述"><a class="anchor" href="#项目描述"></a>1.4.3. 项目描述</h4>
+<div class="paragraph">
+<p>这就到了最为精髓的部分了，请用一两句简短的话将你的项目描述清楚，项目是做什么的，愿景是什么？如 <a href="https://gitee.com/openeuler/iSulad">iSulad</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/images/isulad-project-description.png" alt="isulad project description">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="安装"><a class="anchor" href="#安装"></a>1.4.4. 安装</h4>
 
+</div>
+<div class="sect3">
+<h4 id="使用实例"><a class="anchor" href="#使用实例"></a>1.4.5. 使用实例</h4>
+
+</div>
+<div class="sect3">
+<h4 id="文档"><a class="anchor" href="#文档"></a>1.4.6. 文档</h4>
+
+</div>
+<div class="sect3">
+<h4 id="作者贡献者"><a class="anchor" href="#作者贡献者"></a>1.4.7. 作者/贡献者</h4>
+
+</div>
+<div class="sect3">
+<h4 id="许可证"><a class="anchor" href="#许可证"></a>1.4.8. 许可证</h4>
+
+</div>
+<div class="sect3">
+<h4 id="贡献者指南"><a class="anchor" href="#贡献者指南"></a>1.4.9. 贡献者指南</h4>
+
+</div>
+<div class="sect3">
+<h4 id="已知问题"><a class="anchor" href="#已知问题"></a>1.4.10. 已知问题</h4>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Write your Readme first.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Tom Preston-Werner,自述文件驱动的开发
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -539,7 +701,127 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2">
 <h3 id="开源license的选择"><a class="anchor" href="#开源license的选择"></a>2.2. 开源License的选择</h3>
-
+<div class="paragraph">
+<p>License是软件的授权许可，里面详尽表述了你获得代码后拥有的权利，可以对别人的作品进行何种操作，何种操作又是被禁止的。软件协议可分为开源和商业两类，对于商业协议，或者叫法律声明、许可协议，每个软件会有自己的一套行文，由软件作者或专门律师撰写，对于大多数人来说不必自己花时间和精力去写繁长的许可协议，选择一份广为流传的开源协议就是个不错的选择。</p>
+</div>
+<div class="paragraph">
+<p>世界上开源软件协议OPEN SOURCE LICENSE的种类非常之多，并且同一款协议有很多变种，协议太宽松会导致作者丧失对作品的很多权利，太严格又不便于使用者使用及作品的传播，所以开源作者要考虑自己对作品想保留哪些权利，放开哪些限制。</p>
+</div>
+<div class="sect3">
+<h4 id="主流开源协议"><a class="anchor" href="#主流开源协议"></a>2.2.1. 主流开源协议</h4>
+<div class="paragraph">
+<p>1、 GPL</p>
+</div>
+<div class="paragraph">
+<p>GPL，是GNU General Public License的缩写，为GNU通用公共授权非正式的中文翻译。我们很熟悉的Linux就是采用了GPL，GPL协议和BSD, Apache License等鼓励代码重用的许可很不一样，GPL的出发点是代码的开源/免费使用和引用/修改/衍生代码的开源/免费使用，但不允许修改后和衍生的代码做为闭源的商业软件发布和销售。这也就是为什么我们能用免费的各种linux，包括商业公司的linux和linux上各种各样的由个人，组织，以及商业软件公司开发的免费软件了。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GPL1即最初的版本，发布于1989年一月，其目的是防止那些阻碍自由软件的行为，而这些阻碍软件开源的行为主要有两种（一种是软件发布者只发布可执行的二进制代码而不发布具体源代码，一种是软件发布者在软件许可加入限制性条款）。因此按照GPLv1，如果发布了可执行的二进制代码，就必须同时发布可读的源代码，并且在发布任何基于GPL许可的软件时，不能添加任何限制性的条款。</p>
+</li>
+<li>
+<p>GPL2在1991年6月发布，与此同时第二个许可证程序库GNU通用公共许可证（LGPL,the Lesser General Public License）也被发布出来并且一开始就将其版本定为第2版本以表示其和GPLv2的互补性。这个版本一直延续到1999年，并分支出一个派生的LGPL版本号为2.1，并将其重命名为轻量级通用公共许可证（又称宽通用公共许可证）（Lesser General Public License）以反映其在整个GNU哲学中的位置。</p>
+</li>
+<li>
+<p>GPL3正由斯托曼起草，由伊本·莫格林和软件自由法律中心（Software Freedom Law Center） 提供法律咨询。斯托曼在2006年2月25日自由及开源软件开发者欧洲会议的演讲上说在所有的改动中，最重要的四个是：解决软件专利问题；与其他许可证的兼容性；源代码分区和组成的定义；解决数位版权管理（DRM）问题。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>GPL协议的主要内容是只要在一个软件中使用(“使用”指类库引用，修改后的代码或者衍生代码)GPL 协议的产品，则该软件产品必须也采用GPL协议，即必须也是开源和免费，这就是所谓的”传染性”。GPL协议的产品作为一个单独的产品使用没有任何问题，还可以享受免费的优势，由于GPL严格要求使用了GPL类库的软件产品必须使用GPL协议，对于使用GPL协议的开源代码，商业软件或者对代码有保密要求的部门就不适合集成/采用作为类库和二次开发的基础。</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>2、 BSD</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BSD开源协议是一个给于使用者很大自由的协议。基本上使用者可以”为所欲为”,可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。但”为所欲为”的前提当你发布使用了BSD协议的代码，或则以BSD协议代码为基础做二次开发自己的产品时，需要满足三个条件：</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果再发布的产品中包含源代码，则在源代码中必须带有原来代码中的BSD协议。</p>
+</li>
+<li>
+<p>如果再发布的只是二进制类库/软件，则需要在类库/软件的文档和版权声明中包含原来代码中的BSD协议。</p>
+</li>
+<li>
+<p>不可以用开源代码的作者/机构名字和原来产品的名字做市场推广。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>BSD 代码鼓励代码共享，但需要尊重代码作者的著作权。BSD由于允许使用者修改和重新发布代码，也允许使用或在BSD代码上开发商业软件发布和销售，因此是对商业集成很友好的协议。而很多的公司企业在选用开源产品的时候都首选BSD协议，因为可以完全控制这些第三方的代码，在必要的时候可以修改或者二次开发。</p>
+</div>
+<div class="paragraph">
+<p>3、 MIT</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>MIT许可证之名源自麻省理工学院（Massachusetts Institute of Technology, MIT），又称“X条款”（X License）或“X11条款”（X11 License），是一份简短而宽松的协议，只提供了版权保护和声明，它授予他人复制，修改，合并，发布，分发，授权和/或销售本软件的副本的权力，被授权人可根据程序的需要修改授权条款为适当的内容。作者只想保留版权，而无任何其他了限制，也就是说必须在发行版里包含原许可协议的声明，无论以二进制发布的还是以源代码发布。</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>4、 MPL</p>
+</div>
+<div class="paragraph">
+<p>MPL是The Mozilla Public License的简写，是1998年初Netscape的 Mozilla小组为其开源软件项目设计的软件许可证。MPL许可证出现的最重要原因就是，Netscape公司认为GPL许可证没有很好地平衡开发者对源代码的需求和他们利用源代码获得的利益，同著名的GPL许可证和BSD许可证相比，MPL在许多权利与义务的约定方面与它们相同。（因为都是符合OSIA认定的开源软件许可证）。但是，相比而言MPL还有以下几个显著的不同之处:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MPL虽然要求对于经MPL许可证发布的源代码的修改也要以MPL许可证的方式再许可出来，以保证其他人可以在MPL的条款下共享源代码。但是，在MPL许可证中对“发布”的定义是“以源代码方式发布的文件”，这就意味着MPL允许一个企业在自己已有的源代码库上加一个接口，除了接口程序的源代码以MPL许可证的形式对外许可外，源代码库中的源代码就可以不用MPL许可证的方式强制对外许可。这些，就为借鉴别人的源代码用做自己商业软件开发的行为留了一个豁口。</p>
+</li>
+<li>
+<p>MPL许可证第三条第7款中允许被许可人将经过MPL许可证获得的源代码同自己其他类型的代码混合得到自己的软件程序。</p>
+</li>
+<li>
+<p>对软件专利的态度，MPL许可证不像GPL许可证那样明确表示反对软件专利，但是却明确要求源代码的提供者不能提供已经受专利保护的源代码（除非他本人是专利权人，并书面向公众免费许可这些源代码），也不能在将这些源代码以开放源代码许可证形式许可后再去申请与这些源代码有关的专利。</p>
+</li>
+<li>
+<p>对源代码的定义。在MPL（1.1版本）许可证中，对源代码的定义是:“源代码指的是对作品进行修改最优先择取的形式，它包括:所有模块的所有源程序，加上有关的接口的定义，加上控制可执行作品的安装和编译的‘原本’（原文为‘Script’），或者不是与初始源代码显著不同的源代码就是被源代码贡献者选择的从公共领域可以得到的程序代码。”</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MPL许可证第3条有专门的一款是关于对源代码修改进行描述的规定，就是要求所有再发布者都得有一个专门的文件就对源代码程序修改的时间和修改的方式有描述。</p>
+</div>
+<div class="paragraph">
+<p>5、 Apache License 2.0</p>
+</div>
+<div class="paragraph">
+<p>Apache License是著名的非盈利开源组织Apache采用的协议，该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布（作为开源或商业软件）。需要满足的条件也和BSD类似：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>需要给代码的用户一份Apache License。</p>
+</li>
+<li>
+<p>如果你修改了代码，需要再被修改的文件中说明。在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。</p>
+</li>
+<li>
+<p>如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache License。你可以在Notice中增加自己的许可，但不可以表现为对Apache License构成更改。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Apache License也是对商业应用友好的许可，使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售。</p>
+</div>
+<div class="paragraph">
+<p>6、 LGPL</p>
+</div>
+<div class="paragraph">
+<p>LGPL（亦称GPL V2）是GPL的一个为主要为类库使用设计的开源协议，和GPL要求任何使用/修改/衍生之GPL类库的的软件必须采用GPL协议不同。LGPL 允许商业软件通过类库引用(link)方式使用LGPL类库而不需要开源商业软件的代码。这使得采用LGPL协议的开源代码可以被商业软件作为类库引用并发布和销售。</p>
+</div>
+<div class="paragraph">
+<p>但是如果修改LGPL协议的代码或者衍生，则所有修改的代码，涉及修改部分的额外代码和衍生的代码都必须采用LGPL协议。因此LGPL协议的开源代码很适合作为第三方类库被商业软件引用，但不适合希望以LGPL协议代码为基础，通过修改和衍生的方式做二次开发的商业软件采用。GPL/LGPL都保障原作者的知识产权，避免有人利用开源代码复制并开发类似的产品。</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="第三方依赖license"><a class="anchor" href="#第三方依赖license"></a>2.3. 第三方依赖License</h3>
@@ -562,12 +844,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="域名申请"><a class="anchor" href="#域名申请"></a>3.3. 域名申请</h3>
 
 </div>
+<div class="sect2">
+<h3 id="参考材料"><a class="anchor" href="#参考材料"></a>3.4. 参考材料</h3>
+<div class="paragraph">
+<p>[1] <a href="https://en.wikipedia.org/wiki/README" class="bare">https://en.wikipedia.org/wiki/README</a></p>
+</div>
+<div class="paragraph">
+<p>[2] <a href="https://tom.preston-werner.com/2010/08/23/readme-driven-development.html" class="bare">https://tom.preston-werner.com/2010/08/23/readme-driven-development.html</a></p>
+</div>
+<div class="paragraph">
+<p>[3] <a href="http://catb.org/~esr/jargon/html/R/README-file.html" class="bare">http://catb.org/~esr/jargon/html/R/README-file.html</a></p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-09 07:28:39 UTC
+Last updated 2020-08-18 08:41:16 UTC
 </div>
 </div>
 </body>
