@@ -3,13 +3,232 @@
 
 	- 搭建自动化构建的意义
 
+在早期的软件开发过程中，”谁破坏了编译过程”是一个罪证，尽管这里透露的是关于团队协作的过程，在大规模协作平台GitHub发明之前，软件开源是一个痛苦而低效的过程，其中包含的一个环节就是
+编译，随着软件工程的壮大，项目的规模扩大，构建成为了软件工程中至为关键的部分。
+
+有了自动化构建，作为开发者可以随时验证自己的代码，而不必要等到合并之后，在实际的环境中进行验证。
+
 	- 常见的构建工具
+
+那些规模较大的软件项目，通常组织的非常有序，
 
 		- maven/groovy
 
+`Maven` 用一句话来描述的话，就是针对 `java` 项目的 `make` 程序，其对应的 `makefile` 是 `pom.xml` 。或者这样描述：`Maven`是一个构建工具，一个项目管理工具，一个运行构建任务抽象容器。其实`Maven`能够做的要比这个描述还要多，如管理项目的生命周期。
+
+我们以一个简单的实例来为大家展示一下 `Maven`，在一个崭新的目录下执行下面命令：
+
+[source, xml]
+
+ $mvn archetype:generate -DgroupId=edu.encu.osbook -DartifactId=opensource -Dpackage=edu.encu.osbook -Dversion=1.0-SNAPSHOT -Dfilter=org.apache:maven
+ [INFO] Scanning for projects...
+ [INFO]
+ [INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+ [INFO] Building Maven Stub Project (No POM) 1
+ [INFO] --------------------------------[ pom ]---------------------------------
+ [INFO]
+ [INFO] >>> maven-archetype-plugin:3.1.1:generate (default-cli) > generate-sources @ standalone-pom >>>
+ [INFO]
+ [INFO] <<< maven-archetype-plugin:3.1.1:generate (default-cli) < generate-sources @ standalone-pom <<<
+ [INFO]
+ [INFO]
+ [INFO] --- maven-archetype-plugin:3.1.1:generate (default-cli) @ standalone-pom ---
+ [INFO] Generating project in Interactive mode
+ Choose archetype:
+ ....
+13: remote -> org.apache.maven.archetypes:maven-archetype-quickstart (An archetype which contains a sample Maven project.)
+ ....
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 13:
+Choose org.apache.maven.archetypes:maven-archetype-quickstart version:
+1: 1.0-alpha-1
+2: 1.0-alpha-2
+3: 1.0-alpha-3
+4: 1.0-alpha-4
+5: 1.0
+6: 1.1
+7: 1.3
+8: 1.4
+Choose a number: 8:
+[INFO] Using property: groupId = edu.encu.osbook
+[INFO] Using property: artifactId = opensource
+[INFO] Using property: version = 1.0-SNAPSHOT
+[INFO] Using property: package = edu.encuosbook
+Confirm properties configuration:
+groupId: edu.encu.osbook
+artifactId: opensource
+version: 1.0-SNAPSHOT
+package: edu.encuosbook
+ Y: :
+
+  注:archetype 有1400多种生成的模板，我们过滤掉了大部分。
+
+`archetype-quickstart` 会帮助开发者生成对应的文件，有源代码、测试用例、 `maven` 的 `pom.xml` 等：
+
+[source, makefile]
+---
+# tree opensource/
+opensource/
+├── pom.xml
+└── src
+	 ├── main
+	 │   └── java
+	 │       └── edu
+	 │           └── encuosbook
+	 │               └── App.java
+	 └── test
+			 └── java
+					 └── edu
+							 └── encuosbook
+									 └── AppTest.java
+ 9 directories, 3 files
+---
+
+而生成的`App.java`，就是我们常见的`hello,world!`程序：
+
+[source, java]
+
+---
+# cat opensource/src/main/java/edu/encuosbook/App.java
+package edu.encuosbook;
+/**
+ * Hello world!
+ *
+ */
+public class App
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+---
+
+这个时候就可以编译使用`maven`管理的程序了：
+
+[source, java]
+
+---
+# cd opensource/
+# mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< edu.encu.osbook:opensource >---------------------
+[INFO] Building opensource 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ opensource ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /root/opensource/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ opensource ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /root/opensource/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ opensource ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /root/opensource/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ opensource ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /root/opensource/target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ opensource ---
+[INFO] Surefire report directory: /root/opensource/target/surefire-reports
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.encuosbook.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec
+Results :
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ opensource ---
+[INFO] Building jar: /root/opensource/target/opensource-1.0-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ opensource ---
+[INFO] Installing /root/opensource/target/opensource-1.0-SNAPSHOT.jar to /root/.m2/repository/edu/encu/osbook/opensource/1.0-SNAPSHOT/opensource-1.0-SNAPSHOT.jar
+[INFO] Installing /root/opensource/pom.xml to /root/.m2/repository/edu/encu/osbook/opensource/1.0-SNAPSHOT/opensource-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.640 s
+[INFO] Finished at: 2019-08-21T02:00:19Z
+[INFO] ------------------------------------------------------------------------
+---
+
+我们可以看到`maven`对程序进行了测试，并打包为jar，并放到`target`目录下。
+
+ > 如果遇到错误，则输入`mvn install -X`，根据详细输出定位问题。
+
+验证程序：
+
+[source, java]
+
+---
+# java -cp target/opensource-1.0-SNAPSHOT.jar edu.encu.osbook.App
+Hello World!
+---
+
+`Maven` 在企业级 `Java` 的世界起着举足轻重的作用，是事实上的构建、管理标准，`Maven` 背后的主要贡献者 `Sonatype` 公司，在安全、仓库管理、制品管理方面已经在商业方面印证了该软件的流行程度。伴随着 DevOps 的流行趋势，旗下平台 `Nexus`，即 `Maven` 的仓库管理，更是成为软件开发中必不可少的组件。
+
+在Java的世界里，能读懂 `pom.xml` 文件，会让你事半功倍。反之，如果则会把团队带入一篇混沌状态。
+
+
 		- make
 
-		- npm
+在软件开发中，```make``` 是一个工具程序，经由读取叫做```“makefile”```的文件，自动化建构软件。它是一种转化文件形式的工具，转换的目标称为```“target”```；与此同时，它也检查文件的依赖关系，如果需要的话，它会调用一些外部软件来完成任务。它的依赖关系检查系统非常简单，主要根据依赖文件的修改时间进行判断。大多数情况下，它被用来编译源代码，生成结果代码，然后把结果代码连接起来生成可执行文件或者库文件。它使用叫做```“makefile”```的文件来确定一个```target```文件的依赖关系，然后把生成这个```target```的相关命令传给```shell```去执行。
+
+绝大多数的项目一般均会选择以`make`，即撰写`makefile`来定义整个工程，这也是为什么将之列为阅读源代码的首席工具的重要原因，`makefile`关系到了整个工程的编译规则。一个工程中的源文件不计其数，并且按类型、功能、模块分 别放在若干个目录中，makefile定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译， 哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为`makefile`就像一个Shell脚本一样，其中也可以执行操作系统的命令。
+
+`make`是一个命令工具，是一个解释`makefile`中指令的命令工具，一般来说， 大多数的IDE都有这个命令，比如：Delphi的`make`，Visual C++的`nmake`，Linux下GNU的`make`。
+
+就像其他和make有着悠久历史的软件一样，make有着很多的拥护者和反对者。它的很多问题因现代大型的软件项目的出现而暴露出来。但是很多人争论说它在常见的情况下可以很好的工作，而且使用非常的简单，功能强大，表达清楚。无论如何，make仍然被用来编译很多完整的操作系统，而且现在替代品们在基本的操作上与它没有太大差别。
+
+随着现代的集成开发环境（IDE）的诞生，特别是非Unix的平台上，很多程序员不再手动管理依靠关系检查，甚至不用去管哪些文件是这个项目的一部分，而是把这些任务交给了他们的开发环境去做。类似的，很多现代的编程语言有自己特别的高效的依赖关系的设置方法。
+
+下面就以一个简单的 GNU make 为例说明make的好处。
+
+		 - GNU make
+
+以下是撰写的一个简单的`Makefile`:
+
+[source, makefile]
+
+---
+hello:
+    gcc -g -o hello hello.c
+clean:
+      rm hello
+      install:
+      mkdir -p $(DESTDIR)/usr/bin
+      install -m 0755 hello $(DESTDIR)/usr/bin/hello
+---
+
+将`Makefile`和`hello.c`放在同一个目录下，则有如下的输出：
+
+[source, makefile]
+
+$ make
+gcc -g -o hello hello.c
+$ ./hello
+Hello,World!
+$ make install
+$ make clean
+rm hello
+
+GNU make 有着强大而复杂的功能，详情请参考其 https://www.gnu.org/software/make/manual/[官方文档]，或者直接在任意安装有`make`的Linux发行版中执行`man make`。
+
+			- npm
+
+image::https://img-blog.csdn.net/20170802161055931?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTI0MDg3Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast[]
+
+根据官方的申明解释，`npm` 是一个包管理器，它让 `JavaScript` 开发者分享、复用代码更加的方便。在程序开发中我们常常需要依赖别人提供的框架，写 `JavaScript` 也不例外。这些可以重复的框架代码被称作包（`package`）或者模块（`module`），一个包可以是一个文件夹里放着几个文件，同时有一个叫做 `package.json` 的文件。一个网站里通常有几十甚至上百个包，分散在各处，通常会将这些包按照各自的功能进行划分（类似我们安卓开发中的划分子模块），但是如果重复造一些轮子，不如上传到一个公共平台，让更多的人一起使用、参与这个特定功能的模块。
+
+image::https://img-blog.csdn.net/20170802162917895?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTI0MDg3Nw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast[]
+
+`npm`（全称 `Node Package Manager`，即“node包管理器”）默认是包含在`node.js`当中的，`npm` 完全用 `JavaScript` 写成，最初由艾萨克·施吕特（Isaac Z. Schlueter）开发。艾萨克表示自己意识到“模块管理很糟糕”的问题，并看到了 `PHP` 的 `PEAR` 与 `Perl` 的 `CPAN` 等软件的缺点，于是编写了 `npm`。
+
+`npm` 会随着 `Node.js` 自动安装。 `npm` 模块仓库提供了一个名为 “registry” 的查询服务，用户可通过本地的 `npm` 命令下载并安装指定模块。此外用户也可以通过 `npm` 把自己设计的模块分到 `registry` 上面。
 
 == 自动测试代码
 
