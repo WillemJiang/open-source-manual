@@ -1,0 +1,71 @@
+
+> 本章将以举例的方式说明，一篇优质的贡献者指南应该有哪些内容，而且会举出一些业界典范。
+
+== 贡献者指南
+
+=== 介绍
+
+### 在此写一些友好的内容！
+
+> 首先，非常感谢你正在考虑为 Active Admin 进行贡献，没错，正是像你这样的人打造了 Active Admin 这么精良的工具。
+
+来自 https://github.com/activeadmin/activeadmin/blob/master/CONTRIBUTING.md[Active Admin] 贡献者文档
+
+更多优秀的项目介绍说明，请参考 <<参考文档>> 中的[1]和[2]
+
+### 告诉人们为什么应该读向导
+
+>  了解向导的内容，有助于你和开发者的沟通，可以有效节省该开源项目的开发者管理和开发的宝贵时间。作为回报，他们会在回复你的issue、评估变更、以及完成你的 Pull Request 给予同样的尊重。
+
+内容来自 https://github.com/hoodiehq/hoodie/blob/master/CONTRIBUTING.md[Hoodie] 贡献者文档
+
+### 解释你期望的贡献类型
+
+保持开放的头脑！改进文档、bug 筛选、以及为任何有用处的贡献撰写教程，都会大大的减轻维护者的工作量。
+
+> ElasticSearch 是一款开源项目，而且我们非常热心的希望收到来自共同体的——你——的贡献！有很多种路径实现贡献：撰写教程、撰写博客、改进现有文档、提交bug报告、提交新功能需求、以及提交代码，均是为 Elasticsearch 自身内部合作的一部分。
+
+内容来自 https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md[Elasticsearch] 贡献者文档，更多优秀的解释贡献类型说明，请参考 [参考文档] 中的 <<3>> 和 <<4>>
+
+### 解释你不想看到的贡献类型（如果有的话）
+
+再重复一遍，做这些工作可以大大的减轻维护者的工作量。如果有人忽略掉你的向导指南，并提交了一些你最不想看到的内容，那么这个时候你就可以正当的关闭它，并告诉ta你的规程。
+
+> 请不要使用 issue 跟踪来获得问题支持。请到 Freenode 上的 IRC 频道找 #pocoo 来进一步获得支持。如果你的问题不是直接和 Werkzeug 或 Flask 相关，#python 频道是非常活跃的有可能帮到你的，另外 Stack Overflow 也非常值得考虑。
+
+内容来自： https://github.com/pallets/flask/blob/master/CONTRIBUTING.rst[flask] 贡献者文档，更多优秀说明，请参考 <<5>> 和 <<6>>。
+
+=== 基本规则
+
+### 设定期望的行为（你的和他们的）
+
+此处的信息不仅包括如何和他人沟通（彼此尊重、考虑对方等），也要包括技术上的责任（测试的重要性、项目依赖等），如果有行为准则的话，提示并将链接地址释出。
+
+> 责任：
+
+ -  确保每次变更跨平台的兼容性都能被接受：Windows、Mac、Debian& Ubuntu Linux。
+ -  确保进入核心的代码满足检查表中的所有要求: https://gist.github.com/audreyr/4feef90445b9680475f2
+ -  任何主要的变更和改进都要创建issue，以透明的方式进行讨论，且要获得共同体的反馈。
+ -  除非是绝对必要的情况下，否则不要为代码增加新的类，Err on the side of using functions.
+ -  尽可能的保持特性版本最小化，理想的情况是一个版本只有一个特性。
+ - 对新来这表示友好！鼓励多样性，任何背景的贡献者都是欢迎的。请参考 https://www.python.org/psf/codeofconduct/[Python 共同体行为准则]。
+
+内容来自： https://github.com/audreyr/cookiecutter/blob/master/CONTRIBUTING.rst[cookiecutter] 贡献者文档，更多优秀说明，请参考 <<7>> 和 <<8>>。
+
+==== [参考文档]
+
+[1].  http://read-the-docs.readthedocs.org/en/latest/contribute.html[Read The Docs] 贡献者文档
+
+[2].  https://github.com/janl/mustache.js/#contributing[Mustache.js] 贡献者文档
+
+[3]. https://github.com/plataformatec/devise/wiki/Contributing[Devise] 贡献者文档
+
+[4]. https://github.com/alexreisner/geocoder#known-issues[Geocoder] 贡献者文档
+
+[5]. https://github.com/cucumber/cucumber-ruby/blob/master/CONTRIBUTING.md#about-to-create-a-new-github-issue[cucumber-ruby] 贡献者文档
+
+[6]. http://read-the-docs.readthedocs.org/en/latest/open-source-philosophy.html#unsupported[Read the Docs] 贡献者文档
+
+[7]. https://github.com/celery/celery/blob/master/CONTRIBUTING.rst#community-code-of-conduct[Celery] 贡献者文档
+
+[8]. https://github.com/alexreisner/geocoder#contributing[geocoder] 贡献者文档

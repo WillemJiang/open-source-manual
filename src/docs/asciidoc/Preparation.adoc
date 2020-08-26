@@ -102,6 +102,9 @@ image::images/isulad-project-description.png[]
 > Write your Readme first.
 > -- Tom Preston-Werner,自述文件驱动的开发
 
+=== 撰写贡献者文档
+include::contributing-template.adoc[]
+
 == 知识产权与合规
 
 
