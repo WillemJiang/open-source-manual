@@ -38,6 +38,20 @@
 
 	- 依托的服务
 
+== 版本控制系统
+
+== 版本控制系统简介
+
+include::vcs/VCS-introduciton.adoc[]
+
+=== Git 之前的版本控制系统
+
+include::vcs/era-git-vcs.adoc[]
+
+=== Git
+
+include::vcs/git-introduction.adoc[]
+
 == 代码仓库
 
 	- 代码仓库的基本功能
@@ -66,3 +80,7 @@
 	- 问题追踪的功能
 
 	- 常见的问题追踪系统的使用
+
+== 现代开源项目开发集大成者 GitHub 平台介绍
+
+include::github-introduction.adoc[]
