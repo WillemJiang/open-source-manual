@@ -85,15 +85,61 @@ image::images/isulad-project-description.png[]
 
 ==== 安装
 
+就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 `homebrew`:
+
+[source, java]
+
+---
+$ brew install wget
+---
+
+就直接完成了 `wget`的安装。 诸如 `go`、`npm`、`Pypi` 等等均如此。
+
 ==== 使用实例
+
+请在这里写上你如何使用，比如 https://github.com/WillemJiang/open-source-manual/blob/master/README-zh_CN.adoc[现代开源手册] 项目的用法就非常的言简意赅：
+
+
+[source, java]
+
+---
+# 编译时通过调用 process-resources 生成 HTML5 文件（默认 goal 已配置）:
+$mvn
+---
+
+用浏览器打开生成的 HTML 文件 `target/generated-docs/OpenSourceManual.html` 。
+
+
+
 
 ==== 文档
 
+请在此列出项目的文档：
+
+* 上手指南
+* 开发者文档
+* API 参考
+* 用户手册
+
+等等
+
 ==== 作者/贡献者
+
+请在此列出所有的对项目有贡献的人名以及他们的邮箱地址，如果可以的话，将他们的社交账号一并列出如GitHub id、Twitter id等。
 
 ==== 许可证
 
+通常情况下，项目的主目录下会放一个 `License` 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。
+
+此项为可选，不是必须。
+
 ==== 贡献者指南
+
+开源项目想要生生不息的发展下去，招募更多贡献者加入是必做的事情之一。请在这里写下项目的贡献者指南链接地址。
+
+关于贡献者指南的模板，请参考：
+
+include::contributing-template.adoc[]
 
 ==== 已知问题
 
