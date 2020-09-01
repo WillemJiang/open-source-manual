@@ -1,7 +1,43 @@
 === Git 与 GitHub
 
+我们在版本控制系统一节中详细介绍了<<git>> ，那么基于 `git` 之上再做些事情，是所有想为开发者做事情的出发点。让我们将时间再往回拨一拨，拨回到围绕 Git 之前的版本控制系统所做的服务
+或产品。
+
+==== SourceForge
+
+说起古老的代码托管站点，我们是无法绕过SourceForge的，该站点于1999年由VA 软件公司投资开发，在整个2000~2010年都是开源开发者和用户的主要站点，也诞生了很多知名的开源项目：
+
+* JBoss
+* PhpMyAdmin
+* FileZilla
+
+支持 CVS、SVN 等中心化的版本控制系统，SourceForge 还有一个重要的特点，就是支持二进制分发，且嵌入广告。这可能为它后来的衰败有很大的关系。
+
+==== Google code
+
+Google 在2009年推出了开源项目托管平台： https://code.google.com/hosting/[Google Code]，支持的版本控制系统包括 `git` `Subversion` 和 `Mercurial`，还有问题跟踪系统、Wiki用于
+记录文档。
+
+已经于2016年1月永久归档：https://code.google.com/archive/
+
+==== Launchpad
+
+==== GitHub
+
+终于轮到介绍GitHub了，GitHub 服务是由四名 Ruby On Rails 开发者： Chris Wanstrath、P. J. Hyett、Tom Preston-Werner 以及 Scott Chacon 共同开发，在2008年二月开始撰写，
+同年4月10号发布上线，首次较大规模发布是在2009年的2月24日，地点选择是在Yahoo！的总部。
+
+
+
+
 === GitHub 上手指南
 
 === GitHub 开源项目协作和流程
 
 === GitHub 公司、GitHub 平台闭源与商业伦理
+
+=== 参考资料
+
+1. https://en.wikipedia.org/wiki/GitHub[GitHub wikipedia] 最后访问：2020.8.28
+2. https://en.wikipedia.org/wiki/Comparison_of_source-code-hosting_facilities[源代码托管实现对比] 最后访问：2020.8.28
+3. https://forge-allura.apache.org/p/allura/wiki/Feature%20Comparison/[Allura 做的源代码托管功能对比] 最后访问：2020.8.28
