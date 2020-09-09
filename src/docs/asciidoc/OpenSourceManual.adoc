@@ -39,7 +39,6 @@ ifndef::imagesdir[:imagesdir: images]
 [preface]
 include::preface.adoc[]
 
-
 = 准备开源
 include::Preparation.adoc[]
 
