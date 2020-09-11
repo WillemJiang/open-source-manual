@@ -139,13 +139,62 @@
 
 当然，伴随着开源的崛起，大大小小的开源共同体所生产的开源项目水涨船高，逐渐的开始被社会所认可，并获得了更多的资助。那么人类这么聪明的物种，从来不会放过任何能够可以复制成功的机会。于是有人开始总结开源项目的开发模式，并进行了整理。并开发了相应的平台：
 
-* GitHub
-* LaunchPad
-* Gerrit
-* https://pagure.io/[Pagure]
-* Trac
+* https://www.github.com/[GitHub]
 
-等平台的开发模式，上述这些平台基本会覆盖软件开发中所有的系统，而且还和其它系统有着友好的集成。GitHub 我们在本书中会进行专门的叙述，请移步[GitHub 详解]，其它平台我们就在这里给大家简单的叙述一番。
+GitHub 我们在本书中会进行专门的叙述，请移步[GitHub 详解]，其它平台我们就在这里给大家简单的叙述一番。
+
+GitHub 作为开发平台，凭借着简化的流程、更易分享代码、更加容易识别高超技能的人，GitHub 作为目前世上汇聚开发者最多、托管代码最多、提交次数频繁的服务平台，值得专门仔细的讲解。
+
+* https://launchpad.net[LaunchPad]
+
+Launchpad 是颇为完善的软件开发协作平台，由知名Linux 发行版 Ubuntu 的母公司 http://canonical.com/[Canonical]发起和维护，提供了非常完善的功能：
+     *  Bug 跟踪系统
+     *  支持分布式版本控制系统 Bazaar 和Git
+     * 支持在线 Code review
+     * 邮件列表
+     * 支持Ubuntu 包的构建和托管
+     * 在线翻译
+     * 问答和FAQ
+
+由非常多的开源项目在该平台上托管，如：
+
+  * https://launchpad.net/openstack[OpenStack]
+  * https://launchpad.net/inkscape[Inkscape]
+  * https://launchpad.net/ubuntu[ubuntu]
+
+
+首先你需要在该网站上注册一个id，然后登录，登录之后就可以根据具体的项目进行代码开发、Bug 提交、Review代码、撰写文档等等日常工作。
+
+进一步的操作可以参考其 https://help.launchpad.net/[用户文档]，该文档详细的说明了
+
+* http://www.gitlab.com[GitLab]
+
+
+
+* https://www.gerritcodereview.com/[Gerrit]
+
+
+https://android-review.googlesource.com/[Android Gerrit]
+
+
+* https://pagure.io/[Pagure]
+
+
+
+* https://trac.edgewall.org/wiki/TracInstall[Trac]
+
+Trac是一个为软件开发项目需要而集成了wiki和问题跟踪管理系统的应用平台。Trac以简单的方式建立了一个软件项目管理的web应用，以帮助开发人员更好地写出高质量的软件，并力求不影响团队现有的开发过程。
+
+Trac提供了访问Git、CVS、Subversion等版本控制系统的界面，内置wiki和方便的报告生成工具。
+
+Trac允许在问题描述和提交信息中使用wiki标记创建链接，可以很方便地在缺陷、任务、变更集、附件、wiki页面之间进行相互引用。时间线(timeline)按照时间倒序的方式显示项目上发生过的所有事件，使获知项目概况和跟踪项目进展变得很容易。路线图(roadmap)显示前面的道路(road ahead)，列出即将到来的里程碑(milestone)。
+
+等平台的开发模式，上述这些平台基本会覆盖软件开发中所有的系统，而且还和其它系统有着友好的集成。
+
+* http://www.gitee.com[Gitee]
+
+=== 总结
+
 
 
 == 开源社交礼仪
@@ -266,10 +315,13 @@ Apache 软件基金会为每个项目设置了两份治理文档，首先是基�
 
 == 开源开发协作流程
 
+这里提及这章其实是因为顾及一般单独的开发团队，尤其是传统软件工程的做法，在开放式开发当中，是没有固定流程的。理想的状态是，所有人都是根据自身的努力和获得的社会资本来进行相应的贡献的。
 
+这里要区别于典型的墙上挂的哪种金字塔式的组织架构图，来进行任务分工和分配的。这一点是特别注意的，没有任命或天生这一说法。
 
 == 维护者的最佳实践
 
+维护者是非常关键的角色，不仅是技术上的，还有共同体方面的，可以说是集多种角色于一身，是“Hub”式的关键人物所在。
 
 == 参考资料
 
