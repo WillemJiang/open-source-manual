@@ -22,22 +22,69 @@ Google 在2009年推出了开源项目托管平台： https://code.google.com/ho
 
 ==== Launchpad
 
+
+
 ==== GitHub
 
 终于轮到介绍GitHub了，GitHub 服务是由四名 Ruby On Rails 开发者： Chris Wanstrath、P. J. Hyett、Tom Preston-Werner 以及 Scott Chacon 共同开发，在2008年二月开始撰写，
 同年4月10号发布上线，首次较大规模发布是在2009年的2月24日，地点选择是在Yahoo！的总部。
 
-
-
-
 === GitHub 上手指南
+
+首先你需要访问域名为： http://www.github.com[http://www.github.com] 的网站，然后根据指示注册，需要输入可用的邮箱、登陆密码等信息，注册完成后，就可以登录了。
+
+登录之后，你可以随意的逛逛，或者完善自己的个人资料：酷酷的头像、自己的状态、社交账号、邮箱等。
+
+在GitHub 有两件事非常的重要：
+
+1. 通过熟悉的开发者，找到更酷的项目，然后分享代码
+2. 通过协作的项目，找到优秀的开发者，建立联系
+
+如果你只是将GitHub 当作一个文件打包或者是存放文件的服务器的话，那么建议还是找当地的网盘服务，是对GitHub最为错误的认识。
+
+总结起来，就是要适应起来开源代码的动态性、流动性，fork到自己的仓库的那部分代码，如果没有进一步的探索其实是没有任何意义的。当然，这也是GitHub最为吸引人的地方。
 
 === GitHub 开源项目协作和流程
 
+
+
 === GitHub 公司、GitHub 平台闭源与商业伦理
+
+GitHub 是一家商业公司，在美国注册，总部位于加利福尼亚州的旧金山。在世界的其它地区，在日本也有相应的办公室，如印度也设立有分部，本来中国是增长非常之大的，首席运营官还在2019年专门来中国低调的进行了实地考察[4],但是终究还是没有来。在2018年，GitHub 公司被微软以高达75亿美金
+收购，在2020年三月，GitHub 收购了JavaScript的包管理 npm 公司。
+
+GitHub 本身平台所使用的技术，绝大多数是闭源的，GitHub之外可以看到的仓库：https://github.com/github ，这些开源的部分，要么是fork其它开源项目，要么就是规模较小的“toy”型的。作为以网站的形式提供服务的站点，GitHub 绝大多数代码是没有以开放源代码的形式发布。
+
+是的，这看起来有点矛盾，甚至在某种程度上有点讽刺：”在互联网的世界拥有最多开源项目集散地的平台本身是闭源的。” 但是仔细想想，这也不是历史上的组合，我们不妨回顾一下历史上那些开源和闭源共同进步的组合：
+
+* Kernel 在Git 发明之前，使用过的版本控制系统是商业的 BitKeeper。
+* Apache 软件基金会旗下的开源项目，使用的bug 跟踪系统是由 atlassian 公司提供的 Jira 系统。
+* 更早些时候，GNU 下的项目如Emacs、GCC 均是运行在商业的Unix系统之上的。
+
+在如今的技术栈组合，闭源和开源相互融合，目前主流的技术云计算服务提供商采用闭源的方式提供服务，然而，运行其上的技术栈开源组合占据很大一部分，据Azure、Amazon、Google cloud等统计，Linux 占据期75%以上。对于用户来讲，可能更加关注的是当下要完成的任务，而对于整个技术
+栈是否必须是开源，考虑的不是最重要的。
+
+当然，有一些开发者就特别的在乎，在《working in public：The Making and Maintenance of Open Source Software 》一书中提及Unicorn 项目的维护者 Eirc Wang 对与平台的敏感：[5]
+
+> No. Never. Github is [sic] proprietary communications tool which requires users to accept a terms of service and login. That gives power and influence to a single entity (and a for-profit organization at that). . . . The reason I contribute to Free Software is because I am against any sort of lock-in or proprietary features. It absolutely sickens me to encounter users who seem to be incapable of using git without a proprietary communications tool.
+
+伴随着GitHub的壮大，也不时的出现一些伦理、政治等问题，如：
+
+* 禁止伊朗、北韩等国家的开发者访问私有仓库。
+* ICE 合同的争议
+* 遭受DDoS攻击等
+
+甚至在中美贸易战升级，中国的工信部购买了商业的Gitee产品，据说是为了防止GitHub封禁中国的开发者访问的后备，这真是一个憋脚的理由。
+
+GitHub 提供免费的服务，以优质的现代软件开发过程而赢得了众多开发者的青睐，截止笔者撰写此文，已经拥有注册用户4千万，Alex排名也一直在100以内，每天都有大量的开发者使用GitHub提供的Git仓库服务、自动构建Action服务、npm仓库、社交化的相互follow等等，让更多的代码工作者有了充分的时间去进行
+创作，如果用web2.0的社交思路来理解Github，和 YouTube、Facebook、Twitter、Medium等站点是没有区别的，本质是简化了相应工作者的流程：喜剧短片、朋友状态、短文字。
+
+GitHub 本身是否开源，这个是合理合法的，也不违反任何的伦理。作为开发者可以选择，也可以不选择，全在开发者自己。比如知名的自由软件基金会旗下的GNU项目，是绝对不会选择GitHub平台的，因为GitHub 是私有的、记录开发者隐私的。
 
 === 参考资料
 
 1. https://en.wikipedia.org/wiki/GitHub[GitHub wikipedia] 最后访问：2020.8.28
 2. https://en.wikipedia.org/wiki/Comparison_of_source-code-hosting_facilities[源代码托管实现对比] 最后访问：2020.8.28
 3. https://forge-allura.apache.org/p/allura/wiki/Feature%20Comparison/[Allura 做的源代码托管功能对比] 最后访问：2020.8.28
+4. https://www.zhihu.com/question/346517099[参加 GitHub 中国首场官方见面会是怎样的体验？] 最后访问：2020.9.8
+5. https://yhbt.net/unicorn-public/20140801213202.GA2729@dcvr.yhbt.net/
