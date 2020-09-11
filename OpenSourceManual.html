@@ -535,6 +535,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#git-之前的版本控制系统">14.1. Git 之前的版本控制系统</a></li>
 <li><a href="#git">14.2. Git</a></li>
+<li><a href="#git-的常见使用">14.3. Git 的常见使用</a></li>
+<li><a href="#参考资料">14.4. 参考资料</a></li>
 </ul>
 </li>
 <li><a href="#代码仓库">15. 代码仓库</a></li>
@@ -547,7 +549,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#github-上手指南">19.2. GitHub 上手指南</a></li>
 <li><a href="#github-开源项目协作和流程">19.3. GitHub 开源项目协作和流程</a></li>
 <li><a href="#github-公司github-平台闭源与商业伦理">19.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></li>
-<li><a href="#参考资料">19.5. 参考资料</a></li>
+<li><a href="#参考资料-2">19.5. 参考资料</a></li>
 </ul>
 </li>
 </ul>
@@ -563,24 +565,57 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#开源协作">开源协作</a>
 <ul class="sectlevel1">
-<li><a href="#开源社交礼仪">25. 开源社交礼仪</a></li>
-<li><a href="#community-共同体治理模型">26. Community (共同体)治理模型</a></li>
-<li><a href="#开源开发协作流程">27. 开源开发协作流程</a></li>
-<li><a href="#维护者的最佳实践">28. 维护者的最佳实践</a></li>
-<li><a href="#参考资料-2">29. 参考资料</a></li>
+<li><a href="#什么是开源共同体">25. 什么是开源共同体？</a>
+<ul class="sectlevel2">
+<li><a href="#gnu-gcc">25.1. GNU GCC</a></li>
+<li><a href="#linux-kernel">25.2. Linux Kernel</a></li>
+<li><a href="#apache-httpd">25.3. Apache HTTPD</a></li>
+<li><a href="#python">25.4. Python</a></li>
+<li><a href="#debian">25.5. Debian</a></li>
+</ul>
+</li>
+<li><a href="#开源共同体的角色构成">26. 开源共同体的角色构成</a>
+<ul class="sectlevel2">
+<li><a href="#开源共同体中的作为个人的角色分类">26.1. 开源共同体中的作为个人的角色分类</a></li>
+<li><a href="#开源共同体中的作为机构的角色分类">26.2. 开源共同体中的作为机构的角色分类</a></li>
+</ul>
+</li>
+<li><a href="#开放式开发平台的崛起">27. 开放式开发平台的崛起</a>
+<ul class="sectlevel2">
+<li><a href="#总结">27.1. 总结</a></li>
+</ul>
+</li>
+<li><a href="#开源社交礼仪">28. 开源社交礼仪</a>
+<ul class="sectlevel2">
+<li><a href="#开源共同体中鼓励和倡导做什么">28.1. 开源共同体中鼓励和倡导做什么？</a></li>
+<li><a href="#开源共同体中不可以做什么">28.2. 开源共同体中不可以做什么？</a></li>
+</ul>
+</li>
+<li><a href="#community-共同体治理模型">29. Community (共同体)治理模型</a>
+<ul class="sectlevel3">
+<li><a href="#概览">29.1. 概览</a></li>
+<li><a href="#角色和责任">29.2. 角色和责任</a></li>
+<li><a href="#支持">29.3. 支持</a></li>
+<li><a href="#决策流程">29.4. 决策流程</a></li>
+<li><a href="#贡献流程">29.5. 贡献流程</a></li>
+</ul>
+</li>
+<li><a href="#开源开发协作流程">30. 开源开发协作流程</a></li>
+<li><a href="#维护者的最佳实践">31. 维护者的最佳实践</a></li>
+<li><a href="#参考资料-3">32. 参考资料</a></li>
 <li><a href="#术语表">Appendix A: 术语表</a></li>
 </ul>
 </li>
 <li><a href="#名词解释">名词解释</a></li>
-<li><a href="#开源-open-source">30. 开源 （Open Source）</a></li>
-<li><a href="#开源软件open-source-software">31. 开源软件（Open Source Software）</a></li>
-<li><a href="#开源软件共同体-open-source-software-community">32. 开源软件共同体 （Open Source software community）</a></li>
-<li><a href="#开源软件基金会-open-source-software-foundation">33. 开源软件基金会（ Open Source software Foundation）</a></li>
+<li><a href="#开源-open-source">33. 开源 （Open Source）</a></li>
+<li><a href="#开源软件open-source-software">34. 开源软件（Open Source Software）</a></li>
+<li><a href="#开源软件共同体-open-source-software-community">35. 开源软件共同体 （Open Source software community）</a></li>
+<li><a href="#开源软件基金会-open-source-software-foundation">36. 开源软件基金会（ Open Source software Foundation）</a></li>
 <li><a href="#贡献者列表">贡献者列表</a></li>
 <li><a href="#参与本书的作者列表">参与本书的作者列表</a>
 <ul class="sectlevel1">
-<li><a href="#l">34. L</a></li>
-<li><a href="#j">35. J</a></li>
+<li><a href="#l">37. L</a></li>
+<li><a href="#j">38. J</a></li>
 </ul>
 </li>
 </ul>
@@ -1795,6 +1830,21 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 <div class="sect2">
 <h3 id="git"><a class="anchor" href="#git"></a><a class="link" href="#git">14.2. Git</a></h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>the stupid content tracker
+       git 的宣传语</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a><a class="link" href="#git-的常见使用">14.3. Git 的常见使用</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="参考资料"><a class="anchor" href="#参考资料"></a><a class="link" href="#参考资料">14.4. 参考资料</a></h3>
 
 </div>
 </div>
@@ -1920,7 +1970,31 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 <div class="sect2">
 <h3 id="github-上手指南"><a class="anchor" href="#github-上手指南"></a><a class="link" href="#github-上手指南">19.2. GitHub 上手指南</a></h3>
-
+<div class="paragraph">
+<p>首先你需要访问域名为： <a href="http://www.github.com">http://www.github.com</a> 的网站，然后根据指示注册，需要输入可用的邮箱、登陆密码等信息，注册完成后，就可以登录了。</p>
+</div>
+<div class="paragraph">
+<p>登录之后，你可以随意的逛逛，或者完善自己的个人资料：酷酷的头像、自己的状态、社交账号、邮箱等。</p>
+</div>
+<div class="paragraph">
+<p>在GitHub 有两件事非常的重要：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>通过熟悉的开发者，找到更酷的项目，然后分享代码</p>
+</li>
+<li>
+<p>通过协作的项目，找到优秀的开发者，建立联系</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>如果你只是将GitHub 当作一个文件打包或者是存放文件的服务器的话，那么建议还是找当地的网盘服务，是对GitHub最为错误的认识。</p>
+</div>
+<div class="paragraph">
+<p>总结起来，就是要适应起来开源代码的动态性、流动性，fork到自己的仓库的那部分代码，如果没有进一步的探索其实是没有任何意义的。当然，这也是GitHub最为吸引人的地方。</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="github-开源项目协作和流程"><a class="anchor" href="#github-开源项目协作和流程"></a><a class="link" href="#github-开源项目协作和流程">19.3. GitHub 开源项目协作和流程</a></h3>
@@ -1928,10 +2002,72 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 <div class="sect2">
 <h3 id="github-公司github-平台闭源与商业伦理"><a class="anchor" href="#github-公司github-平台闭源与商业伦理"></a><a class="link" href="#github-公司github-平台闭源与商业伦理">19.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></h3>
-
+<div class="paragraph">
+<p>GitHub 是一家商业公司，在美国注册，总部位于加利福尼亚州的旧金山。在世界的其它地区，在日本也有相应的办公室，如印度也设立有分部，本来中国是增长非常之大的，首席运营官还在2019年专门来中国低调的进行了实地考察[4],但是终究还是没有来。在2018年，GitHub 公司被微软以高达75亿美金
+收购，在2020年三月，GitHub 收购了JavaScript的包管理 npm 公司。</p>
+</div>
+<div class="paragraph">
+<p>GitHub 本身平台所使用的技术，绝大多数是闭源的，GitHub之外可以看到的仓库：https://github.com/github ，这些开源的部分，要么是fork其它开源项目，要么就是规模较小的“toy”型的。作为以网站的形式提供服务的站点，GitHub 绝大多数代码是没有以开放源代码的形式发布。</p>
+</div>
+<div class="paragraph">
+<p>是的，这看起来有点矛盾，甚至在某种程度上有点讽刺：”在互联网的世界拥有最多开源项目集散地的平台本身是闭源的。” 但是仔细想想，这也不是历史上的组合，我们不妨回顾一下历史上那些开源和闭源共同进步的组合：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kernel 在Git 发明之前，使用过的版本控制系统是商业的 BitKeeper。</p>
+</li>
+<li>
+<p>Apache 软件基金会旗下的开源项目，使用的bug 跟踪系统是由 atlassian 公司提供的 Jira 系统。</p>
+</li>
+<li>
+<p>更早些时候，GNU 下的项目如Emacs、GCC 均是运行在商业的Unix系统之上的。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在如今的技术栈组合，闭源和开源相互融合，目前主流的技术云计算服务提供商采用闭源的方式提供服务，然而，运行其上的技术栈开源组合占据很大一部分，据Azure、Amazon、Google cloud等统计，Linux 占据期75%以上。对于用户来讲，可能更加关注的是当下要完成的任务，而对于整个技术
+栈是否必须是开源，考虑的不是最重要的。</p>
+</div>
+<div class="paragraph">
+<p>当然，有一些开发者就特别的在乎，在《working in public：The Making and Maintenance of Open Source Software 》一书中提及Unicorn 项目的维护者 Eirc Wang 对与平台的敏感：[5]</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>No. Never. Github is [sic] proprietary communications tool which requires users to accept a terms of service and login. That gives power and influence to a single entity (and a for-profit organization at that). . . . The reason I contribute to Free Software is because I am against any sort of lock-in or proprietary features. It absolutely sickens me to encounter users who seem to be incapable of using git without a proprietary communications tool.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>伴随着GitHub的壮大，也不时的出现一些伦理、政治等问题，如：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>禁止伊朗、北韩等国家的开发者访问私有仓库。</p>
+</li>
+<li>
+<p>ICE 合同的争议</p>
+</li>
+<li>
+<p>遭受DDoS攻击等</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>甚至在中美贸易战升级，中国的工信部购买了商业的Gitee产品，据说是为了防止GitHub封禁中国的开发者访问的后备，这真是一个憋脚的理由。</p>
+</div>
+<div class="paragraph">
+<p>GitHub 提供免费的服务，以优质的现代软件开发过程而赢得了众多开发者的青睐，截止笔者撰写此文，已经拥有注册用户4千万，Alex排名也一直在100以内，每天都有大量的开发者使用GitHub提供的Git仓库服务、自动构建Action服务、npm仓库、社交化的相互follow等等，让更多的代码工作者有了充分的时间去进行
+创作，如果用web2.0的社交思路来理解Github，和 YouTube、Facebook、Twitter、Medium等站点是没有区别的，本质是简化了相应工作者的流程：喜剧短片、朋友状态、短文字。</p>
+</div>
+<div class="paragraph">
+<p>GitHub 本身是否开源，这个是合理合法的，也不违反任何的伦理。作为开发者可以选择，也可以不选择，全在开发者自己。比如知名的自由软件基金会旗下的GNU项目，是绝对不会选择GitHub平台的，因为GitHub 是私有的、记录开发者隐私的。</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="参考资料"><a class="anchor" href="#参考资料"></a><a class="link" href="#参考资料">19.5. 参考资料</a></h3>
+<h3 id="参考资料-2"><a class="anchor" href="#参考资料-2"></a><a class="link" href="#参考资料-2">19.5. 参考资料</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1942,6 +2078,12 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </li>
 <li>
 <p><a href="https://forge-allura.apache.org/p/allura/wiki/Feature%20Comparison/">Allura 做的源代码托管功能对比</a> 最后访问：2020.8.28</p>
+</li>
+<li>
+<p><a href="https://www.zhihu.com/question/346517099">参加 GitHub 中国首场官方见面会是怎样的体验？</a> 最后访问：2020.9.8</p>
+</li>
+<li>
+<p><a href="https://yhbt.net/unicorn-public/20140801213202.GA2729@dcvr.yhbt.net/" class="bare">https://yhbt.net/unicorn-public/20140801213202.GA2729@dcvr.yhbt.net/</a></p>
 </li>
 </ol>
 </div>
@@ -2318,33 +2460,623 @@ rm hello</code></pre>
 </div>
 <h1 id="开源协作" class="sect0"><a class="anchor" href="#开源协作"></a><a class="link" href="#开源协作">开源协作</a></h1>
 <div class="sect1">
-<h2 id="开源社交礼仪"><a class="anchor" href="#开源社交礼仪"></a><a class="link" href="#开源社交礼仪">25. 开源社交礼仪</a></h2>
+<h2 id="什么是开源共同体"><a class="anchor" href="#什么是开源共同体"></a><a class="link" href="#什么是开源共同体">25. 什么是开源共同体？</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>根据开源之道的定义如下：</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>为了实现一个开源软件项目，基于互联网，由企业、个人、非营利组织等形成的团体成员（接受过现代计算机科学的训练），在文化上能够达成一定共识，来去自由，进行一定的社会治理、活动、交流等，所形成的合作共同体。</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>既然为一个社会现象下了一个定义，那么我们就需要为之进行代入式的解释，那么具体的、典型的开源共同体有那些，笔者在这里给大家根据不同的类型进行概要的介绍，不过首先提醒大家的是，开源的共同体大大小小的，犹如现实生活中的生活社区，非常之多，错综复杂、纵横交错，</p>
+</div>
+<div class="sect2">
+<h3 id="gnu-gcc"><a class="anchor" href="#gnu-gcc"></a><a class="link" href="#gnu-gcc">25.1. GNU GCC</a></h3>
 
+</div>
+<div class="sect2">
+<h3 id="linux-kernel"><a class="anchor" href="#linux-kernel"></a><a class="link" href="#linux-kernel">25.2. Linux Kernel</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="apache-httpd"><a class="anchor" href="#apache-httpd"></a><a class="link" href="#apache-httpd">25.3. Apache HTTPD</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="python"><a class="anchor" href="#python"></a><a class="link" href="#python">25.4. Python</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="debian"><a class="anchor" href="#debian"></a><a class="link" href="#debian">25.5. Debian</a></h3>
+
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="community-共同体治理模型"><a class="anchor" href="#community-共同体治理模型"></a><a class="link" href="#community-共同体治理模型">26. Community (共同体)治理模型</a></h2>
+<h2 id="开源共同体的角色构成"><a class="anchor" href="#开源共同体的角色构成"></a><a class="link" href="#开源共同体的角色构成">26. 开源共同体的角色构成</a></h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>作为一个存在的社会团体，了解其内部的角色分类是必须要做的事情，否则就无法进一步了解和参与。组成社会团体的是每一个个体，这些个体恰是作为开源发起者特别需要争取的对象，但是对于某一类文化来说，比如奉行集体主义的东方文化里是极难发展个体的，必要的时候还是要将目光</p>
+</div>
+<div class="sect2">
+<h3 id="开源共同体中的作为个人的角色分类"><a class="anchor" href="#开源共同体中的作为个人的角色分类"></a><a class="link" href="#开源共同体中的作为个人的角色分类">26.1. 开源共同体中的作为个人的角色分类</a></h3>
+<div class="sect3">
+<h4 id="领袖"><a class="anchor" href="#领袖"></a><a class="link" href="#领袖">26.1.1. 领袖</a></h4>
+<div class="paragraph">
+<p>在人类的历史上，从来就不曾缺失过哪些一心致力于自身对于事物的驾驭的追求与能力，古希腊戏剧《普罗米修斯》或者是罗马的建筑大师维特鲁威，在开源共同体中，也不乏这样的人，我们这里不妨列举几位：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>林纳斯·本纳第克特·托瓦兹（Linus Benedict Torvalds），Linux和Git创始人</p>
+</li>
+<li>
+<p>Larry Well ,Perl 语言创始人</p>
+</li>
+<li>
+<p>Tim O’Reilly ， “open source” 一次的推动者，出版了数以千记的开源技术、文化相关的图书</p>
+</li>
+<li>
+<p>Guido van Rossum Python 语言创始人</p>
+</li>
+<li>
+<p>Brian Behlendorf  Apache 基金会创始人之一，Apache web服务器主要发起者</p>
+</li>
+<li>
+<p>Eric Raymond ，著名书籍《大教堂与集市》的作者，OSI 的发起者之一</p>
+</li>
+<li>
+<p>Jim Zemlin Linux基金会执行董事</p>
+</li>
+<li>
+<p>Henry Zhu Babel  项目维护者</p>
+</li>
+<li>
+<p>&#8230;&#8203;&#8230;&#8203;.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>更多开源共同体中的领袖或Hero们，请关注开源之道的系列文章:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.opensourceway.community/posts/opensource_leader/bruce_perens_open_source_definition/">Bruce Perens，向全世界宣布“开源”的人</a></p>
+</li>
+<li>
+<p><a href="http://www.opensourceway.community/posts/opensource_leader/solomon_hykes_and_the_docker_revolution/">开源英雄：Solomon Hykes和Docker的革命性崛起</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="核心贡献者"><a class="anchor" href="#核心贡献者"></a><a class="link" href="#核心贡献者">26.1.2. 核心贡献者</a></h4>
+<div class="paragraph">
+<p>每一款开源项目，除了发起者之外，都有核心的贡献者参与，或者提供设计、代码补丁、文档撰写，这是构成开源共同体的核心主力，换句话说：<strong>如果不能理解核心贡献者，那么就无法理解开源共同体</strong>。他们是主要的生产力！</p>
+</div>
+<div class="paragraph">
+<p>想要了解项目的核心贡献者，分为两步：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>到每个开源项目的发布版本日志里，找出贡献者名单。</p>
+</li>
+<li>
+<p>下载源代码，使用版本控制系统，如<code><code>git shortlog -c</code></code> ，对应出名字来</p>
+</li>
+<li>
+<p>根据2找到ta写的代码、注释、设计</p>
+</li>
+<li>
+<p>只有理解了3，才能感同身受地体会ta解决问题的过程，以及为这个问题所花费的时间和精力。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="律师"><a class="anchor" href="#律师"></a><a class="link" href="#律师">26.1.3. 律师</a></h4>
+<div class="paragraph">
+<p>在自由/开源软件发展的历史上，知识产权相关发挥了重要的作用，也就是说法律才是开源的支柱，在这个共同体当中，维护者开发者的权益，至少不被侵犯，从天才般的Richard Stallman 创立的GPL ，到各式各样的许可证，以及OpenChain、开放发明网络（OIN）等机构的诞生。</p>
+</div>
+<div class="paragraph">
+<p>法外之地，开源将不复存在，因为这是人类的高等文明，需要克服人类基本之人性。律师帮助我们、一路同行，做到了这一点。他们是这个开源共同体中不可或缺的重要角色。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="拥护者和布道师"><a class="anchor" href="#拥护者和布道师"></a><a class="link" href="#拥护者和布道师">26.1.4. 拥护者和布道师</a></h4>
+<div class="paragraph">
+<p>这个世界需要诉说者，著名作家伍尔夫写过“没有被叙述的就等于没有发生过”，开源想要联结成为强大的共同体，最终展现在世人面前“可见的”，是能够提供实用功能的运行在计算机当中的软件，不是每个人都具备上述探索核心贡献者，评估他们的工作成果的能力的。那么传播开源、宣扬开源价值的人就有了ta存在的意义。而随着开源在社会中的地位提升，做这些事的人也越来越紧俏。</p>
+</div>
+<div class="paragraph">
+<p>关于布道的意义，在此我想没有比法国著名社会学者托克维尔在《论美国的民主》一书中所描述的更为精准的了：</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>一个社团要想有力量，就必须人多。而由于成员的人数太多，所以他们只能分散在广大的地区，每个人仍然要留在原来的地方，去过他们的哪种比上不足比下有余的生活，为成千上万的小事而操劳。因此，他们必须找到一个使他们不用见面就能彼此交谈不用开会就能得出一致意见的手段。这个手段就是报刊。</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>对比我们现在所处的互联网时代，报刊替换为媒体：社交平台、即使聊天、邮件列表等更为先进的媒介手段！</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="用户"><a class="anchor" href="#用户"></a><a class="link" href="#用户">26.1.5. 用户</a></h4>
+<div class="paragraph">
+<p>根据开源共同体的定义，这里的用户，我们要除却不懂计算机的其它行业的人士，在如今的信息社会，几乎没有人不是开源软件的使用者，我们如果把这个定义套用到他们身上的话，那简直是过于泛泛了，所以我们这里要区别出来：</p>
+</div>
+<div class="paragraph">
+<p><strong>知道自己在有意的使用开源软件，或自行编译开源项目的用户</strong>，最重要的是这些用户在选择软件的时候，会偏向使用开源软件，或者是因为经济、法律、喜好、社交等原因。无论是处于什么原因在使用开源软件的人，意识到自己在使用这种属性至关重要，这里主要是想和盗版区别开来。</p>
+</div>
+<div class="paragraph">
+<p>软件生产出来就是被人用的，如果一款软件没有用户，那么就其意义就需要另外商榷。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="搭便车者"><a class="anchor" href="#搭便车者"></a><a class="link" href="#搭便车者">26.1.6. 搭便车者</a></h4>
+<div class="paragraph">
+<p>我们不可以强制要求邻居或朋友参与到贡献当中来，或者通过劝诱、胁迫等手段去要求ta人。</p>
+</div>
+<div class="paragraph">
+<p>如果光是用户也还罢了，开源软件是可以解决一些实际问题的，一旦能够解决实际问题，那么它就有了经济利益，那么如果这些人，利用了开源项目，有了其它的商业目的，做了类似投机倒把的事情，那么我们不妨称这类人为搭便车者。</p>
+</div>
+<div class="paragraph">
+<p>现实中的搭便车者，比比兼是，由于软件的商业创新，使用的是信息授权模式，所以将开源项目编译为二进制软件之后，是有商业利润存在的。但是呢，这些人虽然从中渔利了，但是并没有考虑其所利用的开源项目的持续性发展的问题，无论是人员的投入，还是金钱上的支持，甚至是宣传活动也是掩盖的。有的时候，一眼就可以看出来，有的时候却需要内行人去仔细的甄别。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="反对者"><a class="anchor" href="#反对者"></a><a class="link" href="#反对者">26.1.7. 反对者</a></h4>
+<div class="paragraph">
+<p>反对开源的人也不在少数，尤其是传统上利用专有软件授权赢得了非常高的利润的公司的员工，称开源软件为“搅屎棍”，损坏了他们的利益，违反了知识产权，最有名的就是微软公司的第二任CEO 史蒂夫·鲍尔默（Steve Ballmer）称Linux为癌症的论断了。</p>
+</div>
+<div class="paragraph">
+<p>这里笔者想阐述一个特别的群体，那就是盗版者，由于开源的免费特性，会让传统专有软件授权的盗版者打着开源的名义堂而皇之的进行专有软件的盗版行为，以迷惑用户，或者以低于专有软件价格很多倍的形式进行非法行为。这其实也是开源的反对者，而且这个更具破坏力，主要是混淆视听。从道德上讲这一类人是要被谴责的，在法律上讲是严重的违法。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="开源相关研究的学者"><a class="anchor" href="#开源相关研究的学者"></a><a class="link" href="#开源相关研究的学者">26.1.8. 开源相关研究的学者</a></h4>
+<div class="paragraph">
+<p>就开源这个现象而言，它太过于迷人，以至于很多学科的学者们都为之倾倒，经济学、社会学、人类学、软件工程、心理学、管理、法律等诸多学科都在围绕开源这个主题进行相关的拓展和研究，有兴趣进一步研究的读者可以关注[开源之道论文阅读计划](<a href="https://github.com/OCselected/ttoos/projects/8)，会涉及到很多相关论文的阅读和作者们的介绍。" class="bare">https://github.com/OCselected/ttoos/projects/8)，会涉及到很多相关论文的阅读和作者们的介绍。</a></p>
+</div>
+<div class="paragraph">
+<p>目前整理成册的开源研究论文集，可以参考开源之道图书共读2019年11月的图书：[Perspectives on Free and Open Source Software (The MIT Press)](posts/paper_or_book_reading/book_review_of_mitfoss/)，聪明的读者你可以顺藤摸瓜，可以找到各位教授在自己的领域里就开源这个主题所研究的成果，如Audris Mockus、Siobhan O’Mahony、Eric von Hippel&#8230;&#8203;&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>另外国内的学者大家可以关注北京大学周明辉教授、华东师范大学王伟老师、南京大学王宇、以及国防科技大学研究集体智慧的几位学者。</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="开源共同体中的作为机构的角色分类"><a class="anchor" href="#开源共同体中的作为机构的角色分类"></a><a class="link" href="#开源共同体中的作为机构的角色分类">26.2. 开源共同体中的作为机构的角色分类</a></h3>
+<div class="sect3">
+<h4 id="拥抱开源的商业公司"><a class="anchor" href="#拥抱开源的商业公司"></a><a class="link" href="#拥抱开源的商业公司">26.2.1. 拥抱开源的商业公司</a></h4>
+<div class="paragraph">
+<p>有了上面个人的理解，再来理解商业公司就会好很多。一个主要的甄别点就是，商业公司直接雇佣核心贡献者或项目领袖，让这些人发挥自己的智力和能力，至于商业公司如何赢得商业利益，那是另外一件事情，这方面做的非常不错的公司，首屈一指的就是 RedHat 公司，当然还有互联网巨头如Google、Facebook、Linkedin、Netflix等。</p>
+</div>
+<div class="paragraph">
+<p>也就是说，一家商业公司是否为开源共同体中的好公民，也是靠其员工的贡献值来进行衡量的。千万不要以为是PR就可以，将自己嘴上吹个天花乱坠，然而没有实质的贡献，那纯粹是扯淡。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="为项目共同体服务的基金会或类似机构"><a class="anchor" href="#为项目共同体服务的基金会或类似机构"></a><a class="link" href="#为项目共同体服务的基金会或类似机构">26.2.2. 为项目共同体服务的基金会或类似机构</a></h4>
+<div class="paragraph">
+<p>开源项目的共同体是一个基于互联网的虚拟组织，并不具备现实的法律实体，也就是说当项目需要资金、或者权益受到伤害到时候，在国家这个层面上，是没有可以维护的，尤其是涉及到多人的时候，然而，这个共同体主要是生产软件的，很多其它的社会性事务是不擅长的，比如组织会议、法律、接受捐赠、寻求赞助等等。那么这样的服务机构应运而生。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="打压开源的商业公司"><a class="anchor" href="#打压开源的商业公司"></a><a class="link" href="#打压开源的商业公司">26.2.3. 打压开源的商业公司</a></h4>
+<div class="paragraph">
+<p>从比尔.盖茨参加完家酿俱乐部之后发表的《至电脑爱好者的一封信》之后，软件以二进制分发授权的商业模式一发不可收拾，至今仍然是软件商业帝国大厦的支柱。</p>
+</div>
+<div class="paragraph">
+<p>和很多事物一样，如果有了替代品，威胁到了既得利益者，那么这些既得利益者就会打压，其中以微软臭名昭著的“万圣节备忘录”为最，当然Oracle也是坚定的打击开源的厂商之一，收购SUN公司之后，一系列开源项目被迫停止开发就是例证。</p>
+</div>
+<div class="paragraph">
+<p>还有就是公有云提供商，采用完全兼容开源的模式，对开源进行一些锁定的定制，然后通过捆绑的方式来进行销售相关计算、存储、网络资源。这些云厂商未必对开源共同体有贡献，但是它可以进行下游的定制，这其实是在削弱开源共同体，搞到开源项目不可持续。这些云提供商是实至名归的打压开源的商业公司！作为消费者其实应该认识到这一点。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="行走在开源和专有软件授权模式之间的灰色地带"><a class="anchor" href="#行走在开源和专有软件授权模式之间的灰色地带"></a><a class="link" href="#行走在开源和专有软件授权模式之间的灰色地带">26.2.4. 行走在开源和专有软件授权模式之间的灰色地带</a></h4>
+<div class="paragraph">
+<p>上面提到，软件以二进制分发授权的商业模式已经发展了近40多年了，绝大多数以及主流媒体都对这样的模式是视之为默认的，那么开源的商业创新其实产生革命性的变化可能性不太大，那么介于这二者之间的，必然是大家都能够接受的方式，比如2019年开始火起来的“Open Core”模式，这个模式不能说是开源，但也不能说和开源没有开源，它确确实实是部分开源了，只是在功能或性能上商家做了区分。分两步走：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>依靠开源软件的分发渠道和模式，让用户消费者适应，并产生锁定。</p>
+</li>
+<li>
+<p>再更一步的模式采用授权模式</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="脱离开源共同体的商业公司开源"><a class="anchor" href="#脱离开源共同体的商业公司开源"></a><a class="link" href="#脱离开源共同体的商业公司开源">26.2.5. 脱离开源共同体的商业公司开源</a></h4>
+<div class="paragraph">
+<p>开源共同体，是一个想象中的概念，现实当中并没有一个类似政府的机构代表这一实体，也就是说，任何人都可以称自己是开源的一份子。那么对于商业公司来讲，搭上开源分发的便车是个不错的营销手段，那么就有很多新的公司有效的利用到了这点，它有可能是刚刚打进软件这个市场，并没有在技术上和开源共同体形成一个有效的技术栈（参考上面提及的产业链的视角看开源软件），或者说在现有的开源共同体中是一个新的实体，从来没有人听说过他们，他们也没有对现有的共同体下的项目做任何的贡献。即使是这样，他们“开源”自己的产品，使自己始终处于游离的状态，使自身是处于一种“孤岛”的状态，虽然开源了，但是并没有融入到开源共同体当中，从技术、文化等诸多角度来看都是。</p>
+</div>
+<div class="paragraph">
+<p>这类公司，我们也会常常遇到，大多是创始人在遇到经营困难的时候，突发奇想，对众包、免费劳动力、庞大的消费者群体等吸引，于是，幻想着自己的产品能够通过他们自己理解的开源一炮打响。这些人当然往往也找不到宣传的途径，最明显的特征就是寻找传统的媒体来进行PR，然而也只是共同体之外的人看热闹而已。对于开源共同体来讲，这些所作所为显然不是他们所关心的内容。</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源开发协作流程"><a class="anchor" href="#开源开发协作流程"></a><a class="link" href="#开源开发协作流程">27. 开源开发协作流程</a></h2>
+<h2 id="开放式开发平台的崛起"><a class="anchor" href="#开放式开发平台的崛起"></a><a class="link" href="#开放式开发平台的崛起">27. 开放式开发平台的崛起</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>当然，伴随着开源的崛起，大大小小的开源共同体所生产的开源项目水涨船高，逐渐的开始被社会所认可，并获得了更多的资助。那么人类这么聪明的物种，从来不会放过任何能够可以复制成功的机会。于是有人开始总结开源项目的开发模式，并进行了整理。并开发了相应的平台：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.github.com/">GitHub</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>GitHub 我们在本书中会进行专门的叙述，请移步[GitHub 详解]，其它平台我们就在这里给大家简单的叙述一番。</p>
+</div>
+<div class="paragraph">
+<p>GitHub 作为开发平台，凭借着简化的流程、更易分享代码、更加容易识别高超技能的人，GitHub 作为目前世上汇聚开发者最多、托管代码最多、提交次数频繁的服务平台，值得专门仔细的讲解。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://launchpad.net">LaunchPad</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Launchpad 是颇为完善的软件开发协作平台，由知名Linux 发行版 Ubuntu 的母公司 <a href="http://canonical.com/">Canonical</a>发起和维护，提供了非常完善的功能：
+     *  Bug 跟踪系统
+     *  支持分布式版本控制系统 Bazaar 和Git
+     * 支持在线 Code review
+     * 邮件列表
+     * 支持Ubuntu 包的构建和托管
+     * 在线翻译
+     * 问答和FAQ</p>
+</div>
+<div class="paragraph">
+<p>由非常多的开源项目在该平台上托管，如：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://launchpad.net/openstack">OpenStack</a></p>
+</li>
+<li>
+<p><a href="https://launchpad.net/inkscape">Inkscape</a></p>
+</li>
+<li>
+<p><a href="https://launchpad.net/ubuntu">ubuntu</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>首先你需要在该网站上注册一个id，然后登录，登录之后就可以根据具体的项目进行代码开发、Bug 提交、Review代码、撰写文档等等日常工作。</p>
+</div>
+<div class="paragraph">
+<p>进一步的操作可以参考其 <a href="https://help.launchpad.net/">用户文档</a>，该文档详细的说明了</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.gitlab.com">GitLab</a></p>
+</li>
+<li>
+<p><a href="https://www.gerritcodereview.com/">Gerrit</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://android-review.googlesource.com/">Android Gerrit</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://pagure.io/">Pagure</a></p>
+</li>
+<li>
+<p><a href="https://trac.edgewall.org/wiki/TracInstall">Trac</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Trac是一个为软件开发项目需要而集成了wiki和问题跟踪管理系统的应用平台。Trac以简单的方式建立了一个软件项目管理的web应用，以帮助开发人员更好地写出高质量的软件，并力求不影响团队现有的开发过程。</p>
+</div>
+<div class="paragraph">
+<p>Trac提供了访问Git、CVS、Subversion等版本控制系统的界面，内置wiki和方便的报告生成工具。</p>
+</div>
+<div class="paragraph">
+<p>Trac允许在问题描述和提交信息中使用wiki标记创建链接，可以很方便地在缺陷、任务、变更集、附件、wiki页面之间进行相互引用。时间线(timeline)按照时间倒序的方式显示项目上发生过的所有事件，使获知项目概况和跟踪项目进展变得很容易。路线图(roadmap)显示前面的道路(road ahead)，列出即将到来的里程碑(milestone)。</p>
+</div>
+<div class="paragraph">
+<p>等平台的开发模式，上述这些平台基本会覆盖软件开发中所有的系统，而且还和其它系统有着友好的集成。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.gitee.com">Gitee</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="总结"><a class="anchor" href="#总结"></a><a class="link" href="#总结">27.1. 总结</a></h3>
 
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="维护者的最佳实践"><a class="anchor" href="#维护者的最佳实践"></a><a class="link" href="#维护者的最佳实践">28. 维护者的最佳实践</a></h2>
+<h2 id="开源社交礼仪"><a class="anchor" href="#开源社交礼仪"></a><a class="link" href="#开源社交礼仪">28. 开源社交礼仪</a></h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>因为是共同体，没有强约束关系，所以全凭是人类的高级认知来进行沟通、协商，进而形成默契。所以一些基本的，人类进化到目前为止的所有优秀的内容都应该在此得到最好的展现。</p>
+</div>
+<div class="paragraph">
+<p>中国古代著名哲学家孔子有云：</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>“非礼勿视，非礼勿听，非礼勿言，非礼勿动。”</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>开源共同体毕竟是由现代人构成的，凡是人组成的社会，都是由一定的规矩，否则的话，就会处于熵增，陷入无序而混乱的状态。</p>
+</div>
+<div class="sect2">
+<h3 id="开源共同体中鼓励和倡导做什么"><a class="anchor" href="#开源共同体中鼓励和倡导做什么"></a><a class="link" href="#开源共同体中鼓励和倡导做什么">28.1. 开源共同体中鼓励和倡导做什么？</a></h3>
+<div class="paragraph">
+<p>人类社会是复杂的，划分的边界也是五花八门，常见的有文化、国家、地域、城市、宗教、风俗、种族、民族等等，如果是讲究差别的话，那么就根本不用谈合作，什么基于互联网的全球化简直是不可能的事，但是我们终究是人类，再大的差别也能找到共同的元素，尤其是良善的内容。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>使用开源共同体所倡导的语言</p>
+</li>
+<li>
+<p>保持开放、透明</p>
+</li>
+<li>
+<p>保持友好</p>
+</li>
+<li>
+<p>尽可能的说明问题的上下文</p>
+</li>
+<li>
+<p>学会提问</p>
+</li>
+<li>
+<p>兼容并包</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="开源共同体中不可以做什么"><a class="anchor" href="#开源共同体中不可以做什么"></a><a class="link" href="#开源共同体中不可以做什么">28.2. 开源共同体中不可以做什么？</a></h3>
+<div class="paragraph">
+<p>我们先来说说通常的开源项目所建立的共同体，需要大家遵守的一般法则，这意味着作为要参与的你不能够做什么，这是一个非常清晰的边界：</p>
+</div>
+<div class="paragraph">
+<p>通常的行为守则的描述遵循如下几点：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>行为守则在哪里有效 (只在issues以及pull requests，或者社区活动？)</p>
+</li>
+<li>
+<p>行为守则适用于谁 (社区成员以及维护者，那赞助商呢？)</p>
+</li>
+<li>
+<p>如果有人违反了行为守则会怎样？</p>
+</li>
+<li>
+<p>大家如何举报违规</p>
+</li>
+<li>
+<p>无论你们在哪里，请使用已有的行为守则。 <a href="https://www.contributor-covenant.org/">贡献者盟约</a> 是一个被超过40,000个开源项目（包括Kubernetes, Rails和Swift）所使用的行为守则。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://www.djangoproject.com/conduct/">Django行为守则</a>和 <a href="http://citizencodeofconduct.org/">Citizen行为守则</a>都是非常好的行为守则。</p>
+</div>
+<div class="paragraph">
+<p>请将 CODE_OF_CONDUCT 文件放在你们项目的根目录，并在README中附上其链接，这样对你们的社区是可见的。</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="参考资料-2"><a class="anchor" href="#参考资料-2"></a><a class="link" href="#参考资料-2">29. 参考资料</a></h2>
+<h2 id="community-共同体治理模型"><a class="anchor" href="#community-共同体治理模型"></a><a class="link" href="#community-共同体治理模型">29. Community (共同体)治理模型</a></h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>我们在这里讲述共同体的治理模型，其实很难和项目相区分开来，正如我们在本章开头所为开源共同体下的定义一样，离开了开源项目，开源共同体的意义就不复存在。</p>
+</div>
+<div class="paragraph">
+<p>一千个人眼中就有一千个哈姆雷特，几乎是每有一个开源项目，就会有一个相应的开源策略，正因为此，关于项目的各项细节如政策、战略等，要准确无误的传递给对于项目有产出的潜在用户和开发者。一个清晰的治理模式可以让潜在的贡献者能够如何参与到项目中来，以及能够获得什么，甚至是提供哪些保护措施以确保大家的贡献始终是可用的。此外，它描述了有助于确保潜在用户项目可行性的质量控制流程，清晰简洁的开发沟通是开放式开发实现 <a href="http://oss-watch.ac.uk/resources/planningsustainability">可持续性</a>的最重要的步骤。</p>
+</div>
+<div class="paragraph">
+<p>治理模式涉及范围颇广，从中心化的控制，无论是单独的个体还是组织（仁慈的独裁者），到基于贡献度认可的分布式控制，都会有所涉及。这中间有个类似光谱的范围，在这个范围内容的任何一点都会有相应的治理模式，而且随着项目的成熟，项目所选择的治理模式还会有所变化。下面一节图中所示的内容即是FOSS的项目示例，以坐标的方式所表达，该图还说明了这些项目是否鼓励来自广泛来源（市集式）的贡献，或者是否是仅针对一小部分人的专门贡献（大教堂风格）。关于贡献的模式的进一步的信息，请阅读 Eric Raymond 的大名鼎鼎的文章《大教堂与集市》，这里蛮耐人寻味的是，特定的治理风格并不会一定和某个贡献模式挂上钩，有的时候会出现，在项目的开始阶段，是采用的大教堂的仁慈的独裁者模式，但是随着时间的转变，项目的成熟，会转变为市集式的贡献或精英式的治理（或两者兼而有之）。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://oss-watch.ac.uk/img/governancevcontrib.png" alt="governancevcontrib">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Linux 项目就是 Raymond 提及的经典的集市模式，鼓励任何人都可以做出贡献，尽早发布，经常发布，该项目由其创始人 Linus Trovalds来治理，Linus 对发布中包括哪些贡献拥有最终的决定权。</p>
+</li>
+<li>
+<p>GNU Emacs 是Raymond 论及的所谓的大教堂模式，由一个小的团队所组成的贡献者，而且发布的频率并不是那么的频繁，项目早期由 Richard Stallman 治理，不过值得注意的是，在Raymond 完成它的文章之时，Stallman其实已经不再管理这个项目了，而当前的维护者采用的是更加开放的贡献模式。</p>
+</li>
+<li>
+<p>Apache HTTPD 项目是 Apache 软件基金会的项目，遵循正式的精英结构，Apache面向全球所有人，任何人都可以在上面贡献代码。</p>
+</li>
+<li>
+<p>Apache OODT ，同样也是 Apache 软件基金会的项目，采用的是Apache精英模式，然而，它的开发模式是大教堂风格的，并不会积极的邀请他人作贡献。当这些核心团队成员觉得可以保证一定质量水平时，才会发布具体的版本。</p>
+</li>
+<li>
+<p>Ubuntu 则是一个典型的仁慈的独裁者模式，即项目的把控者是其创始人和资助者：Mark Shuttleworth，然而，实际上的许多决定是由社区委员会和技术委员会决定的，而委员会的组成是由社区通过选拔来任命的，Ubuntu系统的核心部分是在 Canonical 内部开发，采用的是大教堂的风格，然而，也有社区社区的开发人员会被邀请去开发系统的关键部分，比如Ubuntu收集平台的核心应用程序。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>我们来适当的分析一下这些典型的治理模式。首先，来看看 <a href="http://www.ubuntu.com/community/processes/governance">Ubuntu 的治理模式</a>，根据Ubuntu的描述，更加侧重于描述社区的结构以及与该结构的每个组件相关的职责，以及项目中决策过程的概要描述。Ubuntu项目是将开发人员信息和治理文档中的信息是分开的，但是其技术管理流程是被明确所记录的。</p>
+</div>
+<div class="paragraph">
+<p>Apache 软件基金会为每个项目设置了两份治理文档，首先是基金会本身的治理文档，如组织结构的规定，另外的文档还专门介绍了诸如决策的关键过程的内容，然而，由于每个项目都是自由的，内部有一些限制条件，为了定义好各自的这些具体的变化，Apache软件基金会的很多项目都有自己的治理文档。有关示例，请参阅 <a href="http://forrest.apache.org/guidelines.html">Apache Forrest</a>治理说明。</p>
+</div>
+<div class="paragraph">
+<p>我们列举的第三个关于治理模式的例子是关于 <a href="http://www.taverna.org.uk/about/legal-stuff/taverna-governance-model/">Taverna</a>项目，该项目是一个属于学术界内发展开源的例子，因此展示了一种在学术环境中发挥作用的模式。Taverna 的模式和上述Ubuntu以及Apache软件基金会一样，侧重于项目的结构和管理流程。</p>
+</div>
+<div class="paragraph">
+<p>不妨写个治理文件，有了此文件，无论是对于共同体现有的人员或发起人，还是对于新到来的潜在贡献者，有了文字性的正式描述，大家均有章可循：</p>
+</div>
+<div class="paragraph">
+<p>一旦你建立了自己要采用的模式，接下来要做到事情就是制定一份友好的治理文档，从而详细的说明制定决策和对贡献的识别等过程，下面的内容就是介绍一个创建项目治理文档的一般框架。该框架会描述要文档设计的主要方面，以及解释为什么这些内容是重要的，在最后，我们还给出了一些案例模板的链接。</p>
+</div>
+<div class="paragraph">
+<p>一个典型的治理文档应包含如下章节：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>概览</p>
+</li>
+<li>
+<p>角色和责任</p>
+</li>
+<li>
+<p>支持</p>
+</li>
+<li>
+<p>决策流程</p>
+</li>
+<li>
+<p>贡献流程</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="概览"><a class="anchor" href="#概览"></a><a class="link" href="#概览">29.1. 概览</a></h4>
+<div class="paragraph">
+<p>治理文档的概览部分，应该提及的有项目的目标、项目管理方式等简要概述，而且要将它们适当的联系起来。另外就是一些关键的信息，如项目最终采用的许可证、版权的所有者、以及用户该如何参与项目的开发等。</p>
+</div>
+<div class="paragraph">
+<p>概览要尽可能的简短，目的就是让观看的人们能够迅速了解他们参与项目相关的期望。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="角色和责任"><a class="anchor" href="#角色和责任"></a><a class="link" href="#角色和责任">29.2. 角色和责任</a></h4>
+<div class="paragraph">
+<p>本节内容描述了项目中的正式角色及其权限。它还应该涵盖所需要的承诺水平以及每个寻求参与的角色。本部分的目标是明确谁管理项目、谁可以贡献、以及如何贡献，乃至于如果希望直接影响项目的话，该如何积极的表现。</p>
+</div>
+<div class="paragraph">
+<p>定义角色的时候，可能都是大家耳能生详的名称，如“用户”、“贡献者”、“提交者”、或“项目管理委员会成员”。当然，也可以非常的具体，如“发布经理”、“测试经理”、“社区经理”、“产品经理”等等，通常情况下，所提供的细节越多，人们就越有可能识别出他们可以做出贡献的事情。谨记，请注意不要限制人们可以做出的贡献。例如，拥有“发布经理”头衔的人可能会觉得他们不适合协助管理项目路线图，这似乎是“产品经理”角色的一部分。出于这个原因，许多项目选择了描述各种活动的广泛标题。举例来讲，管理发布和管理路线图的任务可能均由一个角色来承担——如“提交者”，该角色中的个人将自行选择他们希望贡献的活动。</p>
+</div>
+<div class="paragraph">
+<p>反过来讲，如果没有对某些人承担特定的责任可能会导致在特定活动领域就会缺乏贡献，当然，还需要与如下一些事实相平衡：指示社区成员执行已定义的任务这事不是总能行得通的，因为社区并非是雇佣关系，没有人喜欢被颐指气使。可以参考这份单独的关于角色的[文档](<a href="http://oss-watch.ac.uk/resources/rolesinopensource)。" class="bare">http://oss-watch.ac.uk/resources/rolesinopensource)。</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="支持"><a class="anchor" href="#支持"></a><a class="link" href="#支持">29.3. 支持</a></h4>
+<div class="paragraph">
+<p>本小节描述了关于项目内部的支持流程，对于绝大多数开源项目来讲，支持的渠道也是项目用户的主要联系方式，这些用户在未来可能会成为项目的贡献者，也可能成为商业提供商的客户，这些都是项目获得可持续性发展的关键之所在，开源项目尤其要照顾到这些用户。</p>
+</div>
+<div class="paragraph">
+<p>治理文档的支持部分还应描述关于可用的支持渠道以及每种渠道的使用方式。它还应提供防止在多个渠道去提供支持，那样会导致过于的分散，过于分散的风险在于一旦某个单一的地方出现大量的问题，则会显得力不从心，因为，我们要尽量的去建设和寻求可以进行自我支撑的社区。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="决策流程"><a class="anchor" href="#决策流程"></a><a class="link" href="#决策流程">29.4. 决策流程</a></h4>
+<div class="paragraph">
+<p>对于开放式开发来讲，做决策的方式是项目成功的关键因素，一个过于耗时的流程会导致决策的延迟，从而导致整个项目的延迟，更为糟糕的是，这个流程可能会被忽略，进而社区的一部分权力被剥夺了。另外，一个定义不够明确的流程，可能会导致关于决策是否有效的争论，再次导致社区内的延迟和分裂。</p>
+</div>
+<div class="paragraph">
+<p>决策过程的效率和透明度应该是治理文件中的主要重点。恰是这个决策的过程确保了潜在的贡献者，他们的努力将会得到项目公平的处理，并能够在未来保持价值。关于创建正确的控制结构的方法，在文章的前面我们有做过详尽的谈论。</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="贡献流程"><a class="anchor" href="#贡献流程"></a><a class="link" href="#贡献流程">29.5. 贡献流程</a></h4>
+<div class="paragraph">
+<p>本小节介绍人们应如何为项目做出自己的贡献，关于贡献流程的文档应该介绍各种类型的贡献是可以接受的，以及让这些贡献可以被管理的工具等，本节不应提供工具的完整描述，而应提供工具提供支持的过程的清晰说明。</p>
+</div>
+<div class="paragraph">
+<p>与贡献相关的明确流程是必要的，原因有两个：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>指导项目的贡献者</p>
+</li>
+<li>
+<p>向潜在的用户保证，所有贡献的质量控制和法律监督足够强大，从而可以生产出可靠的、精良的软件</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>因此，治理文件的这一部分应描述项目对版权管理，编码标准和文档的期望。它还应该描述清楚贡献后会发生什么，包括当贡献被认为是不适合项目时所遵循的过程的详细处理。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="开源开发协作流程"><a class="anchor" href="#开源开发协作流程"></a><a class="link" href="#开源开发协作流程">30. 开源开发协作流程</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>这里提及这章其实是因为顾及一般单独的开发团队，尤其是传统软件工程的做法，在开放式开发当中，是没有固定流程的。理想的状态是，所有人都是根据自身的努力和获得的社会资本来进行相应的贡献的。</p>
+</div>
+<div class="paragraph">
+<p>这里要区别于典型的墙上挂的哪种金字塔式的组织架构图，来进行任务分工和分配的。这一点是特别注意的，没有任命或天生这一说法。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="维护者的最佳实践"><a class="anchor" href="#维护者的最佳实践"></a><a class="link" href="#维护者的最佳实践">31. 维护者的最佳实践</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>维护者是非常关键的角色，不仅是技术上的，还有共同体方面的，可以说是集多种角色于一身，是“Hub”式的关键人物所在。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="参考资料-3"><a class="anchor" href="#参考资料-3"></a><a class="link" href="#参考资料-3">32. 参考资料</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://opensourceway.community/posts/community_leadership_development/what-is-open-source-community/" class="bare">http://opensourceway.community/posts/community_leadership_development/what-is-open-source-community/</a></p>
+</li>
+<li>
+<p><a href="http://opensourceway.community/posts/community_leadership_development/open_source_community_role-analysis/" class="bare">http://opensourceway.community/posts/community_leadership_development/open_source_community_role-analysis/</a></p>
+</li>
+<li>
+<p><a href="http://opensourceway.community/posts/community_leadership_development/open_source_community_role-analysis/" class="bare">http://opensourceway.community/posts/community_leadership_development/open_source_community_role-analysis/</a></p>
+</li>
+<li>
+<p><a href="http://opensource.guide/zh-hans/code-of-conduct/" class="bare">http://opensource.guide/zh-hans/code-of-conduct/</a></p>
+</li>
+<li>
+<p><a href="http://oss-watch.ac.uk/resources/governancemodels" class="bare">http://oss-watch.ac.uk/resources/governancemodels</a></p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2360,7 +3092,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源-open-source"><a class="anchor" href="#开源-open-source"></a><a class="link" href="#开源-open-source">30. 开源 （Open Source）</a></h2>
+<h2 id="开源-open-source"><a class="anchor" href="#开源-open-source"></a><a class="link" href="#开源-open-source">33. 开源 （Open Source）</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>开源隶属于开放这个大的范畴，意指一款产品或制品，其不仅提供最终可用的实体，还应该提供源代码、设计文档、交流过程等，最初的意思来自于[#开源软件]的模式，随着开源软件运动的逐步胜利
@@ -2372,7 +3104,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源软件open-source-software"><a class="anchor" href="#开源软件open-source-software"></a><a class="link" href="#开源软件open-source-software">31. 开源软件（Open Source Software）</a></h2>
+<h2 id="开源软件open-source-software"><a class="anchor" href="#开源软件open-source-software"></a><a class="link" href="#开源软件open-source-software">34. 开源软件（Open Source Software）</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>我们这次选择了两种解释风格，一种是正式的、举世公认的定义，即开放源代码促进会（Open Source Initative)的定义：</p>
@@ -2426,7 +3158,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源软件共同体-open-source-software-community"><a class="anchor" href="#开源软件共同体-open-source-software-community"></a><a class="link" href="#开源软件共同体-open-source-software-community">32. 开源软件共同体 （Open Source software community）</a></h2>
+<h2 id="开源软件共同体-open-source-software-community"><a class="anchor" href="#开源软件共同体-open-source-software-community"></a><a class="link" href="#开源软件共同体-open-source-software-community">35. 开源软件共同体 （Open Source software community）</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>为了实现一个开源软件项目，基于互联网，由企业、个人、非营利组织等形成的团体成员，在文化上能够达成一定共识，来去自由，进行一定的社会治理、活动、交流等。该共同体由计算机相关
@@ -2435,7 +3167,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源软件基金会-open-source-software-foundation"><a class="anchor" href="#开源软件基金会-open-source-software-foundation"></a><a class="link" href="#开源软件基金会-open-source-software-foundation">33. 开源软件基金会（ Open Source software Foundation）</a></h2>
+<h2 id="开源软件基金会-open-source-software-foundation"><a class="anchor" href="#开源软件基金会-open-source-software-foundation"></a><a class="link" href="#开源软件基金会-open-source-software-foundation">36. 开源软件基金会（ Open Source software Foundation）</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>由非政府的、非营利的、自有资金（通常来自单一的个人、家庭或公司）并自设董事会管理工作规划的组织，其创办的目的是为了支持发展开源软件项目，以服务于公共福利，主要途径是通过对其他
@@ -2447,7 +3179,7 @@ rm hello</code></pre>
 
 <h1 id="参与本书的作者列表" class="sect0"><a class="anchor" href="#参与本书的作者列表"></a><a class="link" href="#参与本书的作者列表">参与本书的作者列表</a></h1>
 <div class="sect1">
-<h2 id="l"><a class="anchor" href="#l"></a><a class="link" href="#l">34. L</a></h2>
+<h2 id="l"><a class="anchor" href="#l"></a><a class="link" href="#l">37. L</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>李建盛 ，别名适兕，开源布道师，开源之道（opensourceway.community)发起者，ALC Beijing 成员。</p>
@@ -2455,7 +3187,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="j"><a class="anchor" href="#j"></a><a class="link" href="#j">35. J</a></h2>
+<h2 id="j"><a class="anchor" href="#j"></a><a class="link" href="#j">38. J</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>姜宁 - 华为开源软件中心技术专家，前红帽软件首席软件工程师，Apache软件基金会成员，Apache软件基金孵化器导师，参与了绝大多个中国发起的Apache基金会项目的孵化。本人06年开始加入到Apache社区项目开发，就被社区开放协作的氛围深深吸引，成为开源深度信徒。现在致力于开源社区建设，以及开源文化推广，尽其所能帮助国内开源项目成功。</p>
@@ -2466,7 +3198,7 @@ rm hello</code></pre>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0-SNAPSHOT<br>
-Last updated 2020-09-01 01:43:45 UTC
+Last updated 2020-09-11 09:21:32 UTC
 </div>
 </div>
 <style>
