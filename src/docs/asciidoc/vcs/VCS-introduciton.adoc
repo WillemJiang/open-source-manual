@@ -1,4 +1,7 @@
-在 `git` 的官方的书籍中如此定义版本控制：**版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。** 正如我上面所讲的故事一样，我们的每一个人都需要版本控制，无论你做什么，如果你是位图形或网页设计师，可能会需要保存某一幅图片或页面布局文件的所有修订版本（这或许是你非常渴望拥有的功能），采用版本控制系统（VCS）是个明智的选择。 有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。 使用版本控制系统通常还意味着，就算你乱来一气把整个项目中的文件改的改删的删，你也照样可以轻松恢复到原先的样子。 但额外增加的工作量却微乎其微。
+在 `git` 的官方的书籍中如此定义版本控制：**版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。**
+
+
+我们的每一个人都需要版本控制，无论你做什么，如果你是位图形或网页设计师，可能会需要保存某一幅图片或页面布局文件的所有修订版本（这或许是你非常渴望拥有的功能），采用版本控制系统（VCS）是个明智的选择。 有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。 使用版本控制系统通常还意味着，就算你乱来一气把整个项目中的文件改的改删的删，你也照样可以轻松恢复到原先的样子。 但额外增加的工作量却微乎其微。
 
 假设有这么一位喜欢厨艺的爱好者，最近喜欢上的烤面包，光是看说明书总是会出错，也是将各种因素来回的搭配，并记录，并随时进行重新的编排和组合。
 
@@ -7,3 +10,127 @@
 1. 让我们相互之间的协作并行起来，而不是串行——某个时间只能有一个人在工作。
 2. 在协作的过程中，最好是能够各得其所，尽量避免冲突，实在无奈，能够方便的解决冲突。
 3. 我们能够将所做过的所有事情都归档，并可恢复，谁在什么时间做了什么，以及为什么这么做。
+
+==== 为什么会有差异？
+
+在软件开发过程中，大多涉及到多人开发和协作，同一份文件，在不同的开发者的工作台会出现差别，即使是单独的个人，在不同的时间，也会产生不同的版本，日积月累，差异、改进、删除等等都会发生，换句话说：**为了应对这种变化，或者是记录变化本身，我们需要记录差异。**
+
+记录差异在人类的发展史上有着非常悠久的良好传统，可以说，差异产生知识，因为可以比较不同，在能够知道变化，在面临熵增的世界，寻找有序。
+
+差异，是以时空为根本前提的，不同的空间在相同的时间可以对比，同一空间在不同时间也可以进行对比。以代码开发为例，在多人参与的情况下，错综复杂，二者都是可以发生的。
+
+在理解了差异之后，我们就可以说明版本控制的意义了：
+
+* 用于记录和跟踪差异，以便于协作、合并、回退、整合源代码文件。
+
+==== diff 和 patch
+
+> we have been able to connect the three different development stages of Linux development: pre-version control, BitKeeper, and Git. During the pre-version control stage, we
+use each of the releases of Linux as a snapshot of its development.
+>         ---- 2020 Linux Kernel History Report
+
+`diff` 是在 UNIX 系统上的一个工具程序，它可以比较两个文件之间的不同。通常它被用来比较同一个文件，在不同版本间的差异。它可以产生一个扩展名为.diff或.patch的文件，这个文件可以被另一个工具程序 `patch` 来使用。
+
+下面我们就以一个实例说明一下这两个程序的使用，这其实是最好的解释和说明。
+
+现在我们有一个 `hello.c` 的C 语言经典入门的程序：
+
+[source, java]
+---
+#include <stdio.h>
+int main(void) {
+    printf("Hello World\n");
+    return 0;
+}
+---
+
+
+按照如下步骤，使用 `diff` 和 `patch` 来了解源代码版本的差异：
+
+1. 为 `hello.c` 复制一个副本
+
+[source, java]
+---
+$ cp cello.c cello.c.orig
+---
+
+2. 修改 `hello.c` 文件为：
+[source, java]
+---
+#include <stdio.h>
+int main(void) {
+    printf("Hello World from my very first patch!\n");
+    return 0;
+}
+---
+
+3. 使用 `diff` 来生成差异的文本，
+[source,java]
+% diff -Naur hello.c.orig hello.c
+--- hello.c.orig	2020-09-14 13:34:20.000000000 +0800
++++ hello.c	2020-09-14 13:34:50.000000000 +0800
+@@ -1,6 +1,6 @@
+ #include <stdio.h>
+ int main(void) {
+-    printf("Hello World\n");
++    printf("Hello World from my very first patch!\n");
+     return 0;
+ }
+---
+
+4. 重定向到文本文件，并以后缀 `.patch` 为命名：
+
+[source,java]
+---
+% diff -Naur hello.c.orig hello.c > hello-first-patch.patch
+lee@lees-MacBook-Pro code % cat hello-first-patch.patch
+--- hello.c.orig	2020-09-14 13:34:20.000000000 +0800
++++ hello.c	2020-09-14 13:34:50.000000000 +0800
+@@ -1,6 +1,6 @@
+#include <stdio.h>
+int main(void) {
+-    printf("Hello World\n");
++    printf("Hello World from my very first patch!\n");
+    return 0;
+}
+---
+
+5. 生成 patch 之后，我们就可以换一台机器，可以预想的场景就是，已经将 `hello.c` 分享给来其他人，现在也将这个patch发送给对方，让对方能够生成新的文件，以和我们保持一致。
+
+[source,java]
+
+---
+$ cp cello.c.orig cello.c
+---
+
+6. 使用程序 `patch` 将差异修改到源文件。
+
+[source,java]
+
+---
+% patch < hello-first-patch.patch
+patching file hello.c
+lee@lees-MacBook-Pro code % cat hello.c
+#include <stdio.h>
+int main(void) {
+    printf("Hello World from my very first patch!\n");
+    return 0;
+}
+---
+
+7. 编译、执行即可
+
+[source,java]
+
+---
+% gcc -g -o hello hello.c
+% ./hello
+Hello World from my very first patch!
+---
+
+这就是差异比较，然后合并的最基础的、最本质的原理所在，现代化的版本控制系统如Git、SVN 等都自带这两个程序，我们后续会进一步的给大家做介绍。
+
+==== 参考资料
+
+1. https://en.wikipedia.org/wiki/Diff
+2. https://rpm-packaging-guide.github.io/#checking-cello-spec-file

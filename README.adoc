@@ -19,3 +19,22 @@ Convert the AsciiDoc to HTML5 by invoking the `process-resources` goal (configur
  $ mvn
 
 Open the file _target/generated-docs/OpenSourceManual.html_ in your browser to see the generated HTML file.
+
+## output to pdf
+
+Asciidoc PDF need ruby gem env.
+
+```
+$sudo apt-get install ruby
+$ gem install asciidoctor-pdf
+$ cd src/docs/asciidoc
+$ asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font OpenSourceManual.adoc
+```
+
+## Chinese simplified problem
+
+you need download custom font first.
+
+go to [https://fonts.google.com/specimen/Noto+Sans+SC?subset=chinese-simplified#standard-styles](https://fonts.google.com/specimen/Noto+Sans+SC?subset=chinese-simplified#standard-styles)
+
+and download google Noto-Sans-SC  font to local.
