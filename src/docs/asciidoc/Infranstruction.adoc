@@ -40,7 +40,7 @@
 
 == 版本控制系统
 
-== 版本控制系统简介
+=== 版本控制系统简介
 
 include::vcs/VCS-introduciton.adoc[]
 

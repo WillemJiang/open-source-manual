@@ -11,7 +11,7 @@
 2. 在协作的过程中，最好是能够各得其所，尽量避免冲突，实在无奈，能够方便的解决冲突。
 3. 我们能够将所做过的所有事情都归档，并可恢复，谁在什么时间做了什么，以及为什么这么做。
 
-==== 为什么会有差异？
+=== 为什么会有差异？
 
 在软件开发过程中，大多涉及到多人开发和协作，同一份文件，在不同的开发者的工作台会出现差别，即使是单独的个人，在不同的时间，也会产生不同的版本，日积月累，差异、改进、删除等等都会发生，换句话说：**为了应对这种变化，或者是记录变化本身，我们需要记录差异。**
 
@@ -23,7 +23,7 @@
 
 * 用于记录和跟踪差异，以便于协作、合并、回退、整合源代码文件。
 
-==== diff 和 patch
+=== diff 和 patch
 
 > we have been able to connect the three different development stages of Linux development: pre-version control, BitKeeper, and Git. During the pre-version control stage, we
 use each of the releases of Linux as a snapshot of its development.
@@ -47,14 +47,14 @@ int main(void) {
 
 按照如下步骤，使用 `diff` 和 `patch` 来了解源代码版本的差异：
 
-1. 为 `hello.c` 复制一个副本
+1、 为 `hello.c` 复制一个副本
 
 [source, java]
 ---
 $ cp cello.c cello.c.orig
 ---
 
-2. 修改 `hello.c` 文件为：
+2、 修改 `hello.c` 文件为：
 [source, java]
 ---
 #include <stdio.h>
@@ -64,7 +64,7 @@ int main(void) {
 }
 ---
 
-3. 使用 `diff` 来生成差异的文本，
+3、 使用 `diff` 来生成差异的文本，
 [source,java]
 % diff -Naur hello.c.orig hello.c
 --- hello.c.orig	2020-09-14 13:34:20.000000000 +0800
@@ -78,7 +78,7 @@ int main(void) {
  }
 ---
 
-4. 重定向到文本文件，并以后缀 `.patch` 为命名：
+4、 重定向到文本文件，并以后缀 `.patch` 为命名：
 
 [source,java]
 ---
@@ -95,7 +95,7 @@ int main(void) {
 }
 ---
 
-5. 生成 patch 之后，我们就可以换一台机器，可以预想的场景就是，已经将 `hello.c` 分享给来其他人，现在也将这个patch发送给对方，让对方能够生成新的文件，以和我们保持一致。
+5、 生成 patch 之后，我们就可以换一台机器，可以预想的场景就是，已经将 `hello.c` 分享给来其他人，现在也将这个patch发送给对方，让对方能够生成新的文件，以和我们保持一致。
 
 [source,java]
 
@@ -103,7 +103,7 @@ int main(void) {
 $ cp cello.c.orig cello.c
 ---
 
-6. 使用程序 `patch` 将差异修改到源文件。
+6、 使用程序 `patch` 将差异修改到源文件。
 
 [source,java]
 
@@ -118,7 +118,7 @@ int main(void) {
 }
 ---
 
-7. 编译、执行即可
+7、 编译、执行即可
 
 [source,java]
 
@@ -130,7 +130,7 @@ Hello World from my very first patch!
 
 这就是差异比较，然后合并的最基础的、最本质的原理所在，现代化的版本控制系统如Git、SVN 等都自带这两个程序，我们后续会进一步的给大家做介绍。
 
-==== 参考资料
+=== 参考资料
 
 1. https://en.wikipedia.org/wiki/Diff
 2. https://rpm-packaging-guide.github.io/#checking-cello-spec-file
