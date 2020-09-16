@@ -41,7 +41,11 @@ $ git commit -s -m 'add new file.'
 $ git push origin draft
 ---
 
+> Git is “expressly designed to make you feel less intelligent than you thought you were.”
+>      -- Andrew Morton
+
 
 === 参考资料
 
 1. https://git-scm.com/book/zh/v2[Pro Git 中文版]
+2. https://www.linuxfoundation.org/blog/2015/04/10-years-of-git-an-interview-with-git-creator-linus-torvalds/[10 Years of Git: An Interview with Git Creator Linus Torvalds]
