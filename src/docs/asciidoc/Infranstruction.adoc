@@ -77,7 +77,7 @@ include::vcs/git-introduction.adoc[]
 
 	- 网站工具
 
-  一、SEO （搜索引擎优化）
+一、SEO （搜索引擎优化）
 
 
 
@@ -89,17 +89,38 @@ include::vcs/git-introduction.adoc[]
 
 == 持续集成系统
 
-	- 持续集成功能与意义
+=== 持续集成功能与意义
 
-	- Jenkins集成
+=== Jenkins集成
 
-	- Travis，Github Actions
+=== Travis，Github Actions 在线服务
+
+随着web的发展，越来越多的服务可以通过友好的API来进行实现，相比于 Jenkins 部署本地的服务，对于很多项目其实是没有必要的，‘随需随用’、毋需维护基础设施成本、和GitHub等开放式开发平台无缝集成，为什么要拒绝了呢？下面我们就以两个实例为说明持续集成的在线服务。
+
+==== Travis
+
+
+
+==== GitHub Action
+
+
 
 == 问题追踪系统
 
-	- 问题追踪的功能
+=== 问题追踪的功能
 
-	- 常见的问题追踪系统的使用
+=== 常见的问题追踪系统的使用
+
+==== Bugzilla
+
+==== Jira
+
+
+==== GitHub Issue
+
+
+==== Trac issue
+
 
 == 现代开源项目开发集大成者 GitHub 平台介绍
 

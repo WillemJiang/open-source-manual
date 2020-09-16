@@ -51,6 +51,8 @@ url is changed: [https://github.com/chloerei/asciidoctor-pdf-cjk-kai_gen_gothic/
 
 if you download manually, please put all ttf files to `/var/lib/gems/2.7.0/gems/asciidoctor-pdf-cjk-kai_gen_gothic-0.1.1/data/fonts`
 
+> the java way ,please go to https://github.com/asciidoctor/asciidoctor-maven-examples/blob/master/asciidoctor-pdf-cjk-example/pom.xml for more details.
+
 ## support more Chinese simplified fonts.
 
 you need download custom font first.
