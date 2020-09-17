@@ -19,3 +19,47 @@ Convert the AsciiDoc to HTML5 by invoking the `process-resources` goal (configur
  $ mvn
 
 Open the file _target/generated-docs/OpenSourceManual.html_ in your browser to see the generated HTML file.
+
+## output to pdf
+
+Asciidoc PDF need ruby gem env.
+
+```
+$sudo apt-get install ruby
+$ gem install asciidoctor-pdf
+$ cd src/docs/asciidoc
+$ asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font OpenSourceManual.adoc
+```
+
+fix chaos Chinese characters.
+
+```
+$ gem install asciidoctor-pdf-cjk-kai_gen_gothic
+$ asciidoctor-pdf-cjk-kai_gen_gothic-install  //download font ttf files, if not work, please download them manual.
+$ asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicCN OpenSourceManual.asc
+```
+
+maybe you need support download images from remote.
+
+```
+asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicCN -a allow-uri-read OpenSourceManual.adoc
+```
+
+change file `/var/lib/gems/2.7.0/gems/asciidoctor-pdf-cjk-kai_gen_gothic-0.1.1/exe/asciidoctor-pdf-cjk-kai_gen_gothic-install` fonts download url.
+
+url is changed: [https://github.com/chloerei/asciidoctor-pdf-cjk-kai_gen_gothic/releases/tag/v0.1.0-fonts](https://github.com/chloerei/asciidoctor-pdf-cjk-kai_gen_gothic/releases/tag/v0.1.0-fonts).
+
+if you download manually, please put all ttf files to `/var/lib/gems/2.7.0/gems/asciidoctor-pdf-cjk-kai_gen_gothic-0.1.1/data/fonts`
+
+> the java way ,please go to https://github.com/asciidoctor/asciidoctor-maven-examples/blob/master/asciidoctor-pdf-cjk-example/pom.xml for more details.
+
+## support more Chinese simplified fonts.
+
+you need download custom font first.
+
+
+
+
+go to [https://fonts.google.com/specimen/Noto+Sans+SC?subset=chinese-simplified#standard-styles](https://fonts.google.com/specimen/Noto+Sans+SC?subset=chinese-simplified#standard-styles)
+
+and download google Noto-Sans-SC  font to local.

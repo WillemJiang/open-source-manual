@@ -1,11 +1,9 @@
 
 > 本章将以举例的方式说明，一篇优质的贡献者指南应该有哪些内容，而且会举出一些业界典范。本文档大部分来源于 Nadia eghbal 所写就的 https://github.com/nayafia/contributing-template[贡献者指南模板] 并做了适当的补充。
 
-== 贡献者指南
+==== 介绍
 
-=== 介绍
-
-### 在此写一些友好的内容！
+===== 在此写一些友好的内容！
 
 > 首先，非常感谢你正在考虑为 Active Admin 进行贡献，没错，正是像你这样的人打造了 Active Admin 这么精良的工具。
 
@@ -13,13 +11,13 @@
 
 更多优秀的项目介绍说明，请参考 <<参考文档>> 中的[1]和[2]
 
-### 告诉人们为什么应该读向导
+===== 告诉人们为什么应该读向导
 
 >  了解向导的内容，有助于你和开发者的沟通，可以有效节省该开源项目的开发者管理和开发的宝贵时间。作为回报，他们会在回复你的issue、评估变更、以及完成你的 Pull Request 给予同样的尊重。
 
 内容来自 https://github.com/hoodiehq/hoodie/blob/master/CONTRIBUTING.md[Hoodie] 贡献者文档
 
-### 解释你期望的贡献类型
+===== 解释你期望的贡献类型
 
 保持开放的头脑！改进文档、bug 筛选、以及为任何有用处的贡献撰写教程，都会大大的减轻维护者的工作量。
 
@@ -27,7 +25,7 @@
 
 内容来自 https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md[Elasticsearch] 贡献者文档，更多优秀的解释贡献类型说明，请参考 [参考文档] 中的 <<3>> 和 <<4>>
 
-### 解释你不想看到的贡献类型（如果有的话）
+===== 解释你不想看到的贡献类型（如果有的话）
 
 再重复一遍，做这些工作可以大大的减轻维护者的工作量。如果有人忽略掉你的向导指南，并提交了一些你最不想看到的内容，那么这个时候你就可以正当的关闭它，并告诉ta你的规程。
 
@@ -35,9 +33,9 @@
 
 内容来自： https://github.com/pallets/flask/blob/master/CONTRIBUTING.rst[flask] 贡献者文档，更多优秀说明，请参考 <<5>> 和 <<6>>。
 
-=== 基本规则
+==== 基本规则
 
-### 设定期望的行为（你的和他们的）
+===== 设定期望的行为（你的和他们的）
 
 此处的信息不仅包括如何和他人沟通（彼此尊重、考虑对方等），也要包括技术上的责任（测试的重要性、项目依赖等），如果有行为准则的话，提示并将链接地址释出。
 
@@ -52,7 +50,7 @@
 
 内容来自： https://github.com/audreyr/cookiecutter/blob/master/CONTRIBUTING.rst[cookiecutter] 贡献者文档，更多优秀说明，请参考 <<7>> 和 <<8>>。
 
-== 针对初次贡献的说明
+==== 针对初次贡献的说明
 
 帮助刚刚接触到贵项目的新人，最佳之处就是了解他们哪里需要帮助。而这通常也是一个展示你项目是否适合新手的好时机。
 
@@ -65,7 +63,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 
 这就非常的清晰了，更多的优秀的关于针对首次贡献的说明，可参考：<<1>>、<<9>>
 
-=== 为从来都没有为开源贡献过的人添加资源链接
+==== 为从来都没有为开源贡献过的人添加资源链接
 
 这里有一些友好的教程或许有所帮助：
 
@@ -76,9 +74,9 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 
 以上内容是 https://github.com/facebook/react/blob/master/CONTRIBUTING.md#pull-requests[React] 项目所提供的额外资源。简直是良心共同体。
 
-== 贡献者入门指南
+==== 贡献者入门指南
 
-=== 给出如何提交贡献的快速路径
+===== 给出如何提交贡献的快速路径
 
 这部分的内容如何写取决于你自己，不过下面的内容最好是包含进来：
 
@@ -98,7 +96,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 
 以上是来自 http://requirejs.org/docs/contributing.html[requierjs] 贡献者指南的良好实例，另外有心的读者还可参阅 <<10>> 、 <<11>> 和 <<12>>。
 
-=== 如果您对小的或“明显的”修复有不同的流程，请让他们知道
+===== 如果您对小的或“明显的”修复有不同的流程，请让他们知道
 
 关于此方面， https://github.com/chef/chef/blob/master/CONTRIBUTING.md#chef-obvious-fix-policy[chef] 有着非常不错的描述
 
@@ -116,9 +114,9 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 
 另外也可参考 <<13>> 即Puppet 的做法。
 
-== 如何报告缺陷
+==== 如何报告缺陷
 
-=== 说明披露安全问题是的首要法则
+===== 说明披露安全问题是的首要法则
 
 至少，包括以下句子:
 
@@ -139,7 +137,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 
 https://github.com/travis-ci/travis-ci/blob/master/CONTRIBUTING.md[Travis-CI] 给了我们一个非常好的例子，另外 <<14>> 、<<15>> 也不错。
 
-=== 告诉你的贡献者如何撰写bug 报告
+===== 告诉你的贡献者如何撰写bug 报告
 
 你可以准备好一些模板，这样人们就可以复制-粘贴（呵呵，再次节省你的工作）。Go 语言给了我们非常不错的范例：
 
@@ -155,9 +153,9 @@ https://github.com/travis-ci/travis-ci/blob/master/CONTRIBUTING.md[Travis-CI] �
 
 更多bug报告经常的描述，可参考 <<14>> 和 <<16>>。
 
-== 如何为新的功能和改进提建议
+==== 如何为新的功能和改进提建议
 
-=== 如果有特定的 roadmap、目标、原则、开发方式等，分享到这里
+===== 如果有特定的 roadmap、目标、原则、开发方式等，分享到这里
 
 这些信息可以帮助到贡献者了解上下文，进而避免他们提出不符合项目需求的建议。（节省彼此的时间）
 
@@ -167,7 +165,7 @@ https://github.com/travis-ci/travis-ci/blob/master/CONTRIBUTING.md[Travis-CI] �
 
 https://github.com/expressjs/express#philosophy[Express.js] 这份原则声明就为我们提供了非常好的例子，<<10>> 做的也非常不错，供参考。
 
-=== 解释建议某个特性所需的过程
+===== 解释建议某个特性所需的过程
 
 如果是前后来回需要确认的话，那么这个解释就很必要了。询问他们功能的范围，仔细思考为什么这个功能是必须的，以及其将如何工作。
 
@@ -175,9 +173,9 @@ https://github.com/expressjs/express#philosophy[Express.js] 这份原则声明�
 
 来自 https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md#feature-requests[Elasticsearch] 的实例。更多精彩请参考 <<17>>、<<18>>。
 
-== 代码核对（review）流程
+==== 代码核对（review）流程
 
-=== 解释代码提交之后如何能够被接受的全过程
+===== 解释代码提交之后如何能够被接受的全过程
 
 谁来核对？在被接受之前需要谁的签名？贡献者希望在什么时候收到你的消息?贡献者如何获得提交访问(如果有的话)?
 
@@ -188,7 +186,7 @@ https://github.com/expressjs/express#philosophy[Express.js] 这份原则声明�
 https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md#submitting-changes[Puppet] 为我们提供了非常好的范例。另外也可参考 <<15>> 和 <<19>>。
 
 
-== 共同体（community）
+==== 共同体（community）
 
 如果你的项目除了 GitHub 之外还有其它的通道的话，一并在这里列出。还可以作者、维护者、亦或是贡献者都可以写上，或者是说明一下响应时间的期望。
 
@@ -196,23 +194,23 @@ https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md#submitting-chan
 
 https://github.com/cucumber/cucumber-ruby/blob/master/CONTRIBUTING.md#talking-with-other-devs[cucumber-ruby] 就是最好的例子。另外也可参考 <<20>> 和 <<21>>。
 
-== 可选：代码、commit 约定、以及标签约定
+===== 可选：代码、commit 约定、以及标签约定
 
 以下这些内容并非必须项，但是对于简化贡献的流程等内容会有所帮助的。
 
-=== 解释项目有特别的代码风格，如果有的话。
+===== 解释项目有特别的代码风格，如果有的话。
 
 可参考：<<22>> <<23>>
 
-=== 如果项目采用了一定的 commit 约定的话，请解释一番
+===== 如果项目采用了一定的 commit 约定的话，请解释一番
 
 可参考：<<24>> <<25>>
 
-=== 如果项目的 issue 采用了标签约定的话，请解释一番
+===== 如果项目的 issue 采用了标签约定的话，请解释一番
 
 可参考：<<26>> <<27>>
 
-==== [参考文档]
+====== [参考文档]
 
 [1].  http://read-the-docs.readthedocs.org/en/latest/contribute.html[Read The Docs] 贡献者文档
 

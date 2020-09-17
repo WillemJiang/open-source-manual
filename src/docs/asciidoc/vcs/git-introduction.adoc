@@ -2,8 +2,50 @@
 > the stupid content tracker
 >        git 的宣传语
 
+
+=== Git 的“八卦”
+
+在Youtube上有一个视频，是Linux 创始人 linus 在为Google的一次内部分享会上讲解Git，其中有一句话的表达特别让人印象深刻：**I Hate CVS**， 这也是我们在这章开头引用Linux29周年的报告的一句话，在2002年之前，Linus 都是使用patch这个程序来维护所有
+Linux的开发代码的。
+
+但是Linux 不是linus一个人的事情，在2002年，Linus在众多人的压力之下，选择了一个商业的版本控制系统，也就是我们在Kernel的历史上有三年是BitKeeper的原因所在。这也充分说明了Linus是有多么的痛恨集中式的版本控制系统，宁愿选择工具本身闭源也不要选择CVS、SVN
+等。所谓的分布式版本控制系统，就是没有集中式的中心版本库，每个人都工作在通过clone建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、commit、打tag、branch等均在本地完成，而毋需通过中央网络连接和请求。这样的话，每位在其本地的库都是
+完全属于自己的，再也不需要获得谁的许可才能操作。正是这样一个变化，再加上更友好的协作模式（版本库之间的pull、merge、cherrypick），从而让开源项目的参与有了前所未有的方便，也预示了更多的可能性。
+
+2005年，发生了一件颇有戏剧性的事件，反编译微软Windows 网络文件系统的Samba项目的作者 Andrew Tridgell 不知道因为什么将目光瞄准了 BitKeeper，欲将其进行逆向工程，进而像Samba那样访问windows 文件一样，开发一个能与BitKeeper交互的开源工具。但是
+这种情况是 BitMover，即BitKeeper所有者的商业公司不想看到的局面。他们要求收回为Linux kernel提供免费使用的授权。迫不得已、万般无奈之下，因为不想付费，再说了价钱也确实太高了点，Linus决定自己动手写一个分布式的版本控制系统，
+
+这个项目和历史上很多卓越的项目一样，充满了智慧与神奇：
+
+* 2005.4.3 Linus 开始开发Git
+* 2005.4.6 项目发布
+* 2005.4.7 Git 作为自身的版本控制工具
+* 2005.4.18 多分支合并功能实现
+* 2005.4.29 性能实现预期
+* 2005.6.16 Linux 2.6.12 全面采用Git
+* 2005.7.26 Linus 将Git 的开发和维护工作交接给Junio C Hamano
+
+嗯，你看的没错，三个多月的时间，成就了这个世界上目前来说最伟大的合作协同工具。
+
 === Git 的常见使用
 
+如果你不是专业的代码仓库维护者的话，或许像笔者这样，通常执行如下操作即可：
+
+[source,java]
+---
+$ git config --global user.email lijiansheng@ocselected.org user.name lijiansheng
+$ git clone https://github.com/WillemJiang/open-source-manual/
+change or add some files.
+$ git add
+$ git commit -s -m 'add new file.'
+$ git push origin draft
+---
+
+> Git is “expressly designed to make you feel less intelligent than you thought you were.”
+>      -- Andrew Morton
 
 
 === 参考资料
+
+1. https://git-scm.com/book/zh/v2[Pro Git 中文版]
+2. https://www.linuxfoundation.org/blog/2015/04/10-years-of-git-an-interview-with-git-creator-linus-torvalds/[10 Years of Git: An Interview with Git Creator Linus Torvalds]

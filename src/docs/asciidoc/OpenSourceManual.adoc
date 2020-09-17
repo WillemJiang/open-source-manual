@@ -26,7 +26,7 @@ ifndef::imagesdir[:imagesdir: images]
 :table-caption!:
 :example-caption!:
 :figure-caption!:
-:imagesdir: ../images
+:imagesdir: images
 :includedir: _includes
 :underscore: _
 :adp: AsciiDoc Python

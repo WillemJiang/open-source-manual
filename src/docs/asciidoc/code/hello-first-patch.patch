@@ -1,0 +1,10 @@
+--- hello.c.orig	2020-09-14 13:34:20.000000000 +0800
++++ hello.c	2020-09-14 13:34:50.000000000 +0800
+@@ -1,6 +1,6 @@
+ #include <stdio.h>
+ 
+ int main(void) {
+-    printf("Hello World\n");
++    printf("Hello World from my very first patch!\n");
+     return 0;
+ }
