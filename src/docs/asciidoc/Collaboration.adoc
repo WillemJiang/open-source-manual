@@ -24,8 +24,6 @@
 
 === 开源共同体中的作为个人的角色分类
 
-
-
 ==== 领袖
 
 在人类的历史上，从来就不曾缺失过哪些一心致力于自身对于事物的驾驭的追求与能力，古希腊戏剧《普罗米修斯》或者是罗马的建筑大师维特鲁威，在开源共同体中，也不乏这样的人，我们这里不妨列举几位：
@@ -149,8 +147,8 @@ GitHub 作为开发平台，凭借着简化的流程、更易分享代码、更�
 
 Launchpad 是颇为完善的软件开发协作平台，由知名Linux 发行版 Ubuntu 的母公司 http://canonical.com/[Canonical]发起和维护，提供了非常完善的功能：
 
-     *  Bug 跟踪系统
-     *  支持分布式版本控制系统 Bazaar 和Git
+     * Bug 跟踪系统
+     * 支持分布式版本控制系统 Bazaar 和Git
      * 支持在线 Code review
      * 邮件列表
      * 支持Ubuntu 包的构建和托管
@@ -170,7 +168,10 @@ Launchpad 是颇为完善的软件开发协作平台，由知名Linux 发行版 
 
 * http://www.gitlab.com[GitLab]
 
+GitLab 是由 GitLab Inc.开发，一款基于 Git 的集大成的软件开发平台。 另外，GitLab 且具有wiki以及在线编辑、issue跟踪功能、CI/CD 等功能。
+GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它由 Ruby 写成。后来，一部分用 Go 语言重写。截止 2018 年 5 月，该公司约有 290 名团队成员，以及 2000 多名开源贡献者。 GitLab 被 IBM，Sony，Jülich Research Center，NASA，Alibaba，Invincea，O’Reilly Media，Leibniz-Rechenzentrum (LRZ)，CERN，SpaceX 等组织使用。
 
+GitLab 从开始建造的哪天起就是走 GitHub 的模仿路线，且以GitHub 本身服务不开源为竞争策略，一路走来也赢得了很多私有化部署的口碑。GitLab 具备GitHub 的几乎所有功能。
 
 * https://www.gerritcodereview.com/[Gerrit]
 
@@ -190,6 +191,9 @@ image::https://source.android.com/images/workflow-0.png[]
 
 无独有偶，基于Linux 的发行版，GitHub 等简化开发流程等平台，也并不是理想之所。上面提及等Launchpad 即是 Ubuntu 根据自身的需求而量身定做的，其PPA项目即是这个平台的产物，那么我们来看看Fedora 发行版使用的代码托管平台。
 
+当然，Pagure需要和其它的平台进行配合，方能实现Fedora —— Linux 发行版的打造流程，如Bug 跟踪系统 https://bugzilla.redhat.com/[https://bugzilla.redhat.com/]、rpm 构建平台 https://koji.fedoraproject.org/koji/index[Dojo]、Git代码协作平台 https://src.fedoraproject.org/[src.fedoraproject.org]以及日常的邮件列表和IRC
+，以及最具特色的 https://fedoraproject.org/wiki/Fedora_Project_Wiki[Fedora Wiki系统]，共同构造出来的发行版开发平台。其中代码部分是上下游链接的关键所在。
+
 * https://trac.edgewall.org/wiki/TracInstall[Trac]
 
 Trac是一个为软件开发项目需要而集成了wiki和问题跟踪管理系统的应用平台。Trac以简单的方式建立了一个软件项目管理的web应用，以帮助开发人员更好地写出高质量的软件，并力求不影响团队现有的开发过程。
@@ -202,9 +206,26 @@ Trac允许在问题描述和提交信息中使用wiki标记创建链接，可以
 
 * http://www.gitee.com[Gitee]
 
-=== 总结
+GitEE 是OSChina 旗下的代码托管协作开发平台，类似于GitHub、GitLab 的定位，但是 Gitee 相对集成的现代 CI/CD、DevOps、以及第三方插件的功能弱一些，由于其定位在中国本土，所以和即时通信工具如微信之类的非透明内容集合的颇为紧密。
 
+Gitee 最初是基于 GitLab 开发，像绝大多数的 fork 项目一样，在不久之后就分道扬镳了，按照自身的理解、为满足客户的需求、对于技术的理解等有了不同的思考和行动。
 
+Gitee 针对个人开发者是比较友好的，完全免费，可以拥有私有仓库。
+
+=== 小结
+
+分布式带来的人类协作，从来没有像 Git 这样彻底解放了人类的限制，就软件开发这件重要的信息时代的生产力，完完全全的释放了！ 围绕 Git 的生产工具水涨船高，一路高歌猛进，不仅获得了几乎全世界所有的开发者的青睐，也赢得了资本、商人、创新者的关注。
+
+> 最终，我相信软件开源作为人类协作更加文明高效的方式，一定会是软件开发的未来，而对于开源的深刻理解，也终将会成为我们未来进一步去推动整个人类社会演化进程中最重要的基础认知。[10]
+>      --- 赵生宇，同济大学开源博士
+
+例如项目 https://www.hypertrons.io/#/zh-cn/[hypertrons]，就是试图将开源文化、制度等人类等思维认知的内容工具化，试图将开源共同体的最佳实践以技术和自动化的方式植入上述的这些平台，从而让开发者能够在潜移默化的过程中将下章所谈及的内容就做了，开发者可以专心到代码上，而毋需为这些事情操劳。
+类似的围绕Git协作平台的工具、人工智能、数据分析等创新正在不断被开发和激活。
+
+开放式开发平台的星火燎原之势，对于生产者来说是极度友好的，各种工具简直是魔法般的存在，可以说是伸手即来、挥手即去，这在十年前是无法想象的。十年前的软件，无论是开源还是闭源，基本上仍然受限于其它行业的工程和管理理论来治理整个项目，例如组织结构的设计、项目周期的制定、里程碑的想象等等，现在看来这些
+均是摸索路上的必要损耗。
+
+但是，这些平台之间的竞争，也成为了开发者们彼此隔绝的阴影，没有人能够在孤岛中实现自由，而这些平台的演变也成了开发者们至为关心的内容，此时仍然要借助世界的其它力量来制约这些平台之间的彼此孤立，甚至是恶性的竞争。当然，即使是最坏的情况，开发者仍然有选择的权力。
 
 == 开源社交礼仪
 
@@ -220,17 +241,19 @@ Trac允许在问题描述和提交信息中使用wiki标记创建链接，可以
 
 人类社会是复杂的，划分的边界也是五花八门，常见的有文化、国家、地域、城市、宗教、风俗、种族、民族等等，如果是讲究差别的话，那么就根本不用谈合作，什么基于互联网的全球化简直是不可能的事，但是我们终究是人类，再大的差别也能找到共同的元素，尤其是良善的内容。
 
-1. 使用开源共同体所倡导的语言
+==== 使用开源共同体所倡导的语言
 
-2. 保持开放、透明
+==== 保持开放、透明
 
-3. 保持友好
+==== 保持友好
 
-4. 尽可能的说明问题的上下文
+==== 尽可能的说明问题的上下文
 
-5. 学会提问
+==== 学会提问
 
-6. 兼容并包
+include::how-to-ask.adoc[]
+
+==== 兼容并包
 
 
 === 开源共同体中不可以做什么？
@@ -248,8 +271,6 @@ Trac允许在问题描述和提交信息中使用wiki标记创建链接，可以
 https://www.djangoproject.com/conduct/[Django行为守则]和 http://citizencodeofconduct.org/[Citizen行为守则]都是非常好的行为守则。
 
 请将 CODE_OF_CONDUCT 文件放在你们项目的根目录，并在README中附上其链接，这样对你们的社区是可见的。
-
-
 
 == Community (共同体)治理模型
 
@@ -348,3 +369,5 @@ include::maintainer.adoc[]
 6. 《Git权威指南》，蒋鑫，机械工业出版社华章公司，ISBN: 9787111349679，2011-6-27
 7. https://blog.ffwll.ch/2017/08/github-why-cant-host-the-kernel.html[Why Github can't host the Linux Kernel Community]
 8. https://www.linuxfoundation.org/blog/2015/04/10-years-of-git-an-interview-with-git-creator-linus-torvalds/[10 Years of Git: An Interview with Git Creator Linus Torvalds]
+9. https://docs.fedoraproject.org/en-US/packaging-guidelines/[Fedora Packaging Guidelines]
+10. https://mp.weixin.qq.com/s/e2gr8rxKUDncQxoBjz3BBQ[开源点亮未来]， 最后访问时间：2020.9.17
