@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Git 的常见使用</title>
+<title>Git 的“八卦”</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -442,8 +442,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel2">
-<li><a href="#git-的常见使用">1. Git 的常见使用</a></li>
-<li><a href="#参考资料">2. 参考资料</a></li>
+<li><a href="#git-的八卦">1. Git 的“八卦”</a></li>
+<li><a href="#git-的常见使用">2. Git 的常见使用</a></li>
+<li><a href="#参考资料">3. 参考资料</a></li>
 </ul>
 </div>
 </div>
@@ -457,18 +458,185 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </blockquote>
 </div>
 <div class="sect2">
-<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a>1. Git 的常见使用</h3>
-
+<h3 id="git-的八卦"><a class="anchor" href="#git-的八卦"></a>1. Git 的“八卦”</h3>
+<div class="paragraph">
+<p>在Youtube上有一个视频，是Linux 创始人 linus 在为Google的一次内部分享会上讲解Git，其中有一句话的表达特别让人印象深刻：<strong>I Hate CVS</strong>， 这也是我们在这章开头引用Linux29周年的报告的一句话，在2002年之前，Linus 都是使用patch这个程序来维护所有
+Linux的开发代码的。</p>
+</div>
+<div class="paragraph">
+<p>但是Linux 不是linus一个人的事情，在2002年，Linus在众多人的压力之下，选择了一个商业的版本控制系统，也就是我们在Kernel的历史上有三年是BitKeeper的原因所在。这也充分说明了Linus是有多么的痛恨集中式的版本控制系统，宁愿选择工具本身闭源也不要选择CVS、SVN
+等。所谓的分布式版本控制系统，就是没有集中式的中心版本库，每个人都工作在通过clone建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、commit、打tag、branch等均在本地完成，而毋需通过中央网络连接和请求。这样的话，每位在其本地的库都是
+完全属于自己的，再也不需要获得谁的许可才能操作。正是这样一个变化，再加上更友好的协作模式（版本库之间的pull、merge、cherrypick），从而让开源项目的参与有了前所未有的方便，也预示了更多的可能性。</p>
+</div>
+<div class="paragraph">
+<p>2005年，发生了一件颇有戏剧性的事件，反编译微软Windows 网络文件系统的Samba项目的作者 Andrew Tridgell 不知道因为什么将目光瞄准了 BitKeeper，欲将其进行逆向工程，进而像Samba那样访问windows 文件一样，开发一个能与BitKeeper交互的开源工具。但是
+这种情况是 BitMover，即BitKeeper所有者的商业公司不想看到的局面。他们要求收回为Linux kernel提供免费使用的授权。迫不得已、万般无奈之下，因为不想付费，再说了价钱也确实太高了点，Linus决定自己动手写一个分布式的版本控制系统，</p>
+</div>
+<div class="paragraph">
+<p>这个项目和历史上很多卓越的项目一样，充满了智慧与神奇：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2005.4.3 Linus 开始开发Git</p>
+</li>
+<li>
+<p>2005.4.6 项目发布</p>
+</li>
+<li>
+<p>2005.4.7 Git 作为自身的版本控制工具</p>
+</li>
+<li>
+<p>2005.4.18 多分支合并功能实现</p>
+</li>
+<li>
+<p>2005.4.29 性能实现预期</p>
+</li>
+<li>
+<p>2005.6.16 Linux 2.6.12 全面采用Git</p>
+</li>
+<li>
+<p>2005.7.26 Linus 将Git 的开发和维护工作交接给Junio C Hamano</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>嗯，你看的没错，三个多月的时间，成就了这个世界上目前来说最伟大的合作协同工具。</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="参考资料"><a class="anchor" href="#参考资料"></a>2. 参考资料</h3>
-
+<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a>2. Git 的常见使用</h3>
+<div class="paragraph">
+<p>如果你不是专业的代码仓库维护者的话，或许像笔者这样，通常执行如下操作即可：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">$</span> git config --global user.email lijiansheng<span class="annotation">@ocselected</span>.org user.name lijiansheng
+<span class="error">$</span> git clone https:<span class="comment">//github.com/WillemJiang/open-source-manual/</span>
+change or add some files.
+<span class="error">$</span> git add
+<span class="error">$</span> git commit -s -m <span class="string"><span class="delimiter">'</span><span class="content">add new file.</span><span class="delimiter">'</span></span>
+<span class="error">$</span> git push origin draft
+---</code></pre>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Git is “expressly designed to make you feel less intelligent than you thought you were.”
+    &#8201;&#8212;&#8201;Andrew Morton</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="参考资料"><a class="anchor" href="#参考资料"></a>3. 参考资料</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://git-scm.com/book/zh/v2">Pro Git 中文版</a></p>
+</li>
+<li>
+<p><a href="https://www.linuxfoundation.org/blog/2015/04/10-years-of-git-an-interview-with-git-creator-linus-torvalds/">10 Years of Git: An Interview with Git Creator Linus Torvalds</a></p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-11 09:21:32 UTC
+Last updated 2020-09-17 12:04:26 UTC
 </div>
 </div>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
 </body>
 </html>

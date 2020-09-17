@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Untitled</title>
+<title>为什么会有差异？</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,12 +437,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel2">
+<li><a href="#为什么会有差异">1. 为什么会有差异？</a></li>
+<li><a href="#diff-和-patch">2. diff 和 patch</a></li>
+<li><a href="#参考资料">3. 参考资料</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div class="paragraph">
-<p>在 <code>git</code> 的官方的书籍中如此定义版本控制：<strong>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</strong> 正如我上面所讲的故事一样，我们的每一个人都需要版本控制，无论你做什么，如果你是位图形或网页设计师，可能会需要保存某一幅图片或页面布局文件的所有修订版本（这或许是你非常渴望拥有的功能），采用版本控制系统（VCS）是个明智的选择。 有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。 使用版本控制系统通常还意味着，就算你乱来一气把整个项目中的文件改的改删的删，你也照样可以轻松恢复到原先的样子。 但额外增加的工作量却微乎其微。</p>
+<p>在 <code>git</code> 的官方的书籍中如此定义版本控制：<strong>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</strong></p>
+</div>
+<div class="paragraph">
+<p>我们的每一个人都需要版本控制，无论你做什么，如果你是位图形或网页设计师，可能会需要保存某一幅图片或页面布局文件的所有修订版本（这或许是你非常渴望拥有的功能），采用版本控制系统（VCS）是个明智的选择。 有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。 使用版本控制系统通常还意味着，就算你乱来一气把整个项目中的文件改的改删的删，你也照样可以轻松恢复到原先的样子。 但额外增加的工作量却微乎其微。</p>
 </div>
 <div class="paragraph">
 <p>假设有这么一位喜欢厨艺的爱好者，最近喜欢上的烤面包，光是看说明书总是会出错，也是将各种因素来回的搭配，并记录，并随时进行重新的编排和组合。</p>
@@ -463,11 +474,274 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ol>
 </div>
+<div class="sect2">
+<h3 id="为什么会有差异"><a class="anchor" href="#为什么会有差异"></a>1. 为什么会有差异？</h3>
+<div class="paragraph">
+<p>在软件开发过程中，大多涉及到多人开发和协作，同一份文件，在不同的开发者的工作台会出现差别，即使是单独的个人，在不同的时间，也会产生不同的版本，日积月累，差异、改进、删除等等都会发生，换句话说：<strong>为了应对这种变化，或者是记录变化本身，我们需要记录差异。</strong></p>
+</div>
+<div class="paragraph">
+<p>记录差异在人类的发展史上有着非常悠久的良好传统，可以说，差异产生知识，因为可以比较不同，在能够知道变化，在面临熵增的世界，寻找有序。</p>
+</div>
+<div class="paragraph">
+<p>差异，是以时空为根本前提的，不同的空间在相同的时间可以对比，同一空间在不同时间也可以进行对比。以代码开发为例，在多人参与的情况下，错综复杂，二者都是可以发生的。</p>
+</div>
+<div class="paragraph">
+<p>在理解了差异之后，我们就可以说明版本控制的意义了：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>用于记录和跟踪差异，以便于协作、合并、回退、整合源代码文件。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="diff-和-patch"><a class="anchor" href="#diff-和-patch"></a>2. diff 和 patch</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>we have been able to connect the three different development stages of Linux development: pre-version control, BitKeeper, and Git. During the pre-version control stage, we
+use each of the releases of Linux as a snapshot of its development.
+        ---- 2020 Linux Kernel History Report</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><code>diff</code> 是在 UNIX 系统上的一个工具程序，它可以比较两个文件之间的不同。通常它被用来比较同一个文件，在不同版本间的差异。它可以产生一个扩展名为.diff或.patch的文件，这个文件可以被另一个工具程序 <code>patch</code> 来使用。</p>
+</div>
+<div class="paragraph">
+<p>下面我们就以一个实例说明一下这两个程序的使用，这其实是最好的解释和说明。</p>
+</div>
+<div class="paragraph">
+<p>现在我们有一个 <code>hello.c</code> 的C 语言经典入门的程序：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>按照如下步骤，使用 <code>diff</code> 和 <code>patch</code> 来了解源代码版本的差异：</p>
+</div>
+<div class="paragraph">
+<p>1、 为 <code>hello.c</code> 复制一个副本</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">$</span> cp cello.c cello.c.orig
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>2、 修改 <code>hello.c</code> 文件为：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3、 使用 <code>diff</code> 来生成差异的文本，</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">% diff -Naur hello.c.orig hello.c
+--- hello.c.orig        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">20.000000000</span> +<span class="integer">0800</span>
++++ hello.c        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">50.000000000</span> +<span class="integer">0800</span>
+<span class="error">@</span><span class="error">@</span> -<span class="integer">1</span>,<span class="integer">6</span> +<span class="integer">1</span>,<span class="integer">6</span> <span class="error">@</span><span class="error">@</span>
+ <span class="error">#</span>include &lt;stdio.h&gt;
+ <span class="type">int</span> main(<span class="type">void</span>) {
+-    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
++    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+     <span class="keyword">return</span> <span class="integer">0</span>;
+ }
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>4、 重定向到文本文件，并以后缀 <code>.patch</code> 为命名：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+% diff -Naur hello.c.orig hello.c &gt; hello-first-patch.patch
+lee<span class="annotation">@lees</span>-MacBook-Pro code % cat hello-first-patch.patch
+--- hello.c.orig        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">20.000000000</span> +<span class="integer">0800</span>
++++ hello.c        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">50.000000000</span> +<span class="integer">0800</span>
+<span class="error">@</span><span class="error">@</span> -<span class="integer">1</span>,<span class="integer">6</span> +<span class="integer">1</span>,<span class="integer">6</span> <span class="error">@</span><span class="error">@</span>
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+-    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
++    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>5、 生成 patch 之后，我们就可以换一台机器，可以预想的场景就是，已经将 <code>hello.c</code> 分享给来其他人，现在也将这个patch发送给对方，让对方能够生成新的文件，以和我们保持一致。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">$</span> cp cello.c.orig cello.c
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>6、 使用程序 <code>patch</code> 将差异修改到源文件。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+% patch &lt; hello-first-patch.patch
+patching file hello.c
+lee<span class="annotation">@lees</span>-MacBook-Pro code % cat hello.c
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>7、 编译、执行即可</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+% gcc -g -o hello hello.c
+% ./hello
+Hello World from my very first patch!
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这就是差异比较，然后合并的最基础的、最本质的原理所在，现代化的版本控制系统如Git、SVN 等都自带这两个程序，我们后续会进一步的给大家做介绍。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="参考资料"><a class="anchor" href="#参考资料"></a>3. 参考资料</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Diff" class="bare">https://en.wikipedia.org/wiki/Diff</a></p>
+</li>
+<li>
+<p><a href="https://rpm-packaging-guide.github.io/#checking-cello-spec-file" class="bare">https://rpm-packaging-guide.github.io/#checking-cello-spec-file</a></p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-11 09:21:32 UTC
+Last updated 2020-09-17 12:04:26 UTC
 </div>
 </div>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
 </body>
 </html>

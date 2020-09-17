@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>名词解释</title>
+<title>免责申明</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,100 +439,441 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>名词解释</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#开源-open-source">1. 开源 （Open Source）</a></li>
-<li><a href="#开源软件open-source-software">2. 开源软件（Open Source Software）</a></li>
-<li><a href="#开源软件共同体-open-source-software-community">3. 开源软件共同体 （Open Source software community）</a></li>
-<li><a href="#开源软件基金会-open-source-software-foundation">4. 开源软件基金会（ Open Source software Foundation）</a></li>
+<ul class="sectlevel2">
+<li><a href="#免责申明">1. 免责申明</a></li>
+<li><a href="#身为一名维护者意味着什么">2. 身为一名维护者意味着什么？</a></li>
+<li><a href="#将流程撰文档化">3. 将流程撰文档化</a></li>
+<li><a href="#写下你的项目的发展方向">4. 写下你的项目的发展方向</a></li>
+<li><a href="#和大家交流你自己对项目的期望">5. 和大家交流你自己对项目的期望</a></li>
+<li><a href="#保证所有的交流都是公开进行的">6. 保证所有的交流都是公开进行的</a></li>
+<li><a href="#学会拒绝他人">7. 学会拒绝他人</a></li>
+<li><a href="#保持友好沟通">8. 保持友好沟通</a></li>
+<li><a href="#保持主动">9. 保持主动</a></li>
+<li><a href="#成为导师">10. 成为导师</a></li>
+<li><a href="#有效利用社区">11. 有效利用社区</a></li>
+<li><a href="#分担工作量">12. 分担工作量</a></li>
+<li><a href="#让别人尝试他们自己想要的解决方案">13. 让别人尝试他们自己想要的解决方案</a></li>
+<li><a href="#使用机器人">14. 使用机器人</a></li>
+<li><a href="#引进测试和别的检查来改善你的代码质量">15. 引进测试和别的检查来改善你的代码质量</a></li>
+<li><a href="#用工具来自动化日常的维护工作">16. 用工具来自动化日常的维护工作</a></li>
+<li><a href="#不干了也没关系">17. 不干了也没关系</a></li>
+<li><a href="#首先照顾好自己">18. 首先照顾好自己！</a></li>
+<li><a href="#参考资料">19. 参考资料</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="开源-open-source"><a class="anchor" href="#开源-open-source"></a>1. 开源 （Open Source）</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="免责申明"><a class="anchor" href="#免责申明"></a>1. 免责申明</h3>
 <div class="paragraph">
-<p>开源隶属于开放这个大的范畴，意指一款产品或制品，其不仅提供最终可用的实体，还应该提供源代码、设计文档、交流过程等，最初的意思来自于[#开源软件]的模式，随着开源软件运动的逐步胜利
-和崛起，开源这个词汇的范畴也在扩大，在社会中的其它行业也有了较为广泛的应用，如开放式协作、开放内容、开放设计等。</p>
+<p>我们在市面上经常会看到，《如何做一个好爸爸/妈妈》、《十招教会你做一个好父亲/母亲》之类的，笔者并不知道这些书能不能帮到那些可怜的父母亲们，但大致翻翻他们书里的内容，觉得基本上说的都是有用的废话。</p>
 </div>
 <div class="paragraph">
-<p>在中国本土，开源还有另外的一个意思：“开源节流”，通常指的是让自己的收入有尽可能的多样化，与非软件行业的人交流的时候要特别的注意。</p>
+<p>其实我们这个章节也差不多类似，身为项目的维护者，才是真正热爱自己项目的人，也是更愿意想尽一切办法让项目茁壮成长的人，他人最多是对他们经验的总结。以下就是为数不多的开源项目维护者们所分享的所谓的他们自身的一些最佳实践。</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="开源软件open-source-software"><a class="anchor" href="#开源软件open-source-software"></a>2. 开源软件（Open Source Software）</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="身为一名维护者意味着什么"><a class="anchor" href="#身为一名维护者意味着什么"></a>2. 身为一名维护者意味着什么？</h3>
 <div class="paragraph">
-<p>我们这次选择了两种解释风格，一种是正式的、举世公认的定义，即开放源代码促进会（Open Source Initative)的定义：</p>
+<p>作为一名维护者有什么显著的变化了呢？这里给大家举一个例子：来自 <a href="http://apisix.apache.org/">APISIX</a>的创始人—— <a href="https://github.com/moonming">温铭</a>在2018～2020三年的 GitHub Profile 变化即是最好的说明：</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="./wenming-github-profile-2018.png" alt="wenming github profile 2018">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>温铭在2018年主要还是提交issue和代码</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./wenming-github-profile-2019.png" alt="wenming github profile 2019">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>2019年则主要集中精力做合并</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./wenming-github-profile-2020.png" alt="wenming github profile 2020">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>2020年的工作则基本就是在review他人的代码了</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果你维护着一个非常流行的项目，而你偶然意识到自己写代码的时间变少，而花费在回答 issue 的时间越来越多。恭喜你，你已经是进入维护者行列了。</p>
+</div>
+<div class="paragraph">
+<p>在项目的起步阶段，你会不断尝试着实现自己的新想法，也能够基于自己想要的作出决定。随着项目逐渐的开始流行，就会发现你的大部分时间都花在了与用户、贡献者打交道上。</p>
+</div>
+<div class="paragraph">
+<p>维护一个项目需要的不仅仅是写代码的能力。有些时候会有一个你意想不到的的事情要应付，但是这对一个项目的成长也很重要（相对于代码来说），我们收集了一些小技巧来让你的维护工作变得稍轻松些，这些技巧，涉及范围颇广，从写文档到管理社区都有所涉猎。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="将流程撰文档化"><a class="anchor" href="#将流程撰文档化"></a>3. 将流程撰文档化</h3>
+<div class="paragraph">
+<p>对于一个项目的维护者来说写文档是最重要的事情之一。</p>
+</div>
+<div class="paragraph">
+<p>文档不仅说清楚了你的想法是什么，而且还帮助别人在问问题之前理解你需要什么和接下在希望做什么。</p>
+</div>
+<div class="paragraph">
+<p>将一些东西写下来，当遇到不符合项目预期的内容时，可以轻松的拒绝。同时，它对于人们的参与提供了指导。最有意思的是，撰写文档的人可能永远也不知道是谁读了他写的文档，或者是谁是项目的使用者。</p>
+</div>
+<div class="paragraph">
+<p>即使你不想长篇大论，对要点略说一二也比啥都不写要好。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="写下你的项目的发展方向"><a class="anchor" href="#写下你的项目的发展方向"></a>4. 写下你的项目的发展方向</h3>
+<div class="paragraph">
+<p>请在项目启动时就写下项目目标，并将之加到 README 文件中， 或者创建一个单独的 <strong>VISION</strong> 文件，其它的内容，如项目管理路线图，也可以帮助人们了解到更多的信息，最好是也把他们公开发布。</p>
+</div>
+<div class="paragraph">
+<p>拥有一个清晰的愿景，且明确的使用文档来将之公开，可以保证项目的动向不会跑偏，同时也能保障不会因为其他的贡献者增加的奇怪的需求而使项目变质。</p>
+</div>
+<div class="paragraph">
+<p>比如，@lord 发现项目有一个明确的愿景能够帮助他决定哪个 PR 值得花时间。作为一个维护者的新手，他甚至还后悔当他接到第一个关于 <a href="https://github.com/lord/slate">slate</a> PR的时候没有坚持项目本身的原则。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="和大家交流你自己对项目的期望"><a class="anchor" href="#和大家交流你自己对项目的期望"></a>5. 和大家交流你自己对项目的期望</h3>
+<div class="paragraph">
+<p>制定规则是很伤脑筋的。有时候你可能觉得你像是在限制别人的行为，或者说把好玩的东西都搞没了。</p>
+</div>
+<div class="paragraph">
+<p>制定了规则，然后严格执行，当然啦，好的规则会让维护者更轻松。它可以把维护者从做自己不愿意做的事情中解脱出来。</p>
+</div>
+<div class="paragraph">
+<p>大多数知道你项目的人对你或者你的处境都是一无所知。他们可能会觉得你做这个项目是有钱拿的，特别是你的项目是他们经常用的而且某种程度上有点依赖的时候。其实你只是偶尔会在项目上花很多时间，你可能现在正在忙着安置新工作或者照顾刚出生的儿子。</p>
+</div>
+<div class="paragraph">
+<p>这些都是再正常不过的事情！所以确保让别人也知道这些。</p>
+</div>
+<div class="paragraph">
+<p>如果你维护某个项目是利用空闲时间或者完全自愿的，能花多少时间就花多少时间。而不是你觉得项目需要你花多少时间或者别人想让你花多少时间。</p>
+</div>
+<div class="paragraph">
+<p>这里是一些值得你写进项目里的东西：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>怎样的贡献才会被复查和接受(<em>需要测试吗？提Issue有模板吗？</em>)</p>
+</li>
+<li>
+<p>你本人会接受什么类型的贡献？（<em>你是不是只希望在某些部分的代码上需要别人的帮助？</em>）</p>
+</li>
+<li>
+<p>在合适的时候跟进项目（比如说 <em>如果你在七天之内没有收到 maintainer 的回复，而且依旧没有其它任何的响应，那么就直接@Ta。</em>）</p>
+</li>
+<li>
+<p>你会在这个项目上花多少时间（比如说 "<em>我们每星期只会在这个项目上花5个小时</em>"）</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/jekyll/jekyll/tree/master/docs">Jekyll</a>、https://github.com/CocoaPods/CocoaPods/wiki/Communication-&amp;-Design-Rules[CocoaPods]、以及 <a href="https://github.com/Homebrew/brew/blob/bbed7246bc5c5b7acb8c1d427d10b43e090dfd39/docs/Maintainers-Avoiding-Burnout.md">Homebrew</a> 均是为维护者和贡献者提供了很好的基本规则的项目，都乃业内典范。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="保证所有的交流都是公开进行的"><a class="anchor" href="#保证所有的交流都是公开进行的"></a>6. 保证所有的交流都是公开进行的</h3>
+<div class="paragraph">
+<p>不管是什么时候，保证你的交流是在公共的场合（就是大家都能看到的地方）。如果有人尝试和你私聊，哪怕是讨论一个新的需求或者功能，请礼貌的引导Ta到公共的交流场合，比如邮件列表或者iuuse tracker。</p>
+</div>
+<div class="paragraph">
+<p>在此特别提醒的一点就是不要使用诸如微信（WeChat）、钉钉之类的工具，这类工具的特点就是无法做到所有的事情在公开的场合下进行。除了无法检索之外，对于新加入的新人而言极为的难堪，因为ta查不到任何的信息。</p>
+</div>
+<div class="paragraph">
+<p>如果你和别的维护者面基了，或者在私下做了一个很重要的决定，把这些信息告诉大家，即便哪怕只是把你的笔记发上去。</p>
+</div>
+<div class="paragraph">
+<p>这样的话，每个新加入到社区的人和已经呆了多年的人是站在同一起跑线上的，因为了解到的信息是一致的，即提供平等的沟通机会。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="学会拒绝他人"><a class="anchor" href="#学会拒绝他人"></a>7. 学会拒绝他人</h3>
+<div class="paragraph">
+<p>把所有的事情都写下来，当然，对于你个人来说，执行自己制定的规则的时候客观分析实际情况也有帮助。</p>
+</div>
+<div class="paragraph">
+<p>拒绝别人确实不是很好玩，但是也要表现出专业程度，比如使用“你的贡献不符合这个项目的标准”而不是“我不喜欢你的贡献”这样显得粗鲁的语句。</p>
+</div>
+<div class="paragraph">
+<p>作为一个维护者，在很多情况下，你都要拒绝别人，例如：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>不符合项目规则的PR</p>
+</li>
+<li>
+<p>某个人脱离了讨论的重点</p>
+</li>
+<li>
+<p>给别人做无关紧要的工作</p>
+</li>
+<li>
+<p>等等</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="保持友好沟通"><a class="anchor" href="#保持友好沟通"></a>8. 保持友好沟通</h3>
+<div class="paragraph">
+<p>你要学会拒绝的最重要的地方就是 issue 和 PR 请求。作为一个项目的维护者, 你会不可避免的收到你不想接受的建议。</p>
+</div>
+<div class="paragraph">
+<p>可能某个贡献并不在项目的范围或者与你的期望不合。又或者是可能想法很好，但是实现的却很烂。</p>
+</div>
+<div class="paragraph">
+<p>不管是什么原因，在处理这些不符合项目标准的贡献的时候都要婉转。</p>
+</div>
+<div class="paragraph">
+<p>如果你收到了你不想接受的贡献，你的第一反应可能是忽略或者假装没看到。但是这么做会严重伤害到别人而且可能会让你社区里的其他贡献者失去动力。</p>
+</div>
+<div class="paragraph">
+<p>别因为自己感到内疚或者想做一个好人就把你不想接受的贡献继续保留。随着时间的流逝，这些你没有回答的 issue 和 PR 会让你觉得越来越不爽。</p>
+</div>
+<div class="paragraph">
+<p>更好的方式是马上关掉你不想接受的贡献。如果你的项目已经饱受积压的 issue 的折磨，@steveklabnik 可以给你点儿建议，http://words.steveklabnik.com/how-to-be-an-open-source-gardener[如何高效的解决 issue]。</p>
+</div>
+<div class="paragraph">
+<p>第二点，忽略别人的贡献等于是在社区传递了一个负面的信号。让人感觉提交一个贡献是蛮恐惧的事情，尤其是对于刚加入的新手来说。即使你不接受他们的贡献，告诉他们为什么，然后致谢。这会让人觉得更舒服。</p>
+</div>
+<div class="paragraph">
+<p>如果你不想接受某个贡献：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>感谢他们</strong> 的贡献</p>
+</li>
+<li>
+<p><strong>解释为什么他们的贡献不符合</strong> 项目的需求范围，然后提供清楚的建议以供改善，如果你可以的话，和蔼一点，但同时也要讲原则。</p>
+</li>
+<li>
+<p><strong>引用相关的文档，</strong> 如果你有的话。如果你发现你反复收到你不想接受的贡献，把他们加到文档以免你在将来重复叙述。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>你不需要用超过1-2两句话来回复。比如，当一个 <a href="https://github.com/celery/celery/">celery</a> 的用户报告了一个 window 相关的错误，@berkerpeksag 是https://github.com/celery/celery/issues/3383[如此这么] 回复的</p>
+</div>
+<div class="paragraph">
+<p>![celery screenshot](<a href="https://opensource.guide/assets/images/best-practices/celery.png" class="bare">https://opensource.guide/assets/images/best-practices/celery.png</a>)</p>
+</div>
+<div class="paragraph">
+<p>如果你感觉拒绝别人很不好意思，也很正常，其实很多人都是这样。就像 @jessfraz <a href="https://blog.jessfraz.com/post/the-art-of-closing/">说到的</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>我和很多来自诸如 Mesos, Kubernetes, Chromium等不同开源项目的维护者交流过，他们都异口同声的觉得做一个维护者最难的就是拒绝你不想要的补丁。</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>对于不想接受别人的贡献这件事不要感到愧疚。如 [@shykes](<a href="https://github.com/shykes)">所说</a>(<a href="https://twitter.com/solomonstre/status/715277134978113536)开源的第一原则就是" class="bare">https://twitter.com/solomonstre/status/715277134978113536)开源的第一原则就是</a> <strong>"拒绝是暂时的，接受是永远的。”</strong> 当然啦，认同别人的热情还是一件好事，拒绝他的贡献和拒绝他这个人是两码事。（要做到对事不对人。）</p>
+</div>
+<div class="paragraph">
+<p>最后，如果一个贡献不是够好，你没任何义务接受它。对那些想对你的项目做贡献的人保持和蔼和积极的态度，但是只能接受那些你确定会让你的项目变得更好的提交。你说拒绝的次数越多，对你来说拒绝别人就越容易。谨记！</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="保持主动"><a class="anchor" href="#保持主动"></a>9. 保持主动</h3>
+<div class="paragraph">
+<p>要想减少你不想接受的贡献的数量，首先，在你项目的贡献指南中解释如何提交贡献以及描述清楚什么样的贡献会被接受。</p>
+</div>
+<div class="paragraph">
+<p>如果你收到太多低质量的贡献，让那个贡献者先多做做功课，比如：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>填写一个 issue 或者 PR 的模板/清单</p>
+</li>
+<li>
+<p>在提交PR之前先开一个 issue</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>如果他们不遵从你的规则，马上关掉 issue 并引用你的文档。</p>
+</div>
+<div class="paragraph">
+<p>当然啦，这么搞一开始是不太舒服，但是你主动一点确实对双方都好。它减少了某个人花太多时间到一个你不想要的 PR 上的可能性。而且还会让你管理起来更轻松。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="成为导师"><a class="anchor" href="#成为导师"></a>10. 成为导师</h3>
+<div class="paragraph">
+<p>可能在你的社区里有人不断提交一些不符合项目需求的贡献。对你们双方来说，不停的拒绝他的提交，会令双方都很尴尬。</p>
+</div>
+<div class="paragraph">
+<p>如果你发现有人对你的项目很上心，但是就是需要调教，那就耐心一点。给他解释明白每次它的提交为什么不符合项目需求。尝试着让他先做一些简单一点的事，比如那些标有_"good first bug"_ 标签的issue，以此让他慢慢习惯。如果你有时间的话，考虑教Ta怎么完成第一次贡献，或者在社区找一个人教Ta。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="有效利用社区"><a class="anchor" href="#有效利用社区"></a>11. 有效利用社区</h3>
+<div class="paragraph">
+<p>你不需要凡事亲力亲为。这就是社区存在的原因！即使你没有一个活跃的贡献者社区，但是如果你有很多用户的话，拉他们来干活儿。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="分担工作量"><a class="anchor" href="#分担工作量"></a>12. 分担工作量</h3>
+<div class="paragraph">
+<p>如果你正在寻找其他人来参与, 从身边的人开始。</p>
+</div>
+<div class="paragraph">
+<p>当你看到新的贡献者不停的提交贡献，通过分配给他们更多任务来表示认可。如果别人愿意的话，记录下别人是怎么成长为领导者的过程。</p>
+</div>
+<div class="paragraph">
+<p>鼓励别人来[一起管理项目](../building-community/#share-ownership-of-your-project)能很大程度上减轻你的工作量，就像 <a href="https://github.com/lmccart">@lmccart</a> 在他的项目 <a href="https://github.com/processing/p5.js?files=1">p5.js</a> 上做的那样。</p>
+</div>
+<div class="paragraph">
+<p>如果你需要暂时或者永久的离开的项目，请找人来代替你，这并没有什么不好意思。</p>
+</div>
+<div class="paragraph">
+<p>如果别人认同项目的发展方向，给他们提交的权限或者正式把项目所有权转移给他。如果有人fork了你的项目而且在保持活跃的维护中，考虑在你的原始的仓库放上这个fork版本的链接。如果大家都希望你的项目继续的话这不失为一种好办法。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/progrium">@progruim</a> <a href="http://progrium.com/blog/2015/12/04/leadership-guilt-and-pull-requests/">发现</a> 由于它给他的项目 <a href="https://github.com/dokku/dokku">Dokku</a> 写一个关于项目发展方向的文档，即使在它离开这个项目后他的那些目标仍然会被实现。</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>我写了一个wiki来描述我想要啥和为什么。不知道为啥，项目的维护者就开始推动项目朝这个方向发展，这对我来说还是有点惊讶的。他们会丝毫不差的按照我的意愿去做这个项目吗？不总是这样，但是总是会把项目推动到离我的理想状态更近的位置。</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="让别人尝试他们自己想要的解决方案"><a class="anchor" href="#让别人尝试他们自己想要的解决方案"></a>13. 让别人尝试他们自己想要的解决方案</h3>
+<div class="paragraph">
+<p>如果有贡献者关于项目有不同的意见，你可以礼貌的鼓励它在他自己 fork 的版本上继续工作。</p>
+</div>
+<div class="paragraph">
+<p>fork 一个项目不什么坏事情。<strong>能复制并且修改别人的代码是开源项目最大的好处之一</strong>。鼓励你的社区成员在他自己 fork 的仓库上继续工作，这是在不和你的项目冲突的基础上，给实现他们的想法最好出口。</p>
+</div>
+<div class="paragraph">
+<p>这对于那些强烈的需要某个你没时间实现的解决方案的用户来说也是一样的。提供 API 或者自定义的钩子帮助他们更好的实现自己的需求而不需要改动源码。 <a href="https://github.com/orta">@orta</a> <a href="http://artsy.github.io/blog/2016/07/03/handling-big-projects/">发现</a> 鼓励在 CocoaPods 上使用插件导致了很多有趣的想法的诞生。</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>一旦一个项目变大之后，维护者对怎么增加新代码变得保守是不可避免的事情。你可能会拒绝别人的需求，但是很多人提的都是合法的需求。所以，你最后不得不把你的一个工具变成平台。</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="使用机器人"><a class="anchor" href="#使用机器人"></a>14. 使用机器人</h3>
+<div class="paragraph">
+<p>就像很多工作别人可以帮你做一样，也有很多工作不需要人来做。因为有机器可以替代人工，尤其是那些重复、无聊的工作，用好它们能够让你的生活变得更轻松。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="引进测试和别的检查来改善你的代码质量"><a class="anchor" href="#引进测试和别的检查来改善你的代码质量"></a>15. 引进测试和别的检查来改善你的代码质量</h3>
+<div class="paragraph">
+<p>让你项目自动化的最重要的方法之一就是引进测试。</p>
+</div>
+<div class="paragraph">
+<p>测试能够帮助贡献者得知他们没有弄坏什么。测试也让你复查代码和接受别人的贡献的过程更加容易。你反应的越多，社区参与的就越多。</p>
+</div>
+<div class="paragraph">
+<p>设置自动化的测试让所有新来的贡献者都可用，而且保证你的测试可以很容易在贡献者的本地运行。保证所有的代码贡献者在提交之前都运行你的测试。你还得为所有的提交设置一个基本的标准。</p>
+</div>
+<div class="paragraph">
+<p>如果你添加了测试，确保在 CONTRIBUTING 文件里面解释他们是怎么工作的。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="用工具来自动化日常的维护工作"><a class="anchor" href="#用工具来自动化日常的维护工作"></a>16. 用工具来自动化日常的维护工作</h3>
+<div class="paragraph">
+<p>对于维护一个流行的项目来说，一个利好消息是别的维护者也可能遇到过类似的问题而且已经找到一个解决方案。</p>
+</div>
+<div class="paragraph">
+<p>这里有 <a href="https://github.com/integrations">各种各样的工具</a>帮你自动化一部分的维护工作。这里仅列举一些常见的例子：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/semantic-release/semantic-release">semantic-release</a> 自动化版本发布</p>
+</li>
+<li>
+<p><a href="https://github.com/facebook/mention-bot">mention-bot</a> 可能的贡献者来帮你复查代码</p>
+</li>
+<li>
+<p><a href="https://github.com/danger/danger">Danger</a>  帮你自动复查代码</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>对于bug报告和其他常见形式的贡献，Github有 <a href="https://github.com/blog/2111-issue-and-pull-request-templates">Issue 模版和 Pull Request 模版</a>, 你可以用来降低沟通成本。你也可以设置 <a href="https://github.com/blog/2203-email-updates-about-your-own-activity">邮件过滤</a> 来管理你的邮件提醒。</p>
+</div>
+<div class="paragraph">
+<p>如果你想更加的先进和高效，代码风格指南能帮助你的项目收到的提交更加规范，而且更容易复查和被接受。</p>
+</div>
+<div class="paragraph">
+<p>当然啦，如果你的标准太复杂了，反倒会增加了贡献的难度。所以保证你只添加那些让每个人工作起来更容易的规则。</p>
+</div>
+<div class="paragraph">
+<p>如果你不确定用什么工具，看一看别的流行项目是怎么做的，特别是和你在一个生态系统的。比如，其他的 Node 模块的贡献流程是怎么样的？用相似的工具和方法，能够让你项目的贡献流程对于开发者来说是很熟悉的。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="不干了也没关系"><a class="anchor" href="#不干了也没关系"></a>17. 不干了也没关系</h3>
+<div class="paragraph">
+<p>开源项目曾经让你开心，但可能现在开始让你不开心了。</p>
+</div>
+<div class="paragraph">
+<p>可能当你想到你的项目的时候，感觉到"压力山大"。而同时，issue 和 PR 又纷至沓来。</p>
+</div>
+<div class="paragraph">
+<p>疲倦在开源工作工作中是一个常见的问题，特别是在维护者中间。作为一个维护者，你做的开心对项目的生存来说是一个没有商量余地的条件。</p>
+</div>
+<div class="paragraph">
+<p>虽然你不需要跟谁请假，但是也不要拖到自己疲倦不堪的时候才去度假。https://github.com/brettcannon[@brettcannon] 就是非常典型的例子，他是一名 python 语言的核心开发者，决定在14年的义务劳动之后 <a href="http://www.snarky.ca/why-i-took-october-off-from-oss-volunteering">休一个月的假</a>。</p>
+</div>
+<div class="paragraph">
+<p>就像其他工作一样，有规律的休息会让你对工作保持舒适愉快的心情。</p>
+</div>
+<div class="paragraph">
+<p>有时候，当你感觉大家都离不开你的时候，请假去休息是一件蛮困难的事情。甚至你自己会因为离开而感到愧疚。</p>
+</div>
+<div class="paragraph">
+<p>在你离开项目的时候尽可能的在用户和社区中间寻求支持，如果你找到支持你的人，还是休息吧。在你不工作的时候还是要保持和别人交流，这样人们不会因为你的失联而感到奇怪。</p>
+</div>
+<div class="paragraph">
+<p>休假不仅适用于度假。如果你周末不想做开源项目的工作了，或者在本该工作的时候不想干活了，和别人说，这样他们知道什么时候不该打扰你。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="首先照顾好自己"><a class="anchor" href="#首先照顾好自己"></a>18. 首先照顾好自己！</h3>
+<div class="paragraph">
+<p>维护一个大型项目时，相比早期的增长阶段，是需要更多的不一样的技能，作为一个维护者，你会将自己的领导力和个人能力提高一个层次，而这是很少人能体会的到的。但是与此同时，要挑战管理项目，以及设定清晰的界限。只做你感到舒服的事情，能够让你保持开心、充满活力、且高效输出的状态。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="参考资料"><a class="anchor" href="#参考资料"></a>19. 参考资料</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>自由再发布</p>
-</li>
-<li>
-<p>源代码</p>
-</li>
-<li>
-<p>派生作品</p>
-</li>
-<li>
-<p>作者源代码的完整性</p>
-</li>
-<li>
-<p>不能歧视任何个人和团体</p>
-</li>
-<li>
-<p>不能歧视任何领域</p>
-</li>
-<li>
-<p>许可证的发布</p>
-</li>
-<li>
-<p>许可证不能针对某个产品</p>
-</li>
-<li>
-<p>许可证不能约束其他软件</p>
-</li>
-<li>
-<p>许可证必须独立于技术</p>
+<p><a href="http://opensource.guide/zh-hans/best-practices/">GitHub 开源指南</a></p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>可参考： <a href="https://opensource.org/osd">OSI定义</a>。</p>
-</div>
-<div class="paragraph">
-<p>另外一个就是较为通俗的版本，引用自 <a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6">Wikipedia</a>：</p>
-</div>
-<div class="paragraph">
-<p>&#8220;<code>又称开放源代码软件，是一种源代码可以任意获取的计算机软件，这种软件的著作权持有人在软件协议的规定之下保留一部分权利并允许用户学习、修改以及以任何目的向任何人分发该软件。
-开源协议通常符合开放源代码的定义的要求。一些开源软件被发布到公有领域 开源软件大多采用公开协作的方式进行开发，开源软件是开放式协作的典范。开源软件是开放源代码开发的最常见的例子，也经常与用户生成内容做比较。 开
-源软件的英文“open-source software”一词出自自由软件的营销活动中。开源软件同时也是一种软件的分发模式。一般的软件仅可获取已经过编译的二进制可执行档，通常只有软件的作者或著作
-权所有者等拥有程序的源代码。</code>&#8221;</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="开源软件共同体-open-source-software-community"><a class="anchor" href="#开源软件共同体-open-source-software-community"></a>3. 开源软件共同体 （Open Source software community）</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>为了实现一个开源软件项目，基于互联网，由企业、个人、非营利组织等形成的团体成员，在文化上能够达成一定共识，来去自由，进行一定的社会治理、活动、交流等。该共同体由计算机相关
-专业领域中的工作者组成。在一种绝大多数其他领域无法比拟的程度上，他们都经受过近似的教育和专业训练。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="开源软件基金会-open-source-software-foundation"><a class="anchor" href="#开源软件基金会-open-source-software-foundation"></a>4. 开源软件基金会（ Open Source software Foundation）</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>由非政府的、非营利的、自有资金（通常来自单一的个人、家庭或公司）并自设董事会管理工作规划的组织，其创办的目的是为了支持发展开源软件项目，以服务于公共福利，主要途径是通过对其他
-非营利机构的赞助。自身的资金来源主要是通过接受捐赠、监管下的营销、举办会议等。</p>
-</div>
 </div>
 </div>
 </div>

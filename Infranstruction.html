@@ -443,26 +443,50 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#邮件列表">1. 邮件列表</a></li>
-<li><a href="#版本控制系统">2. 版本控制系统</a></li>
-<li><a href="#版本控制系统简介">3. 版本控制系统简介</a>
+<li><a href="#版本控制系统">2. 版本控制系统</a>
 <ul class="sectlevel2">
-<li><a href="#git-之前的版本控制系统">3.1. Git 之前的版本控制系统</a></li>
-<li><a href="#git">3.2. Git</a></li>
-<li><a href="#git-的常见使用">3.3. Git 的常见使用</a></li>
-<li><a href="#参考资料">3.4. 参考资料</a></li>
+<li><a href="#版本控制系统简介">2.1. 版本控制系统简介</a></li>
+<li><a href="#为什么会有差异">2.2. 为什么会有差异？</a></li>
+<li><a href="#diff-和-patch">2.3. diff 和 patch</a></li>
+<li><a href="#参考资料">2.4. 参考资料</a></li>
+<li><a href="#git-之前的版本控制系统">2.5. Git 之前的版本控制系统</a></li>
+<li><a href="#git">2.6. Git</a></li>
+<li><a href="#git-的八卦">2.7. Git 的“八卦”</a></li>
+<li><a href="#git-的常见使用">2.8. Git 的常见使用</a></li>
+<li><a href="#参考资料-3">2.9. 参考资料</a></li>
 </ul>
 </li>
-<li><a href="#代码仓库">4. 代码仓库</a></li>
-<li><a href="#项目资料">5. 项目资料</a></li>
-<li><a href="#持续集成系统">6. 持续集成系统</a></li>
-<li><a href="#问题追踪系统">7. 问题追踪系统</a></li>
-<li><a href="#现代开源项目开发集大成者-github-平台介绍">8. 现代开源项目开发集大成者 GitHub 平台介绍</a>
+<li><a href="#代码仓库">3. 代码仓库</a>
 <ul class="sectlevel2">
-<li><a href="#git-与-github">8.1. Git 与 GitHub</a></li>
-<li><a href="#github-上手指南">8.2. GitHub 上手指南</a></li>
-<li><a href="#github-开源项目协作和流程">8.3. GitHub 开源项目协作和流程</a></li>
-<li><a href="#github-公司github-平台闭源与商业伦理">8.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></li>
-<li><a href="#参考资料-2">8.5. 参考资料</a></li>
+<li><a href="#代码仓库的基本功能">3.1. 代码仓库的基本功能</a></li>
+<li><a href="#常见代码仓库的使用">3.2. 常见代码仓库的使用</a></li>
+</ul>
+</li>
+<li><a href="#项目资料">4. 项目资料</a>
+<ul class="sectlevel2">
+<li><a href="#创建网站">4.1. 创建网站</a></li>
+</ul>
+</li>
+<li><a href="#持续集成系统">5. 持续集成系统</a>
+<ul class="sectlevel2">
+<li><a href="#持续集成功能与意义">5.1. 持续集成功能与意义</a></li>
+<li><a href="#jenkins开源的持续集成">5.2. Jenkins&#8201;&#8212;&#8201;开源的持续集成</a></li>
+<li><a href="#travisgithub-actions-在线服务">5.3. Travis，Github Actions 在线服务</a></li>
+</ul>
+</li>
+<li><a href="#问题追踪系统">6. 问题追踪系统</a>
+<ul class="sectlevel2">
+<li><a href="#问题追踪的功能">6.1. 问题追踪的功能</a></li>
+<li><a href="#常见的问题追踪系统的使用">6.2. 常见的问题追踪系统的使用</a></li>
+</ul>
+</li>
+<li><a href="#现代开源项目开发集大成者-github-平台介绍">7. 现代开源项目开发集大成者 GitHub 平台介绍</a>
+<ul class="sectlevel2">
+<li><a href="#git-与-github">7.1. Git 与 GitHub</a></li>
+<li><a href="#github-上手指南">7.2. GitHub 上手指南</a></li>
+<li><a href="#github-开源项目协作和流程">7.3. GitHub 开源项目协作和流程</a></li>
+<li><a href="#github-公司github-平台闭源与商业伦理">7.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></li>
+<li><a href="#参考资料-4">7.5. 参考资料</a></li>
 </ul>
 </li>
 </ul>
@@ -546,14 +570,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="版本控制系统"><a class="anchor" href="#版本控制系统"></a>2. 版本控制系统</h2>
 <div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="版本控制系统简介"><a class="anchor" href="#版本控制系统简介"></a>3. 版本控制系统简介</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="版本控制系统简介"><a class="anchor" href="#版本控制系统简介"></a>2.1. 版本控制系统简介</h3>
 <div class="paragraph">
-<p>在 <code>git</code> 的官方的书籍中如此定义版本控制：<strong>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</strong> 正如我上面所讲的故事一样，我们的每一个人都需要版本控制，无论你做什么，如果你是位图形或网页设计师，可能会需要保存某一幅图片或页面布局文件的所有修订版本（这或许是你非常渴望拥有的功能），采用版本控制系统（VCS）是个明智的选择。 有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。 使用版本控制系统通常还意味着，就算你乱来一气把整个项目中的文件改的改删的删，你也照样可以轻松恢复到原先的样子。 但额外增加的工作量却微乎其微。</p>
+<p>在 <code>git</code> 的官方的书籍中如此定义版本控制：<strong>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</strong></p>
+</div>
+<div class="paragraph">
+<p>我们的每一个人都需要版本控制，无论你做什么，如果你是位图形或网页设计师，可能会需要保存某一幅图片或页面布局文件的所有修订版本（这或许是你非常渴望拥有的功能），采用版本控制系统（VCS）是个明智的选择。 有了它你就可以将某个文件回溯到之前的状态，甚至将整个项目都回退到过去某个时间点的状态，你可以比较文件的变化细节，查出最后是谁修改了哪个地方，从而找出导致怪异问题出现的原因，又是谁在何时报告了某个功能缺陷等等。 使用版本控制系统通常还意味着，就算你乱来一气把整个项目中的文件改的改删的删，你也照样可以轻松恢复到原先的样子。 但额外增加的工作量却微乎其微。</p>
 </div>
 <div class="paragraph">
 <p>假设有这么一位喜欢厨艺的爱好者，最近喜欢上的烤面包，光是看说明书总是会出错，也是将各种因素来回的搭配，并记录，并随时进行重新的编排和组合。</p>
@@ -574,10 +597,185 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ol>
 </div>
+</div>
 <div class="sect2">
-<h3 id="git-之前的版本控制系统"><a class="anchor" href="#git-之前的版本控制系统"></a>3.1. Git 之前的版本控制系统</h3>
+<h3 id="为什么会有差异"><a class="anchor" href="#为什么会有差异"></a>2.2. 为什么会有差异？</h3>
+<div class="paragraph">
+<p>在软件开发过程中，大多涉及到多人开发和协作，同一份文件，在不同的开发者的工作台会出现差别，即使是单独的个人，在不同的时间，也会产生不同的版本，日积月累，差异、改进、删除等等都会发生，换句话说：<strong>为了应对这种变化，或者是记录变化本身，我们需要记录差异。</strong></p>
+</div>
+<div class="paragraph">
+<p>记录差异在人类的发展史上有着非常悠久的良好传统，可以说，差异产生知识，因为可以比较不同，在能够知道变化，在面临熵增的世界，寻找有序。</p>
+</div>
+<div class="paragraph">
+<p>差异，是以时空为根本前提的，不同的空间在相同的时间可以对比，同一空间在不同时间也可以进行对比。以代码开发为例，在多人参与的情况下，错综复杂，二者都是可以发生的。</p>
+</div>
+<div class="paragraph">
+<p>在理解了差异之后，我们就可以说明版本控制的意义了：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>用于记录和跟踪差异，以便于协作、合并、回退、整合源代码文件。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="diff-和-patch"><a class="anchor" href="#diff-和-patch"></a>2.3. diff 和 patch</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>we have been able to connect the three different development stages of Linux development: pre-version control, BitKeeper, and Git. During the pre-version control stage, we
+use each of the releases of Linux as a snapshot of its development.
+        ---- 2020 Linux Kernel History Report</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><code>diff</code> 是在 UNIX 系统上的一个工具程序，它可以比较两个文件之间的不同。通常它被用来比较同一个文件，在不同版本间的差异。它可以产生一个扩展名为.diff或.patch的文件，这个文件可以被另一个工具程序 <code>patch</code> 来使用。</p>
+</div>
+<div class="paragraph">
+<p>下面我们就以一个实例说明一下这两个程序的使用，这其实是最好的解释和说明。</p>
+</div>
+<div class="paragraph">
+<p>现在我们有一个 <code>hello.c</code> 的C 语言经典入门的程序：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>按照如下步骤，使用 <code>diff</code> 和 <code>patch</code> 来了解源代码版本的差异：</p>
+</div>
+<div class="paragraph">
+<p>1、 为 <code>hello.c</code> 复制一个副本</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">$</span> cp cello.c cello.c.orig
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>2、 修改 <code>hello.c</code> 文件为：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3、 使用 <code>diff</code> 来生成差异的文本，</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">% diff -Naur hello.c.orig hello.c
+--- hello.c.orig        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">20.000000000</span> +<span class="integer">0800</span>
++++ hello.c        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">50.000000000</span> +<span class="integer">0800</span>
+<span class="error">@</span><span class="error">@</span> -<span class="integer">1</span>,<span class="integer">6</span> +<span class="integer">1</span>,<span class="integer">6</span> <span class="error">@</span><span class="error">@</span>
+ <span class="error">#</span>include &lt;stdio.h&gt;
+ <span class="type">int</span> main(<span class="type">void</span>) {
+-    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
++    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+     <span class="keyword">return</span> <span class="integer">0</span>;
+ }
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>4、 重定向到文本文件，并以后缀 <code>.patch</code> 为命名：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+% diff -Naur hello.c.orig hello.c &gt; hello-first-patch.patch
+lee<span class="annotation">@lees</span>-MacBook-Pro code % cat hello-first-patch.patch
+--- hello.c.orig        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">20.000000000</span> +<span class="integer">0800</span>
++++ hello.c        <span class="integer">2020</span>-<span class="integer">09</span>-<span class="integer">14</span> <span class="integer">13</span>:<span class="integer">34</span>:<span class="float">50.000000000</span> +<span class="integer">0800</span>
+<span class="error">@</span><span class="error">@</span> -<span class="integer">1</span>,<span class="integer">6</span> +<span class="integer">1</span>,<span class="integer">6</span> <span class="error">@</span><span class="error">@</span>
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+-    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
++    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>5、 生成 patch 之后，我们就可以换一台机器，可以预想的场景就是，已经将 <code>hello.c</code> 分享给来其他人，现在也将这个patch发送给对方，让对方能够生成新的文件，以和我们保持一致。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">$</span> cp cello.c.orig cello.c
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>6、 使用程序 <code>patch</code> 将差异修改到源文件。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+% patch &lt; hello-first-patch.patch
+patching file hello.c
+lee<span class="annotation">@lees</span>-MacBook-Pro code % cat hello.c
+<span class="error">#</span>include &lt;stdio.h&gt;
+<span class="type">int</span> main(<span class="type">void</span>) {
+    printf(<span class="string"><span class="delimiter">&quot;</span><span class="content">Hello World from my very first patch!</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+    <span class="keyword">return</span> <span class="integer">0</span>;
+}
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>7、 编译、执行即可</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+% gcc -g -o hello hello.c
+% ./hello
+Hello World from my very first patch!
+---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这就是差异比较，然后合并的最基础的、最本质的原理所在，现代化的版本控制系统如Git、SVN 等都自带这两个程序，我们后续会进一步的给大家做介绍。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="参考资料"><a class="anchor" href="#参考资料"></a>2.4. 参考资料</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Diff" class="bare">https://en.wikipedia.org/wiki/Diff</a></p>
+</li>
+<li>
+<p><a href="https://rpm-packaging-guide.github.io/#checking-cello-spec-file" class="bare">https://rpm-packaging-guide.github.io/#checking-cello-spec-file</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="git-之前的版本控制系统"><a class="anchor" href="#git-之前的版本控制系统"></a>2.5. Git 之前的版本控制系统</h3>
 <div class="sect3">
-<h4 id="rcs"><a class="anchor" href="#rcs"></a>3.1.1. RCS</h4>
+<h4 id="rcs"><a class="anchor" href="#rcs"></a>2.5.1. RCS</h4>
 <div class="paragraph">
 <p>RCS 是由普渡大学的 Walter F. Tichy 教授在1982年所开发。主要语言采用的是C语言。</p>
 </div>
@@ -586,7 +784,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="古老的-cvs"><a class="anchor" href="#古老的-cvs"></a>3.1.2. 古老的 CVS</h4>
+<h4 id="古老的-cvs"><a class="anchor" href="#古老的-cvs"></a>2.5.2. 古老的 CVS</h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -594,14 +792,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </blockquote>
 </div>
+<div class="paragraph">
+<p>接下来我们引用《CVS精髓》一书当中对于CVS 的解释：</p>
+</div>
+<div class="paragraph">
+<p>CVS 是一种版本跟踪系统，它可以在软件开发过程中保持文件的各种记录以及取出文件的任何已被存储的版本，制作出各种版本的软件。CVS 可以让多名开发人员同时编辑单一文件而不会遗失任何数据。每名开发人员各自编辑自己所拥有的该文件的副本，最后所有的修改会合并到单一的主“副本”中。CVS
+所提供的功能可以协助项目经理跟踪项目随时间而变的轨迹。</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="拥有完整权限控制的-svn"><a class="anchor" href="#拥有完整权限控制的-svn"></a>3.1.3. 拥有完整权限控制的 SVN</h4>
-
+<h4 id="拥有完整权限控制的-svn"><a class="anchor" href="#拥有完整权限控制的-svn"></a>2.5.3. 拥有完整权限控制的 SVN</h4>
+<div class="paragraph">
+<p>SVN 真正的项目名称叫做： <a href="http://subversion.apache.org">Subversion</a>，目前是 Apache 软件基金会下的顶级项目，在分布式系统Git流行之前，SVN 是开源当中最佳的选择。至于其为什么被业内人士经常简称为svn，大约是命令行为svn 的缘故吧，我们在下文或本书中也会多次提到SVN，
+它没有特别申明的情况下就是指 Subversion。</p>
+</div>
+<div class="paragraph">
+<p>SVN 由 CollabNet 公司于2000年资助并开发，目标就是创建一个更好用的版本控制系统以取代CVS，</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="参考资料-2"><a class="anchor" href="#参考资料-2"></a>2.5.4. 参考资料</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>《CVS精髓》，Jennifer Vesperman 著，东南大学出版社，ISBN: 9787564102555，出版年: 2006-4</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="git"><a class="anchor" href="#git"></a>3.2. Git</h3>
+<h3 id="git"><a class="anchor" href="#git"></a>2.6. Git</h3>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -612,92 +833,212 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a>3.3. Git 的常见使用</h3>
-
+<h3 id="git-的八卦"><a class="anchor" href="#git-的八卦"></a>2.7. Git 的“八卦”</h3>
+<div class="paragraph">
+<p>在Youtube上有一个视频，是Linux 创始人 linus 在为Google的一次内部分享会上讲解Git，其中有一句话的表达特别让人印象深刻：<strong>I Hate CVS</strong>， 这也是我们在这章开头引用Linux29周年的报告的一句话，在2002年之前，Linus 都是使用patch这个程序来维护所有
+Linux的开发代码的。</p>
 </div>
-<div class="sect2">
-<h3 id="参考资料"><a class="anchor" href="#参考资料"></a>3.4. 参考资料</h3>
-
+<div class="paragraph">
+<p>但是Linux 不是linus一个人的事情，在2002年，Linus在众多人的压力之下，选择了一个商业的版本控制系统，也就是我们在Kernel的历史上有三年是BitKeeper的原因所在。这也充分说明了Linus是有多么的痛恨集中式的版本控制系统，宁愿选择工具本身闭源也不要选择CVS、SVN
+等。所谓的分布式版本控制系统，就是没有集中式的中心版本库，每个人都工作在通过clone建立的本地版本库中。也就是说每个人都拥有一个完整的版本库，查看提交日志、commit、打tag、branch等均在本地完成，而毋需通过中央网络连接和请求。这样的话，每位在其本地的库都是
+完全属于自己的，再也不需要获得谁的许可才能操作。正是这样一个变化，再加上更友好的协作模式（版本库之间的pull、merge、cherrypick），从而让开源项目的参与有了前所未有的方便，也预示了更多的可能性。</p>
 </div>
+<div class="paragraph">
+<p>2005年，发生了一件颇有戏剧性的事件，反编译微软Windows 网络文件系统的Samba项目的作者 Andrew Tridgell 不知道因为什么将目光瞄准了 BitKeeper，欲将其进行逆向工程，进而像Samba那样访问windows 文件一样，开发一个能与BitKeeper交互的开源工具。但是
+这种情况是 BitMover，即BitKeeper所有者的商业公司不想看到的局面。他们要求收回为Linux kernel提供免费使用的授权。迫不得已、万般无奈之下，因为不想付费，再说了价钱也确实太高了点，Linus决定自己动手写一个分布式的版本控制系统，</p>
 </div>
+<div class="paragraph">
+<p>这个项目和历史上很多卓越的项目一样，充满了智慧与神奇：</p>
 </div>
-<div class="sect1">
-<h2 id="代码仓库"><a class="anchor" href="#代码仓库"></a>4. 代码仓库</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>代码仓库的基本功能</p>
+<p>2005.4.3 Linus 开始开发Git</p>
 </li>
 <li>
-<p>常见代码仓库的使用</p>
+<p>2005.4.6 项目发布</p>
+</li>
+<li>
+<p>2005.4.7 Git 作为自身的版本控制工具</p>
+</li>
+<li>
+<p>2005.4.18 多分支合并功能实现</p>
+</li>
+<li>
+<p>2005.4.29 性能实现预期</p>
+</li>
+<li>
+<p>2005.6.16 Linux 2.6.12 全面采用Git</p>
+</li>
+<li>
+<p>2005.7.26 Linus 将Git 的开发和维护工作交接给Junio C Hamano</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>嗯，你看的没错，三个多月的时间，成就了这个世界上目前来说最伟大的合作协同工具。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a>2.8. Git 的常见使用</h3>
+<div class="paragraph">
+<p>如果你不是专业的代码仓库维护者的话，或许像笔者这样，通常执行如下操作即可：</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">---
+<span class="error">$</span> git config --global user.email lijiansheng<span class="annotation">@ocselected</span>.org user.name lijiansheng
+<span class="error">$</span> git clone https:<span class="comment">//github.com/WillemJiang/open-source-manual/</span>
+change or add some files.
+<span class="error">$</span> git add
+<span class="error">$</span> git commit -s -m <span class="string"><span class="delimiter">'</span><span class="content">add new file.</span><span class="delimiter">'</span></span>
+<span class="error">$</span> git push origin draft
+---</code></pre>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Git is “expressly designed to make you feel less intelligent than you thought you were.”
+    &#8201;&#8212;&#8201;Andrew Morton</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="参考资料-3"><a class="anchor" href="#参考资料-3"></a>2.9. 参考资料</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://git-scm.com/book/zh/v2">Pro Git 中文版</a></p>
+</li>
+<li>
+<p><a href="https://www.linuxfoundation.org/blog/2015/04/10-years-of-git-an-interview-with-git-creator-linus-torvalds/">10 Years of Git: An Interview with Git Creator Linus Torvalds</a></p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="项目资料"><a class="anchor" href="#项目资料"></a>5. 项目资料</h2>
+<h2 id="代码仓库"><a class="anchor" href="#代码仓库"></a>3. 代码仓库</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="代码仓库的基本功能"><a class="anchor" href="#代码仓库的基本功能"></a>3.1. 代码仓库的基本功能</h3>
+
+</div>
+<div class="sect2">
+<h3 id="常见代码仓库的使用"><a class="anchor" href="#常见代码仓库的使用"></a>3.2. 常见代码仓库的使用</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="项目资料"><a class="anchor" href="#项目资料"></a>4. 项目资料</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="创建网站"><a class="anchor" href="#创建网站"></a>4.1. 创建网站</h3>
+<div class="paragraph">
+<p>项目本身是需要向世人展示的，在互联网如此发达的今天，如果一个开源项目没有相应的可以使用搜索引擎搜得到的站点，那么很可能潜在的用户和开发者都找不到你的项目。鉴于目前代码协作平台如GitHub等强大的功能，我们特别说明建立网站通常有三种方式：</p>
+</div>
+<div class="paragraph">
+<p>一、 GitHub Page</p>
+</div>
+<div class="paragraph">
+<p>二、 自行搭建</p>
+</div>
+<div class="paragraph">
+<p>三、 第三方托管</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>创建网站</p>
-</li>
-<li>
 <p>网站工具</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>一、SEO （搜索引擎优化）</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>编写用户手册</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>要为你的项目最终的输出物：软件，编写用户使用手册。</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="持续集成系统"><a class="anchor" href="#持续集成系统"></a>6. 持续集成系统</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>持续集成功能与意义</p>
-</li>
-<li>
-<p>Jenkins集成</p>
-</li>
-<li>
-<p>Travis，Github Actions</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="问题追踪系统"><a class="anchor" href="#问题追踪系统"></a>7. 问题追踪系统</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>问题追踪的功能</p>
-</li>
-<li>
-<p>常见的问题追踪系统的使用</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="现代开源项目开发集大成者-github-平台介绍"><a class="anchor" href="#现代开源项目开发集大成者-github-平台介绍"></a>8. 现代开源项目开发集大成者 GitHub 平台介绍</h2>
+<h2 id="持续集成系统"><a class="anchor" href="#持续集成系统"></a>5. 持续集成系统</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="git-与-github"><a class="anchor" href="#git-与-github"></a>8.1. Git 与 GitHub</h3>
+<h3 id="持续集成功能与意义"><a class="anchor" href="#持续集成功能与意义"></a>5.1. 持续集成功能与意义</h3>
+
+</div>
+<div class="sect2">
+<h3 id="jenkins开源的持续集成"><a class="anchor" href="#jenkins开源的持续集成"></a>5.2. Jenkins&#8201;&#8212;&#8201;开源的持续集成</h3>
+
+</div>
+<div class="sect2">
+<h3 id="travisgithub-actions-在线服务"><a class="anchor" href="#travisgithub-actions-在线服务"></a>5.3. Travis，Github Actions 在线服务</h3>
+<div class="paragraph">
+<p>随着web的发展，越来越多的服务可以通过友好的API来进行实现，相比于 Jenkins 部署本地的服务，对于很多项目其实是没有必要的，‘随需随用’、毋需维护基础设施成本、和GitHub等开放式开发平台无缝集成，为什么要拒绝了呢？下面我们就以两个实例为说明持续集成的在线服务。</p>
+</div>
+<div class="sect3">
+<h4 id="travis"><a class="anchor" href="#travis"></a>5.3.1. Travis</h4>
+
+</div>
+<div class="sect3">
+<h4 id="github-action"><a class="anchor" href="#github-action"></a>5.3.2. GitHub Action</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="问题追踪系统"><a class="anchor" href="#问题追踪系统"></a>6. 问题追踪系统</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="问题追踪的功能"><a class="anchor" href="#问题追踪的功能"></a>6.1. 问题追踪的功能</h3>
+
+</div>
+<div class="sect2">
+<h3 id="常见的问题追踪系统的使用"><a class="anchor" href="#常见的问题追踪系统的使用"></a>6.2. 常见的问题追踪系统的使用</h3>
+<div class="sect3">
+<h4 id="bugzilla"><a class="anchor" href="#bugzilla"></a>6.2.1. Bugzilla</h4>
+
+</div>
+<div class="sect3">
+<h4 id="jira"><a class="anchor" href="#jira"></a>6.2.2. Jira</h4>
+
+</div>
+<div class="sect3">
+<h4 id="github-issue"><a class="anchor" href="#github-issue"></a>6.2.3. GitHub Issue</h4>
+
+</div>
+<div class="sect3">
+<h4 id="trac-issue"><a class="anchor" href="#trac-issue"></a>6.2.4. Trac issue</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="现代开源项目开发集大成者-github-平台介绍"><a class="anchor" href="#现代开源项目开发集大成者-github-平台介绍"></a>7. 现代开源项目开发集大成者 GitHub 平台介绍</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="git-与-github"><a class="anchor" href="#git-与-github"></a>7.1. Git 与 GitHub</h3>
 <div class="paragraph">
 <p>我们在版本控制系统一节中详细介绍了<a href="#git">Git</a> ，那么基于 <code>git</code> 之上再做些事情，是所有想为开发者做事情的出发点。让我们将时间再往回拨一拨，拨回到围绕 Git 之前的版本控制系统所做的服务
 或产品。</p>
 </div>
 <div class="sect3">
-<h4 id="sourceforge"><a class="anchor" href="#sourceforge"></a>8.1.1. SourceForge</h4>
+<h4 id="sourceforge"><a class="anchor" href="#sourceforge"></a>7.1.1. SourceForge</h4>
 <div class="paragraph">
 <p>说起古老的代码托管站点，我们是无法绕过SourceForge的，该站点于1999年由VA 软件公司投资开发，在整个2000~2010年都是开源开发者和用户的主要站点，也诞生了很多知名的开源项目：</p>
 </div>
@@ -719,7 +1060,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="google-code"><a class="anchor" href="#google-code"></a>8.1.2. Google code</h4>
+<h4 id="google-code"><a class="anchor" href="#google-code"></a>7.1.2. Google code</h4>
 <div class="paragraph">
 <p>Google 在2009年推出了开源项目托管平台： <a href="https://code.google.com/hosting/">Google Code</a>，支持的版本控制系统包括 <code>git</code> <code>Subversion</code> 和 <code>Mercurial</code>，还有问题跟踪系统、Wiki用于
 记录文档。</p>
@@ -729,11 +1070,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="launchpad"><a class="anchor" href="#launchpad"></a>8.1.3. Launchpad</h4>
+<h4 id="launchpad"><a class="anchor" href="#launchpad"></a>7.1.3. Launchpad</h4>
 
 </div>
 <div class="sect3">
-<h4 id="github"><a class="anchor" href="#github"></a>8.1.4. GitHub</h4>
+<h4 id="github"><a class="anchor" href="#github"></a>7.1.4. GitHub</h4>
 <div class="paragraph">
 <p>终于轮到介绍GitHub了，GitHub 服务是由四名 Ruby On Rails 开发者： Chris Wanstrath、P. J. Hyett、Tom Preston-Werner 以及 Scott Chacon 共同开发，在2008年二月开始撰写，
 同年4月10号发布上线，首次较大规模发布是在2009年的2月24日，地点选择是在Yahoo！的总部。</p>
@@ -741,7 +1082,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="github-上手指南"><a class="anchor" href="#github-上手指南"></a>8.2. GitHub 上手指南</h3>
+<h3 id="github-上手指南"><a class="anchor" href="#github-上手指南"></a>7.2. GitHub 上手指南</h3>
 <div class="paragraph">
 <p>首先你需要访问域名为： <a href="http://www.github.com">http://www.github.com</a> 的网站，然后根据指示注册，需要输入可用的邮箱、登陆密码等信息，注册完成后，就可以登录了。</p>
 </div>
@@ -769,11 +1110,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="github-开源项目协作和流程"><a class="anchor" href="#github-开源项目协作和流程"></a>8.3. GitHub 开源项目协作和流程</h3>
+<h3 id="github-开源项目协作和流程"><a class="anchor" href="#github-开源项目协作和流程"></a>7.3. GitHub 开源项目协作和流程</h3>
 
 </div>
 <div class="sect2">
-<h3 id="github-公司github-平台闭源与商业伦理"><a class="anchor" href="#github-公司github-平台闭源与商业伦理"></a>8.4. GitHub 公司、GitHub 平台闭源与商业伦理</h3>
+<h3 id="github-公司github-平台闭源与商业伦理"><a class="anchor" href="#github-公司github-平台闭源与商业伦理"></a>7.4. GitHub 公司、GitHub 平台闭源与商业伦理</h3>
 <div class="paragraph">
 <p>GitHub 是一家商业公司，在美国注册，总部位于加利福尼亚州的旧金山。在世界的其它地区，在日本也有相应的办公室，如印度也设立有分部，本来中国是增长非常之大的，首席运营官还在2019年专门来中国低调的进行了实地考察[4],但是终究还是没有来。在2018年，GitHub 公司被微软以高达75亿美金
 收购，在2020年三月，GitHub 收购了JavaScript的包管理 npm 公司。</p>
@@ -839,7 +1180,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="参考资料-2"><a class="anchor" href="#参考资料-2"></a>8.5. 参考资料</h3>
+<h3 id="参考资料-4"><a class="anchor" href="#参考资料-4"></a>7.5. 参考资料</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -865,8 +1206,97 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-11 09:21:32 UTC
+Last updated 2020-09-17 12:04:26 UTC
 </div>
 </div>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+pre.CodeRay{background:#f7f7f8}
+.CodeRay .line-numbers{border-right:1px solid currentColor;opacity:.35;padding:0 .5em 0 0}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.75em}
+.CodeRay .line-numbers strong{color:#000}
+table.CodeRay{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.CodeRay td{vertical-align:top;line-height:inherit}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.code{padding:0 0 0 .75em}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#000}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
 </body>
 </html>
