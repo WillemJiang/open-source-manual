@@ -60,11 +60,11 @@ image::isulad-project-name.png[]
 
 * 程序构建（持续集成）如（ http://travis-ci.org/[Travis]、 https://circleci.com/[CircleCI]、 https://www.jetbrains.com/teamcity/[TeamCity])
 
-image::https://miro.medium.com/max/294/1*XKOHKSYuycUjo7Bqh2H6Cg.png[]
+image::build_success.png[]
 
 * 代码覆盖（ http://coveralls.io/[Coveralls]）
 
-image::https://miro.medium.com/max/324/1*psOVJ_DE6PLBUZjuqyfbCA.png[]
+image::coverage_process.png[]
 
 * 版本号
 
