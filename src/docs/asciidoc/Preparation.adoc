@@ -85,7 +85,7 @@ image::isulad-project-description.png[]
 
 ==== 安装
 
-就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 `homebrew`:
+就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 homebrew:
 
 [source, java]
 
@@ -93,7 +93,7 @@ image::isulad-project-description.png[]
 $ brew install wget
 ---
 
-就直接完成了 `wget`的安装。 诸如 `go`、`npm`、`Pypi` 等等均如此。
+就直接完成了 wget 的安装。 诸如 go、npm、Pypi 等等均如此。
 
 ==== 使用实例
 
@@ -107,7 +107,7 @@ $ brew install wget
 $mvn
 ---
 
-用浏览器打开生成的 HTML 文件 `target/generated-docs/OpenSourceManual.html` 。
+用浏览器打开生成的 HTML 文件 “target/generated-docs/OpenSourceManual.html” 。
 
 
 ==== 文档
@@ -127,7 +127,7 @@ $mvn
 
 ==== 许可证
 
-通常情况下，项目的主目录下会放一个 `License` 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。
+通常情况下，项目的主目录下会放一个 License 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。
 
 此项为可选，不是必须。
 
