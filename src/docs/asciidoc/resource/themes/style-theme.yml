@@ -1,0 +1,72 @@
+extends: KaiGenGothicCN
+
+font:
+ catalog:
+    KaiGen Gothic CN:
+      normal: KaiGenGothicCN-Regular.ttf
+      bold: KaiGenGothicCN-Bold.ttf
+      italic: KaiGenGothicCN-Regular-Italic.ttf
+      bold_italic: KaiGenGothicCN-Bold-Italic.ttf
+    DroidSansFallback:
+      normal: droid-sans-fallback.ttf
+      italic: droid-sans-fallback.ttf
+      bold: droid-sans-fallback.ttf
+      bold_italic: droid-sans-fallback.ttf
+    Roboto Mono:
+      normal: RobotoMono-Regular.ttf
+      bold: RobotoMono-Bold.ttf
+      italic: RobotoMono-Italic.ttf
+      bold_italic: RobotoMono-BoldItalic.ttf
+ fallbacks:
+  - DroidSansFallback
+
+base:
+  #定义字距
+  text-decoration-width: 0.5
+  #定义行距
+  line_height_length: 20
+
+
+  #define quotes
+  menu-caret-content: " <font size=\"1.15em\"><color rgb=\"#b12146\">\u203a</color></font> "
+
+section:
+   indent: [0.5in, 0]
+
+
+blockquote:
+   font_size: $base_font_size_min
+   background-color: 40E0D0
+   padding: [5, 10, -5, 12]
+
+
+#定制目录
+
+toc:
+    line-height: 2.0
+
+    dot-leader:
+      levels: 1 2 3
+
+#定制封面
+title_page:
+        title_font_size: 50
+        title_font_color: 008B00
+        font-style: bold
+        background-color: F0FFF0
+        line-height: 3
+        logo:
+           align: left
+           top: 15%
+           image: image:logo.jpg[width=250,align=left]
+        revision:
+           margin-bottom: 5
+           display: none
+
+literal:
+  font_color: b12146
+  font_family: Roboto Mono
+
+#代码字体定义
+  code:
+  font-family: DroidSansFallback
