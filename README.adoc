@@ -59,4 +59,30 @@ edit custom file `src/docs/asciidoc/resource/themes/style-theme.yml`
 
 ```
 asciidoctor-pdf --trace -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=style -a allow-uri-read -a pdf-themesdir=resource/themes -a pdf-fontsdir="resource/fonts;GEM_FONTS_DIR" OpenSourceManual.adoc
+
+```
+
+## add another Chinese fonts
+
+copy your fonts (just *.ttf) to target directory. and edit `sytle-theme.yml` and add this:
+
+```
+SourceCodePro:
+  normal: SourceCodePro-Black.ttf
+  bold: SourceCodePro-Bold.ttf
+  italic: SourceCodePro-It.ttf
+  bold_italic: SourceCodePro-BoldIt.ttf
+
+base:
+#定义字体
+font_family: SourceCodePro
+```
+
+save and quit.
+
+use command :
+
+```
+asciidoctor-pdf --trace -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=style -a allow-uri-read -a pdf-themesdir=resource/themes -a pdf-fontsdir="resource/fonts;YOUR-TARGET-DIR;GEM_FONTS_DIR" OpenSourceManual.adoc
+
 ```
