@@ -1,6 +1,8 @@
 = 现代开源手册
-姜宁 <ningjiang@apache.org>;李建盛 <lijiansheng@ocselected.org>
-:revnumber: {project-version}
+一部与时俱进的开源方法论指南
+:revnumber: 0.1
+:revdate: 2020-09-30
+:revremark: 第一个可预览的版本
 :example-caption!:
 ifndef::imagesdir[:imagesdir: images]
 :doctype: book
@@ -9,7 +11,7 @@ ifndef::imagesdir[:imagesdir: images]
 :toclevels: 2
 :sectanchors:
 :sectlinks:
-:sectnums:
+#:sectnums:
 :icons: font
 :source-highlighter: coderay
 :source-language: asciidoc
@@ -32,9 +34,11 @@ ifndef::imagesdir[:imagesdir: images]
 :adp: AsciiDoc Python
 :adr: Asciidoctor
 
-= 作者
+= 作者介绍
 
-{author}
+include::authors.adoc[]
+
+== 贡献者列表
 
 [preface]
 include::preface.adoc[]
@@ -57,7 +61,3 @@ include::Collaboration.adoc[]
 == 术语表
 
 include::glossary.adoc[]
-
-= 贡献者列表
-
-include::authors.adoc[]

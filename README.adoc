@@ -53,13 +53,36 @@ if you download manually, please put all ttf files to `/var/lib/gems/2.7.0/gems/
 
 > the java way ,please go to https://github.com/asciidoctor/asciidoctor-maven-examples/blob/master/asciidoctor-pdf-cjk-example/pom.xml for more details.
 
-## support more Chinese simplified fonts.
+## custom pdf theme
 
-you need download custom font first.
+edit custom file `src/docs/asciidoc/resource/themes/style-theme.yml`
 
+```
+asciidoctor-pdf --trace -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=style -a allow-uri-read -a pdf-themesdir=resource/themes -a pdf-fontsdir="resource/fonts;GEM_FONTS_DIR" OpenSourceManual.adoc
 
+```
 
+## add another Chinese fonts
 
-go to [https://fonts.google.com/specimen/Noto+Sans+SC?subset=chinese-simplified#standard-styles](https://fonts.google.com/specimen/Noto+Sans+SC?subset=chinese-simplified#standard-styles)
+copy your fonts (just *.ttf) to target directory. and edit `sytle-theme.yml` and add this:
 
-and download google Noto-Sans-SC  font to local.
+```
+SourceCodePro:
+  normal: SourceCodePro-Black.ttf
+  bold: SourceCodePro-Bold.ttf
+  italic: SourceCodePro-It.ttf
+  bold_italic: SourceCodePro-BoldIt.ttf
+
+base:
+#定义字体
+font_family: SourceCodePro
+```
+
+save and quit.
+
+use command :
+
+```
+asciidoctor-pdf --trace -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=style -a allow-uri-read -a pdf-themesdir=resource/themes -a pdf-fontsdir="resource/fonts;YOUR-TARGET-DIR;GEM_FONTS_DIR" OpenSourceManual.adoc
+
+```
