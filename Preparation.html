@@ -601,7 +601,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://miro.medium.com/max/294/1*XKOHKSYuycUjo7Bqh2H6Cg.png" alt="1*XKOHKSYuycUjo7Bqh2H6Cg">
+<img src="./build_success.png" alt="build success">
 </div>
 </div>
 <div class="ulist">
@@ -613,7 +613,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://miro.medium.com/max/324/1*psOVJ_DE6PLBUZjuqyfbCA.png" alt="1*psOVJ DE6PLBUZjuqyfbCA">
+<img src="./coverage_process.png" alt="coverage process">
 </div>
 </div>
 <div class="ulist">
@@ -656,7 +656,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="安装"><a class="anchor" href="#安装"></a>1.4.4. 安装</h4>
 <div class="paragraph">
-<p>就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 <code>homebrew</code>:</p>
+<p>就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 homebrew:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -666,7 +666,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>就直接完成了 <code>wget`的安装。 诸如 `go</code>、<code>npm</code>、<code>Pypi</code> 等等均如此。</p>
+<p>就直接完成了 wget 的安装。 诸如 go、npm、Pypi 等等均如此。</p>
 </div>
 </div>
 <div class="sect3">
@@ -683,7 +683,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>用浏览器打开生成的 HTML 文件 <code>target/generated-docs/OpenSourceManual.html</code> 。</p>
+<p>用浏览器打开生成的 HTML 文件 “target/generated-docs/OpenSourceManual.html” 。</p>
 </div>
 </div>
 <div class="sect3">
@@ -720,7 +720,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="许可证"><a class="anchor" href="#许可证"></a>1.4.8. 许可证</h4>
 <div class="paragraph">
-<p>通常情况下，项目的主目录下会放一个 <code>License</code> 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。</p>
+<p>通常情况下，项目的主目录下会放一个 License 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。</p>
 </div>
 <div class="paragraph">
 <p>此项为可选，不是必须。</p>
@@ -780,12 +780,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>保持开放的头脑！改进文档、bug 筛选、以及为任何有用处的贡献撰写教程，都会大大的减轻维护者的工作量。</p>
 </div>
-<div class="quoteblock">
-<blockquote>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>ElasticSearch 是一款开源项目，而且我们非常热心的希望收到来自共同体的——你——的贡献！有很多种路径实现贡献：撰写教程、撰写博客、改进现有文档、提交bug报告、提交新功能需求、以及提交代码，均是为 Elasticsearch 自身内部合作的一部分。</p>
 </div>
-</blockquote>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>内容来自 <a href="https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md">Elasticsearch</a> 贡献者文档，更多优秀的解释贡献类型说明，请参考 [参考文档] 中的 <a href="#3">[3]</a> 和 <a href="#4">[4]</a></p>
@@ -796,12 +803,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>再重复一遍，做这些工作可以大大的减轻维护者的工作量。如果有人忽略掉你的向导指南，并提交了一些你最不想看到的内容，那么这个时候你就可以正当的关闭它，并告诉ta你的规程。</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>请不要使用 issue 跟踪来获得问题支持。请到 Freenode 上的 IRC 频道找 #pocoo 来进一步获得支持。如果你的问题不是直接和 Werkzeug 或 Flask 相关，#python 频道是非常活跃的有可能帮到你的，另外 Stack Overflow 也非常值得考虑。</p>
-</div>
-</blockquote>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+请不要使用 issue 跟踪来获得问题支持。请到 Freenode 上的 IRC 频道找 #pocoo 来进一步获得支持。如果你的问题不是直接和 Werkzeug 或 Flask 相关，#python 频道是非常活跃的有可能帮到你的，另外 Stack Overflow 也非常值得考虑。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>内容来自： <a href="https://github.com/pallets/flask/blob/master/CONTRIBUTING.rst">flask</a> 贡献者文档，更多优秀说明，请参考 <a href="#5">[5]</a> 和 <a href="#6">[6]</a>。</p>
@@ -815,12 +827,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>此处的信息不仅包括如何和他人沟通（彼此尊重、考虑对方等），也要包括技术上的责任（测试的重要性、项目依赖等），如果有行为准则的话，提示并将链接地址释出。</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>责任：</p>
-</div>
-</blockquote>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+责任:
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -857,15 +874,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>例如 <a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#your-first-code-contribution">Atom</a> 给出贡献者指南：</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>不确定如何开始为 Atom 做贡献？你可以先从那些标记为 beginner 或 help-wanted的issue入手：
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+不确定如何开始为 Atom 做贡献？你可以先从那些标记为 beginner 或 help-wanted的issue入手：
 Beginner issues -  那些只需要几行代码就可以搞定，或者是做一到两个测试的 issues 。
 Help wanted issues - 比 Beginner 更深度参与的 issues 。
-上述 issue 列表，你可以将之按评论总数排序。虽然这么做有所缺陷，但是评论的数量可以合理地反映一个给定的变化将会产生的影响。</p>
-</div>
-</blockquote>
+上述 issue 列表，你可以将之按评论总数排序。虽然这么做有所缺陷，但是评论的数量可以合理地反映一个给定的变化将会产生的影响。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>这就非常的清晰了，更多的优秀的关于针对首次贡献的说明，可参考：<a href="#1">[1]</a>、<a href="#9">[9]</a></p>
@@ -886,12 +908,17 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </li>
 </ul>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>正在为你的第一个 Pull Request 做准备吗？你可以从这个系列文章中学习到： <a href="https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github">在 GitHub 如何为开源项目做贡献</a></p>
-</div>
-</blockquote>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+正在为你的第一个 Pull Request 做准备吗？你可以从这个系列文章中学习到： <a href="https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github">在 GitHub 如何为开源项目做贡献</a>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>以上内容是 <a href="https://github.com/facebook/react/blob/master/CONTRIBUTING.md#pull-requests">React</a> 项目所提供的额外资源。简直是良心共同体。</p>
@@ -917,12 +944,17 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </li>
 </ul>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>针对修改一两行内容之上的改动，应做到：</p>
-</div>
-</blockquote>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+针对修改一两行内容之上的改动，应做到：
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1483,7 +1515,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-17 12:04:26 UTC
+Last updated 2020-10-01 14:43:59 UTC
 </div>
 </div>
 <style>

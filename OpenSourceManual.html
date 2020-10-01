@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="姜宁 &lt;ningjiang@apache.org&gt;;李建盛 &lt;lijiansheng@ocselected.org&gt;">
+<meta name="author" content="一部与时俱进的开源方法论指南">
 <title>现代开源手册</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -442,190 +442,214 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>现代开源手册</h1>
 <div class="details">
-<span id="author" class="author">姜宁 &lt;ningjiang@apache.org&gt;;李建盛 &lt;lijiansheng@ocselected.org&gt;</span><br>
-<span id="revnumber">version 1.0.0-SNAPSHOT</span>
+<span id="author" class="author">一部与时俱进的开源方法论指南</span><br>
+<span id="revnumber">version 0.1,</span>
+<span id="revdate">2020-09-30</span>
+<br><span id="revremark">第一个可预览的版本</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel0">
-<li><a href="#作者">作者</a>
+<li><a href="#作者介绍">作者介绍</a>
 <ul class="sectlevel1">
+<li><a href="#参与本书的作者列表">1. 参与本书的作者列表</a></li>
+<li><a href="#l">2. L</a></li>
+<li><a href="#j">3. J</a></li>
+<li><a href="#贡献者列表">4. 贡献者列表</a></li>
 <li><a href="#前言">前言</a></li>
 </ul>
 </li>
 <li><a href="#准备开源">准备开源</a>
 <ul class="sectlevel1">
-<li><a href="#开源最佳实践">1. 开源最佳实践</a>
+<li><a href="#开源最佳实践">5. 开源最佳实践</a>
 <ul class="sectlevel2">
-<li><a href="#上游优先的开发方式">1.1. 上游优先的开发方式</a></li>
-<li><a href="#可插拔软件体系架构">1.2. 可插拔软件体系架构</a></li>
-<li><a href="#mvp原则">1.3. MVP原则</a></li>
-<li><a href="#撰写有吸引力readme文档">1.4. 撰写有吸引力README文档</a></li>
-<li><a href="#撰写贡献者指南">1.5. 撰写贡献者指南</a></li>
+<li><a href="#上游优先的开发方式">5.1. 上游优先的开发方式</a></li>
+<li><a href="#可插拔软件体系架构">5.2. 可插拔软件体系架构</a></li>
+<li><a href="#mvp原则">5.3. MVP原则</a></li>
+<li><a href="#撰写有吸引力readme文档">5.4. 撰写有吸引力README文档</a></li>
+<li><a href="#撰写贡献者指南">5.5. 撰写贡献者指南</a></li>
 </ul>
 </li>
-<li><a href="#知识产权与合规">2. 知识产权与合规</a>
+<li><a href="#知识产权与合规">6. 知识产权与合规</a>
 <ul class="sectlevel2">
-<li><a href="#版权基础知识">2.1. 版权基础知识</a></li>
-<li><a href="#开源license的选择">2.2. 开源License的选择</a></li>
-<li><a href="#第三方依赖license">2.3. 第三方依赖License</a></li>
+<li><a href="#版权基础知识">6.1. 版权基础知识</a></li>
+<li><a href="#开源license的选择">6.2. 开源License的选择</a></li>
+<li><a href="#第三方依赖license">6.3. 第三方依赖License</a></li>
 </ul>
 </li>
-<li><a href="#项目命名与商标">3. 项目命名与商标</a>
+<li><a href="#项目命名与商标">7. 项目命名与商标</a>
 <ul class="sectlevel2">
-<li><a href="#项目命名">3.1. 项目命名</a></li>
-<li><a href="#商标注册">3.2. 商标注册</a></li>
-<li><a href="#域名申请">3.3. 域名申请</a></li>
-<li><a href="#参考材料">3.4. 参考材料</a></li>
+<li><a href="#项目命名">7.1. 项目命名</a></li>
+<li><a href="#商标注册">7.2. 商标注册</a></li>
+<li><a href="#域名申请">7.3. 域名申请</a></li>
+<li><a href="#参考材料">7.4. 参考材料</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#基础设施">基础设施</a>
 <ul class="sectlevel1">
-<li><a href="#邮件列表">4. 邮件列表</a></li>
-<li><a href="#版本控制系统">5. 版本控制系统</a>
+<li><a href="#邮件列表">8. 邮件列表</a></li>
+<li><a href="#版本控制系统">9. 版本控制系统</a>
 <ul class="sectlevel2">
-<li><a href="#版本控制系统简介">5.1. 版本控制系统简介</a></li>
-<li><a href="#为什么会有差异">5.2. 为什么会有差异？</a></li>
-<li><a href="#diff-和-patch">5.3. diff 和 patch</a></li>
-<li><a href="#参考资料">5.4. 参考资料</a></li>
-<li><a href="#git-之前的版本控制系统">5.5. Git 之前的版本控制系统</a></li>
-<li><a href="#git">5.6. Git</a></li>
-<li><a href="#git-的八卦">5.7. Git 的“八卦”</a></li>
-<li><a href="#git-的常见使用">5.8. Git 的常见使用</a></li>
-<li><a href="#参考资料-3">5.9. 参考资料</a></li>
+<li><a href="#版本控制系统简介">9.1. 版本控制系统简介</a></li>
+<li><a href="#为什么会有差异">9.2. 为什么会有差异？</a></li>
+<li><a href="#diff-和-patch">9.3. diff 和 patch</a></li>
+<li><a href="#参考资料">9.4. 参考资料</a></li>
+<li><a href="#git-之前的版本控制系统">9.5. Git 之前的版本控制系统</a></li>
+<li><a href="#git">9.6. Git</a></li>
+<li><a href="#git-的八卦">9.7. Git 的“八卦”</a></li>
+<li><a href="#git-的常见使用">9.8. Git 的常见使用</a></li>
+<li><a href="#参考资料-3">9.9. 参考资料</a></li>
 </ul>
 </li>
-<li><a href="#代码仓库">6. 代码仓库</a>
+<li><a href="#代码仓库">10. 代码仓库</a>
 <ul class="sectlevel2">
-<li><a href="#代码仓库的基本功能">6.1. 代码仓库的基本功能</a></li>
-<li><a href="#常见代码仓库的使用">6.2. 常见代码仓库的使用</a></li>
+<li><a href="#代码仓库的基本功能">10.1. 代码仓库的基本功能</a></li>
+<li><a href="#常见代码仓库的使用">10.2. 常见代码仓库的使用</a></li>
 </ul>
 </li>
-<li><a href="#项目资料">7. 项目资料</a>
+<li><a href="#项目资料">11. 项目资料</a>
 <ul class="sectlevel2">
-<li><a href="#创建网站">7.1. 创建网站</a></li>
+<li><a href="#创建网站">11.1. 创建网站</a></li>
 </ul>
 </li>
-<li><a href="#持续集成系统">8. 持续集成系统</a>
+<li><a href="#持续集成系统">12. 持续集成系统</a>
 <ul class="sectlevel2">
-<li><a href="#持续集成功能与意义">8.1. 持续集成功能与意义</a></li>
-<li><a href="#jenkins开源的持续集成">8.2. Jenkins&#8201;&#8212;&#8201;开源的持续集成</a></li>
-<li><a href="#travisgithub-actions-在线服务">8.3. Travis，Github Actions 在线服务</a></li>
+<li><a href="#持续集成功能与意义">12.1. 持续集成功能与意义</a></li>
+<li><a href="#jenkins开源的持续集成">12.2. Jenkins&#8201;&#8212;&#8201;开源的持续集成</a></li>
+<li><a href="#travisgithub-actions-在线服务">12.3. Travis，Github Actions 在线服务</a></li>
 </ul>
 </li>
-<li><a href="#问题追踪系统">9. 问题追踪系统</a>
+<li><a href="#问题追踪系统">13. 问题追踪系统</a>
 <ul class="sectlevel2">
-<li><a href="#问题追踪的功能">9.1. 问题追踪的功能</a></li>
-<li><a href="#常见的问题追踪系统的使用">9.2. 常见的问题追踪系统的使用</a></li>
+<li><a href="#问题追踪的功能">13.1. 问题追踪的功能</a></li>
+<li><a href="#常见的问题追踪系统的使用">13.2. 常见的问题追踪系统的使用</a></li>
 </ul>
 </li>
-<li><a href="#现代开源项目开发集大成者-github-平台介绍">10. 现代开源项目开发集大成者 GitHub 平台介绍</a>
+<li><a href="#现代开源项目开发集大成者-github-平台介绍">14. 现代开源项目开发集大成者 GitHub 平台介绍</a>
 <ul class="sectlevel2">
-<li><a href="#git-与-github">10.1. Git 与 GitHub</a></li>
-<li><a href="#github-上手指南">10.2. GitHub 上手指南</a></li>
-<li><a href="#github-开源项目协作和流程">10.3. GitHub 开源项目协作和流程</a></li>
-<li><a href="#github-公司github-平台闭源与商业伦理">10.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></li>
-<li><a href="#参考资料-4">10.5. 参考资料</a></li>
+<li><a href="#git-与-github">14.1. Git 与 GitHub</a></li>
+<li><a href="#github-上手指南">14.2. GitHub 上手指南</a></li>
+<li><a href="#github-开源项目协作和流程">14.3. GitHub 开源项目协作和流程</a></li>
+<li><a href="#github-公司github-平台闭源与商业伦理">14.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></li>
+<li><a href="#参考资料-4">14.5. 参考资料</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#开源质量">开源质量</a>
 <ul class="sectlevel1">
-<li><a href="#自动持续构建系统">11. 自动持续构建系统</a></li>
-<li><a href="#自动测试代码">12. 自动测试代码</a></li>
-<li><a href="#功能测试代码">13. 功能测试代码</a></li>
-<li><a href="#代码风格检查">14. 代码风格检查</a></li>
-<li><a href="#第三方依赖跟踪">15. 第三方依赖跟踪</a></li>
+<li><a href="#自动持续构建系统">15. 自动持续构建系统</a></li>
+<li><a href="#自动测试代码">16. 自动测试代码</a></li>
+<li><a href="#功能测试代码">17. 功能测试代码</a></li>
+<li><a href="#代码风格检查">18. 代码风格检查</a></li>
+<li><a href="#第三方依赖跟踪">19. 第三方依赖跟踪</a></li>
 </ul>
 </li>
 <li><a href="#开源协作">开源协作</a>
 <ul class="sectlevel1">
-<li><a href="#什么是开源共同体">16. 什么是开源共同体？</a>
+<li><a href="#什么是开源共同体">20. 什么是开源共同体？</a>
 <ul class="sectlevel2">
-<li><a href="#gnu-gcc">16.1. GNU GCC</a></li>
-<li><a href="#linux-kernel">16.2. Linux Kernel</a></li>
-<li><a href="#apache-httpd">16.3. Apache HTTPD</a></li>
-<li><a href="#python">16.4. Python</a></li>
-<li><a href="#debian">16.5. Debian</a></li>
+<li><a href="#gnu-gcc">20.1. GNU GCC</a></li>
+<li><a href="#linux-kernel">20.2. Linux Kernel</a></li>
+<li><a href="#apache-httpd">20.3. Apache HTTPD</a></li>
+<li><a href="#python">20.4. Python</a></li>
+<li><a href="#debian">20.5. Debian</a></li>
 </ul>
 </li>
-<li><a href="#开源共同体的角色构成">17. 开源共同体的角色构成</a>
+<li><a href="#开源共同体的角色构成">21. 开源共同体的角色构成</a>
 <ul class="sectlevel2">
-<li><a href="#开源共同体中的作为个人的角色分类">17.1. 开源共同体中的作为个人的角色分类</a></li>
-<li><a href="#开源共同体中的作为机构的角色分类">17.2. 开源共同体中的作为机构的角色分类</a></li>
+<li><a href="#开源共同体中的作为个人的角色分类">21.1. 开源共同体中的作为个人的角色分类</a></li>
+<li><a href="#开源共同体中的作为机构的角色分类">21.2. 开源共同体中的作为机构的角色分类</a></li>
 </ul>
 </li>
-<li><a href="#开放式开发平台的崛起">18. 开放式开发平台的崛起</a>
+<li><a href="#开放式开发平台的崛起">22. 开放式开发平台的崛起</a>
 <ul class="sectlevel2">
-<li><a href="#小结">18.1. 小结</a></li>
+<li><a href="#小结">22.1. 小结</a></li>
 </ul>
 </li>
-<li><a href="#开源社交礼仪">19. 开源社交礼仪</a>
+<li><a href="#开源社交礼仪">23. 开源社交礼仪</a>
 <ul class="sectlevel2">
-<li><a href="#开源共同体中鼓励和倡导做什么">19.1. 开源共同体中鼓励和倡导做什么？</a></li>
-<li><a href="#开源共同体中不可以做什么">19.2. 开源共同体中不可以做什么？</a></li>
+<li><a href="#开源共同体中鼓励和倡导做什么">23.1. 开源共同体中鼓励和倡导做什么？</a></li>
+<li><a href="#开源共同体中不可以做什么">23.2. 开源共同体中不可以做什么？</a></li>
 </ul>
 </li>
-<li><a href="#community-共同体治理模型">20. Community (共同体)治理模型</a>
+<li><a href="#community-共同体治理模型">24. Community (共同体)治理模型</a>
 <ul class="sectlevel2">
-<li><a href="#概览">20.1. 概览</a></li>
-<li><a href="#角色和责任">20.2. 角色和责任</a></li>
-<li><a href="#支持">20.3. 支持</a></li>
-<li><a href="#决策流程">20.4. 决策流程</a></li>
-<li><a href="#贡献流程">20.5. 贡献流程</a></li>
+<li><a href="#概览">24.1. 概览</a></li>
+<li><a href="#角色和责任">24.2. 角色和责任</a></li>
+<li><a href="#支持">24.3. 支持</a></li>
+<li><a href="#决策流程">24.4. 决策流程</a></li>
+<li><a href="#贡献流程">24.5. 贡献流程</a></li>
 </ul>
 </li>
-<li><a href="#开源开发协作流程">21. 开源开发协作流程</a></li>
-<li><a href="#维护者的最佳实践">22. 维护者的最佳实践</a>
+<li><a href="#开源开发协作流程">25. 开源开发协作流程</a></li>
+<li><a href="#维护者的最佳实践">26. 维护者的最佳实践</a>
 <ul class="sectlevel2">
-<li><a href="#免责申明">22.1. 免责申明</a></li>
-<li><a href="#身为一名维护者意味着什么">22.2. 身为一名维护者意味着什么？</a></li>
-<li><a href="#将流程撰文档化">22.3. 将流程撰文档化</a></li>
-<li><a href="#写下你的项目的发展方向">22.4. 写下你的项目的发展方向</a></li>
-<li><a href="#和大家交流你自己对项目的期望">22.5. 和大家交流你自己对项目的期望</a></li>
-<li><a href="#保证所有的交流都是公开进行的">22.6. 保证所有的交流都是公开进行的</a></li>
-<li><a href="#学会拒绝他人">22.7. 学会拒绝他人</a></li>
-<li><a href="#保持友好沟通">22.8. 保持友好沟通</a></li>
-<li><a href="#保持主动">22.9. 保持主动</a></li>
-<li><a href="#成为导师">22.10. 成为导师</a></li>
-<li><a href="#有效利用社区">22.11. 有效利用社区</a></li>
-<li><a href="#分担工作量">22.12. 分担工作量</a></li>
-<li><a href="#让别人尝试他们自己想要的解决方案">22.13. 让别人尝试他们自己想要的解决方案</a></li>
-<li><a href="#使用机器人">22.14. 使用机器人</a></li>
-<li><a href="#引进测试和别的检查来改善你的代码质量">22.15. 引进测试和别的检查来改善你的代码质量</a></li>
-<li><a href="#用工具来自动化日常的维护工作">22.16. 用工具来自动化日常的维护工作</a></li>
-<li><a href="#不干了也没关系">22.17. 不干了也没关系</a></li>
-<li><a href="#首先照顾好自己">22.18. 首先照顾好自己！</a></li>
-<li><a href="#参考资料-6">22.19. 参考资料</a></li>
+<li><a href="#免责申明">26.1. 免责申明</a></li>
+<li><a href="#身为一名维护者意味着什么">26.2. 身为一名维护者意味着什么？</a></li>
+<li><a href="#将流程撰文档化">26.3. 将流程撰文档化</a></li>
+<li><a href="#写下你的项目的发展方向">26.4. 写下你的项目的发展方向</a></li>
+<li><a href="#和大家交流你自己对项目的期望">26.5. 和大家交流你自己对项目的期望</a></li>
+<li><a href="#保证所有的交流都是公开进行的">26.6. 保证所有的交流都是公开进行的</a></li>
+<li><a href="#学会拒绝他人">26.7. 学会拒绝他人</a></li>
+<li><a href="#保持友好沟通">26.8. 保持友好沟通</a></li>
+<li><a href="#保持主动">26.9. 保持主动</a></li>
+<li><a href="#成为导师">26.10. 成为导师</a></li>
+<li><a href="#有效利用社区">26.11. 有效利用社区</a></li>
+<li><a href="#分担工作量">26.12. 分担工作量</a></li>
+<li><a href="#让别人尝试他们自己想要的解决方案">26.13. 让别人尝试他们自己想要的解决方案</a></li>
+<li><a href="#使用机器人">26.14. 使用机器人</a></li>
+<li><a href="#引进测试和别的检查来改善你的代码质量">26.15. 引进测试和别的检查来改善你的代码质量</a></li>
+<li><a href="#用工具来自动化日常的维护工作">26.16. 用工具来自动化日常的维护工作</a></li>
+<li><a href="#不干了也没关系">26.17. 不干了也没关系</a></li>
+<li><a href="#首先照顾好自己">26.18. 首先照顾好自己！</a></li>
+<li><a href="#参考资料-6">26.19. 参考资料</a></li>
 </ul>
 </li>
-<li><a href="#参考资料-7">23. 参考资料</a></li>
-<li><a href="#术语表">Appendix A: 术语表</a></li>
+<li><a href="#参考资料-7">27. 参考资料</a></li>
+<li><a href="#术语表">Appendix A: 术语表</a>
+<ul class="sectlevel2">
+<li><a href="#开源-open-source">开源 （Open Source）</a></li>
+<li><a href="#开源软件open-source-software">A.1. 开源软件（Open Source Software）</a></li>
+<li><a href="#开源软件共同体-open-source-software-community">A.2. 开源软件共同体 （Open Source software community）</a></li>
+<li><a href="#开源软件基金会-open-source-software-foundation">A.3. 开源软件基金会（ Open Source software Foundation）</a></li>
 </ul>
 </li>
-<li><a href="#名词解释">名词解释</a></li>
-<li><a href="#开源-open-source">24. 开源 （Open Source）</a></li>
-<li><a href="#开源软件open-source-software">25. 开源软件（Open Source Software）</a></li>
-<li><a href="#开源软件共同体-open-source-software-community">26. 开源软件共同体 （Open Source software community）</a></li>
-<li><a href="#开源软件基金会-open-source-software-foundation">27. 开源软件基金会（ Open Source software Foundation）</a></li>
-<li><a href="#贡献者列表">贡献者列表</a>
-<ul class="sectlevel1">
-<li><a href="#参与本书的作者列表">28. 参与本书的作者列表</a></li>
-<li><a href="#l">29. L</a></li>
-<li><a href="#j">30. J</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<h1 id="作者" class="sect0"><a class="anchor" href="#作者"></a><a class="link" href="#作者">作者</a></h1>
-<div class="openblock partintro">
-<div class="content">
-姜宁 &lt;<a href="mailto:ningjiang@apache.org">ningjiang@apache.org</a>&gt;;李建盛 &lt;<a href="mailto:lijiansheng@ocselected.org">lijiansheng@ocselected.org</a>&gt;
+<h1 id="作者介绍" class="sect0"><a class="anchor" href="#作者介绍"></a><a class="link" href="#作者介绍">作者介绍</a></h1>
+<div class="sect1">
+<h2 id="参与本书的作者列表"><a class="anchor" href="#参与本书的作者列表"></a><a class="link" href="#参与本书的作者列表">1. 参与本书的作者列表</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="l"><a class="anchor" href="#l"></a><a class="link" href="#l">2. L</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>李建盛 ，别名适兕，开源布道师，开源之道（opensourceway.community)发起者，ALC Beijing 成员。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="j"><a class="anchor" href="#j"></a><a class="link" href="#j">3. J</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>姜宁 - 华为开源软件中心技术专家，前红帽软件首席软件工程师，Apache软件基金会成员，Apache软件基金孵化器导师，参与了绝大多个中国发起的Apache基金会项目的孵化。本人06年开始加入到Apache社区项目开发，就被社区开放协作的氛围深深吸引，成为开源深度信徒。现在致力于开源社区建设，以及开源文化推广，尽其所能帮助国内开源项目成功。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="贡献者列表"><a class="anchor" href="#贡献者列表"></a><a class="link" href="#贡献者列表">4. 贡献者列表</a></h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
@@ -664,10 +688,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <h1 id="准备开源" class="sect0"><a class="anchor" href="#准备开源"></a><a class="link" href="#准备开源">准备开源</a></h1>
 <div class="sect1">
-<h2 id="开源最佳实践"><a class="anchor" href="#开源最佳实践"></a><a class="link" href="#开源最佳实践">1. 开源最佳实践</a></h2>
+<h2 id="开源最佳实践"><a class="anchor" href="#开源最佳实践"></a><a class="link" href="#开源最佳实践">5. 开源最佳实践</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="上游优先的开发方式"><a class="anchor" href="#上游优先的开发方式"></a><a class="link" href="#上游优先的开发方式">1.1. 上游优先的开发方式</a></h3>
+<h3 id="上游优先的开发方式"><a class="anchor" href="#上游优先的开发方式"></a><a class="link" href="#上游优先的开发方式">5.1. 上游优先的开发方式</a></h3>
 <div class="paragraph">
 <p>开源项目之间是相互依赖包含构成了一个完整的生态体系。一个开源项目可能会使用到很多第三方的开源项目，这个开源项目也可能被第三方项目引用包含到其它的开源或者非开源的项目中。通常我们会把被依赖的项目称为上游项目，对上游项目产生依赖的项目为下游项目。上游项目提供了具体的功能实现，下游项目一般通过调用上游项目实现相关的功能。</p>
 </div>
@@ -712,15 +736,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="可插拔软件体系架构"><a class="anchor" href="#可插拔软件体系架构"></a><a class="link" href="#可插拔软件体系架构">1.2. 可插拔软件体系架构</a></h3>
+<h3 id="可插拔软件体系架构"><a class="anchor" href="#可插拔软件体系架构"></a><a class="link" href="#可插拔软件体系架构">5.2. 可插拔软件体系架构</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="mvp原则"><a class="anchor" href="#mvp原则"></a><a class="link" href="#mvp原则">1.3. MVP原则</a></h3>
+<h3 id="mvp原则"><a class="anchor" href="#mvp原则"></a><a class="link" href="#mvp原则">5.3. MVP原则</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="撰写有吸引力readme文档"><a class="anchor" href="#撰写有吸引力readme文档"></a><a class="link" href="#撰写有吸引力readme文档">1.4. 撰写有吸引力README文档</a></h3>
+<h3 id="撰写有吸引力readme文档"><a class="anchor" href="#撰写有吸引力readme文档"></a><a class="link" href="#撰写有吸引力readme文档">5.4. 撰写有吸引力README文档</a></h3>
 <div class="paragraph">
 <p>README ，中文常常翻译为自述文件[1]，在软件开发的历史上，自述文件出现的时期也算很早了，上世纪70年代就有人关注项目中的自我描述文件的重要性了。甚至这是作为一名hacker
 必须做到的事情[3]。</p>
@@ -770,7 +794,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="项目名称"><a class="anchor" href="#项目名称"></a><a class="link" href="#项目名称">1.4.1. 项目名称</a></h4>
+<h4 id="项目名称"><a class="anchor" href="#项目名称"></a><a class="link" href="#项目名称">5.4.1. 项目名称</a></h4>
 <div class="paragraph">
 <p>对，你的项目较什么名字，可以带上logo更佳。如 <a href="https://gitee.com/openeuler/iSulad">iSulad</a>:</p>
 </div>
@@ -781,7 +805,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="徽章和标志"><a class="anchor" href="#徽章和标志"></a><a class="link" href="#徽章和标志">1.4.2. 徽章和标志</a></h4>
+<h4 id="徽章和标志"><a class="anchor" href="#徽章和标志"></a><a class="link" href="#徽章和标志">5.4.2. 徽章和标志</a></h4>
 <div class="paragraph">
 <p>这些酷酷的小玩意，起到的作用是出乎我们意料之外的，正如现在社交媒体使用的Emoji一样：</p>
 </div>
@@ -794,7 +818,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://miro.medium.com/max/294/1*XKOHKSYuycUjo7Bqh2H6Cg.png" alt="1*XKOHKSYuycUjo7Bqh2H6Cg">
+<img src="./build_success.png" alt="build success">
 </div>
 </div>
 <div class="ulist">
@@ -806,7 +830,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://miro.medium.com/max/324/1*psOVJ_DE6PLBUZjuqyfbCA.png" alt="1*psOVJ DE6PLBUZjuqyfbCA">
+<img src="./coverage_process.png" alt="coverage process">
 </div>
 </div>
 <div class="ulist">
@@ -836,7 +860,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="项目描述"><a class="anchor" href="#项目描述"></a><a class="link" href="#项目描述">1.4.3. 项目描述</a></h4>
+<h4 id="项目描述"><a class="anchor" href="#项目描述"></a><a class="link" href="#项目描述">5.4.3. 项目描述</a></h4>
 <div class="paragraph">
 <p>这就到了最为精髓的部分了，请用一两句简短的话将你的项目描述清楚，项目是做什么的，愿景是什么？如 <a href="https://gitee.com/openeuler/iSulad">iSulad</a></p>
 </div>
@@ -847,9 +871,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="安装"><a class="anchor" href="#安装"></a><a class="link" href="#安装">1.4.4. 安装</a></h4>
+<h4 id="安装"><a class="anchor" href="#安装"></a><a class="link" href="#安装">5.4.4. 安装</a></h4>
 <div class="paragraph">
-<p>就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 <code>homebrew</code>:</p>
+<p>就现代软件的供应链来讲，尤其是分布式的模块分布，以及包管理器的成熟，举个例子，比如 Mac OS 下的命令行工具 homebrew:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -859,11 +883,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>就直接完成了 <code>wget`的安装。 诸如 `go</code>、<code>npm</code>、<code>Pypi</code> 等等均如此。</p>
+<p>就直接完成了 wget 的安装。 诸如 go、npm、Pypi 等等均如此。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="使用实例"><a class="anchor" href="#使用实例"></a><a class="link" href="#使用实例">1.4.5. 使用实例</a></h4>
+<h4 id="使用实例"><a class="anchor" href="#使用实例"></a><a class="link" href="#使用实例">5.4.5. 使用实例</a></h4>
 <div class="paragraph">
 <p>请在这里写上你如何使用，比如 <a href="https://github.com/WillemJiang/open-source-manual/blob/master/README-zh_CN.adoc">现代开源手册</a> 项目的用法就非常的言简意赅：</p>
 </div>
@@ -876,11 +900,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph">
-<p>用浏览器打开生成的 HTML 文件 <code>target/generated-docs/OpenSourceManual.html</code> 。</p>
+<p>用浏览器打开生成的 HTML 文件 “target/generated-docs/OpenSourceManual.html” 。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="文档"><a class="anchor" href="#文档"></a><a class="link" href="#文档">1.4.6. 文档</a></h4>
+<h4 id="文档"><a class="anchor" href="#文档"></a><a class="link" href="#文档">5.4.6. 文档</a></h4>
 <div class="paragraph">
 <p>请在此列出项目的文档：</p>
 </div>
@@ -905,15 +929,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="作者贡献者"><a class="anchor" href="#作者贡献者"></a><a class="link" href="#作者贡献者">1.4.7. 作者/贡献者</a></h4>
+<h4 id="作者贡献者"><a class="anchor" href="#作者贡献者"></a><a class="link" href="#作者贡献者">5.4.7. 作者/贡献者</a></h4>
 <div class="paragraph">
 <p>请在此列出所有的对项目有贡献的人名以及他们的邮箱地址，如果可以的话，将他们的社交账号一并列出如GitHub id、Twitter id等。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="许可证"><a class="anchor" href="#许可证"></a><a class="link" href="#许可证">1.4.8. 许可证</a></h4>
+<h4 id="许可证"><a class="anchor" href="#许可证"></a><a class="link" href="#许可证">5.4.8. 许可证</a></h4>
 <div class="paragraph">
-<p>通常情况下，项目的主目录下会放一个 <code>License</code> 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。</p>
+<p>通常情况下，项目的主目录下会放一个 License 的文件，表明该仓库的项目是在何种开源许可证授权的，当然你也可以在这里进行一定的说明。</p>
 </div>
 <div class="paragraph">
 <p>此项为可选，不是必须。</p>
@@ -921,7 +945,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="撰写贡献者指南"><a class="anchor" href="#撰写贡献者指南"></a><a class="link" href="#撰写贡献者指南">1.5. 撰写贡献者指南</a></h3>
+<h3 id="撰写贡献者指南"><a class="anchor" href="#撰写贡献者指南"></a><a class="link" href="#撰写贡献者指南">5.5. 撰写贡献者指南</a></h3>
 <div class="paragraph">
 <p>开源项目想要生生不息的发展下去，招募更多贡献者加入是必做的事情之一。请在这里写下项目的贡献者指南链接地址。</p>
 </div>
@@ -936,7 +960,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </blockquote>
 </div>
 <div class="sect3">
-<h4 id="介绍"><a class="anchor" href="#介绍"></a><a class="link" href="#介绍">1.5.1. 介绍</a></h4>
+<h4 id="介绍"><a class="anchor" href="#介绍"></a><a class="link" href="#介绍">5.5.1. 介绍</a></h4>
 <div class="sect4">
 <h5 id="在此写一些友好的内容"><a class="anchor" href="#在此写一些友好的内容"></a><a class="link" href="#在此写一些友好的内容">在此写一些友好的内容！</a></h5>
 <div class="quoteblock">
@@ -973,12 +997,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>保持开放的头脑！改进文档、bug 筛选、以及为任何有用处的贡献撰写教程，都会大大的减轻维护者的工作量。</p>
 </div>
-<div class="quoteblock">
-<blockquote>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>ElasticSearch 是一款开源项目，而且我们非常热心的希望收到来自共同体的——你——的贡献！有很多种路径实现贡献：撰写教程、撰写博客、改进现有文档、提交bug报告、提交新功能需求、以及提交代码，均是为 Elasticsearch 自身内部合作的一部分。</p>
 </div>
-</blockquote>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>内容来自 <a href="https://github.com/elastic/elasticsearch/blob/master/CONTRIBUTING.md">Elasticsearch</a> 贡献者文档，更多优秀的解释贡献类型说明，请参考 [参考文档] 中的 <a href="#3">[3]</a> 和 <a href="#4">[4]</a></p>
@@ -989,12 +1020,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>再重复一遍，做这些工作可以大大的减轻维护者的工作量。如果有人忽略掉你的向导指南，并提交了一些你最不想看到的内容，那么这个时候你就可以正当的关闭它，并告诉ta你的规程。</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>请不要使用 issue 跟踪来获得问题支持。请到 Freenode 上的 IRC 频道找 #pocoo 来进一步获得支持。如果你的问题不是直接和 Werkzeug 或 Flask 相关，#python 频道是非常活跃的有可能帮到你的，另外 Stack Overflow 也非常值得考虑。</p>
-</div>
-</blockquote>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+请不要使用 issue 跟踪来获得问题支持。请到 Freenode 上的 IRC 频道找 #pocoo 来进一步获得支持。如果你的问题不是直接和 Werkzeug 或 Flask 相关，#python 频道是非常活跃的有可能帮到你的，另外 Stack Overflow 也非常值得考虑。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>内容来自： <a href="https://github.com/pallets/flask/blob/master/CONTRIBUTING.rst">flask</a> 贡献者文档，更多优秀说明，请参考 <a href="#5">[5]</a> 和 <a href="#6">[6]</a>。</p>
@@ -1002,18 +1038,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="基本规则"><a class="anchor" href="#基本规则"></a><a class="link" href="#基本规则">1.5.2. 基本规则</a></h4>
+<h4 id="基本规则"><a class="anchor" href="#基本规则"></a><a class="link" href="#基本规则">5.5.2. 基本规则</a></h4>
 <div class="sect4">
 <h5 id="设定期望的行为你的和他们的"><a class="anchor" href="#设定期望的行为你的和他们的"></a><a class="link" href="#设定期望的行为你的和他们的">设定期望的行为（你的和他们的）</a></h5>
 <div class="paragraph">
 <p>此处的信息不仅包括如何和他人沟通（彼此尊重、考虑对方等），也要包括技术上的责任（测试的重要性、项目依赖等），如果有行为准则的话，提示并将链接地址释出。</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>责任：</p>
-</div>
-</blockquote>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+责任:
+</td>
+</tr>
+</table>
 </div>
 <div class="ulist">
 <ul>
@@ -1043,29 +1084,34 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="针对初次贡献的说明"><a class="anchor" href="#针对初次贡献的说明"></a><a class="link" href="#针对初次贡献的说明">1.5.3. 针对初次贡献的说明</a></h4>
+<h4 id="针对初次贡献的说明"><a class="anchor" href="#针对初次贡献的说明"></a><a class="link" href="#针对初次贡献的说明">5.5.3. 针对初次贡献的说明</a></h4>
 <div class="paragraph">
 <p>帮助刚刚接触到贵项目的新人，最佳之处就是了解他们哪里需要帮助。而这通常也是一个展示你项目是否适合新手的好时机。</p>
 </div>
 <div class="paragraph">
 <p>例如 <a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#your-first-code-contribution">Atom</a> 给出贡献者指南：</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>不确定如何开始为 Atom 做贡献？你可以先从那些标记为 beginner 或 help-wanted的issue入手：
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+不确定如何开始为 Atom 做贡献？你可以先从那些标记为 beginner 或 help-wanted的issue入手：
 Beginner issues -  那些只需要几行代码就可以搞定，或者是做一到两个测试的 issues 。
 Help wanted issues - 比 Beginner 更深度参与的 issues 。
-上述 issue 列表，你可以将之按评论总数排序。虽然这么做有所缺陷，但是评论的数量可以合理地反映一个给定的变化将会产生的影响。</p>
-</div>
-</blockquote>
+上述 issue 列表，你可以将之按评论总数排序。虽然这么做有所缺陷，但是评论的数量可以合理地反映一个给定的变化将会产生的影响。
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>这就非常的清晰了，更多的优秀的关于针对首次贡献的说明，可参考：<a href="#1">[1]</a>、<a href="#9">[9]</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="为从来都没有为开源贡献过的人添加资源链接"><a class="anchor" href="#为从来都没有为开源贡献过的人添加资源链接"></a><a class="link" href="#为从来都没有为开源贡献过的人添加资源链接">1.5.4. 为从来都没有为开源贡献过的人添加资源链接</a></h4>
+<h4 id="为从来都没有为开源贡献过的人添加资源链接"><a class="anchor" href="#为从来都没有为开源贡献过的人添加资源链接"></a><a class="link" href="#为从来都没有为开源贡献过的人添加资源链接">5.5.4. 为从来都没有为开源贡献过的人添加资源链接</a></h4>
 <div class="paragraph">
 <p>这里有一些友好的教程或许有所帮助：</p>
 </div>
@@ -1079,19 +1125,24 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </li>
 </ul>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>正在为你的第一个 Pull Request 做准备吗？你可以从这个系列文章中学习到： <a href="https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github">在 GitHub 如何为开源项目做贡献</a></p>
-</div>
-</blockquote>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+正在为你的第一个 Pull Request 做准备吗？你可以从这个系列文章中学习到： <a href="https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github">在 GitHub 如何为开源项目做贡献</a>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>以上内容是 <a href="https://github.com/facebook/react/blob/master/CONTRIBUTING.md#pull-requests">React</a> 项目所提供的额外资源。简直是良心共同体。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="贡献者入门指南"><a class="anchor" href="#贡献者入门指南"></a><a class="link" href="#贡献者入门指南">1.5.5. 贡献者入门指南</a></h4>
+<h4 id="贡献者入门指南"><a class="anchor" href="#贡献者入门指南"></a><a class="link" href="#贡献者入门指南">5.5.5. 贡献者入门指南</a></h4>
 <div class="sect4">
 <h5 id="给出如何提交贡献的快速路径"><a class="anchor" href="#给出如何提交贡献的快速路径"></a><a class="link" href="#给出如何提交贡献的快速路径">给出如何提交贡献的快速路径</a></h5>
 <div class="paragraph">
@@ -1110,12 +1161,17 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </li>
 </ul>
 </div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>针对修改一两行内容之上的改动，应做到：</p>
-</div>
-</blockquote>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+针对修改一两行内容之上的改动，应做到：
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1200,7 +1256,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect3">
-<h4 id="如何报告缺陷"><a class="anchor" href="#如何报告缺陷"></a><a class="link" href="#如何报告缺陷">1.5.6. 如何报告缺陷</a></h4>
+<h4 id="如何报告缺陷"><a class="anchor" href="#如何报告缺陷"></a><a class="link" href="#如何报告缺陷">5.5.6. 如何报告缺陷</a></h4>
 <div class="sect4">
 <h5 id="说明披露安全问题是的首要法则"><a class="anchor" href="#说明披露安全问题是的首要法则"></a><a class="link" href="#说明披露安全问题是的首要法则">说明披露安全问题是的首要法则</a></h5>
 <div class="paragraph">
@@ -1306,7 +1362,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect3">
-<h4 id="如何为新的功能和改进提建议"><a class="anchor" href="#如何为新的功能和改进提建议"></a><a class="link" href="#如何为新的功能和改进提建议">1.5.7. 如何为新的功能和改进提建议</a></h4>
+<h4 id="如何为新的功能和改进提建议"><a class="anchor" href="#如何为新的功能和改进提建议"></a><a class="link" href="#如何为新的功能和改进提建议">5.5.7. 如何为新的功能和改进提建议</a></h4>
 <div class="sect4">
 <h5 id="如果有特定的-roadmap目标原则开发方式等分享到这里"><a class="anchor" href="#如果有特定的-roadmap目标原则开发方式等分享到这里"></a><a class="link" href="#如果有特定的-roadmap目标原则开发方式等分享到这里">如果有特定的 roadmap、目标、原则、开发方式等，分享到这里</a></h5>
 <div class="paragraph">
@@ -1348,7 +1404,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect3">
-<h4 id="代码核对review流程"><a class="anchor" href="#代码核对review流程"></a><a class="link" href="#代码核对review流程">1.5.8. 代码核对（review）流程</a></h4>
+<h4 id="代码核对review流程"><a class="anchor" href="#代码核对review流程"></a><a class="link" href="#代码核对review流程">5.5.8. 代码核对（review）流程</a></h4>
 <div class="sect4">
 <h5 id="解释代码提交之后如何能够被接受的全过程"><a class="anchor" href="#解释代码提交之后如何能够被接受的全过程"></a><a class="link" href="#解释代码提交之后如何能够被接受的全过程">解释代码提交之后如何能够被接受的全过程</a></h5>
 <div class="paragraph">
@@ -1374,7 +1430,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect3">
-<h4 id="共同体community"><a class="anchor" href="#共同体community"></a><a class="link" href="#共同体community">1.5.9. 共同体（community）</a></h4>
+<h4 id="共同体community"><a class="anchor" href="#共同体community"></a><a class="link" href="#共同体community">5.5.9. 共同体（community）</a></h4>
 <div class="paragraph">
 <p>如果你的项目除了 GitHub 之外还有其它的通道的话，一并在这里列出。还可以作者、维护者、亦或是贡献者都可以写上，或者是说明一下响应时间的期望。</p>
 </div>
@@ -1498,7 +1554,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect3">
-<h4 id="已知问题"><a class="anchor" href="#已知问题"></a><a class="link" href="#已知问题">1.5.10. 已知问题</a></h4>
+<h4 id="已知问题"><a class="anchor" href="#已知问题"></a><a class="link" href="#已知问题">5.5.10. 已知问题</a></h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1514,14 +1570,14 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect1">
-<h2 id="知识产权与合规"><a class="anchor" href="#知识产权与合规"></a><a class="link" href="#知识产权与合规">2. 知识产权与合规</a></h2>
+<h2 id="知识产权与合规"><a class="anchor" href="#知识产权与合规"></a><a class="link" href="#知识产权与合规">6. 知识产权与合规</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="版权基础知识"><a class="anchor" href="#版权基础知识"></a><a class="link" href="#版权基础知识">2.1. 版权基础知识</a></h3>
+<h3 id="版权基础知识"><a class="anchor" href="#版权基础知识"></a><a class="link" href="#版权基础知识">6.1. 版权基础知识</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="开源license的选择"><a class="anchor" href="#开源license的选择"></a><a class="link" href="#开源license的选择">2.2. 开源License的选择</a></h3>
+<h3 id="开源license的选择"><a class="anchor" href="#开源license的选择"></a><a class="link" href="#开源license的选择">6.2. 开源License的选择</a></h3>
 <div class="paragraph">
 <p>License是软件的授权许可，里面详尽表述了你获得代码后拥有的权利，可以对别人的作品进行何种操作，何种操作又是被禁止的。软件协议可分为开源和商业两类，对于商业协议，或者叫法律声明、许可协议，每个软件会有自己的一套行文，由软件作者或专门律师撰写，对于大多数人来说不必自己花时间和精力去写繁长的许可协议，选择一份广为流传的开源协议就是个不错的选择。</p>
 </div>
@@ -1529,7 +1585,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 <p>世界上开源软件协议OPEN SOURCE LICENSE的种类非常之多，并且同一款协议有很多变种，协议太宽松会导致作者丧失对作品的很多权利，太严格又不便于使用者使用及作品的传播，所以开源作者要考虑自己对作品想保留哪些权利，放开哪些限制。</p>
 </div>
 <div class="sect3">
-<h4 id="主流开源协议"><a class="anchor" href="#主流开源协议"></a><a class="link" href="#主流开源协议">2.2.1. 主流开源协议</a></h4>
+<h4 id="主流开源协议"><a class="anchor" href="#主流开源协议"></a><a class="link" href="#主流开源协议">6.2.1. 主流开源协议</a></h4>
 <div class="paragraph">
 <p>1、 GPL</p>
 </div>
@@ -1639,28 +1695,28 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect2">
-<h3 id="第三方依赖license"><a class="anchor" href="#第三方依赖license"></a><a class="link" href="#第三方依赖license">2.3. 第三方依赖License</a></h3>
+<h3 id="第三方依赖license"><a class="anchor" href="#第三方依赖license"></a><a class="link" href="#第三方依赖license">6.3. 第三方依赖License</a></h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="项目命名与商标"><a class="anchor" href="#项目命名与商标"></a><a class="link" href="#项目命名与商标">3. 项目命名与商标</a></h2>
+<h2 id="项目命名与商标"><a class="anchor" href="#项目命名与商标"></a><a class="link" href="#项目命名与商标">7. 项目命名与商标</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="项目命名"><a class="anchor" href="#项目命名"></a><a class="link" href="#项目命名">3.1. 项目命名</a></h3>
+<h3 id="项目命名"><a class="anchor" href="#项目命名"></a><a class="link" href="#项目命名">7.1. 项目命名</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="商标注册"><a class="anchor" href="#商标注册"></a><a class="link" href="#商标注册">3.2. 商标注册</a></h3>
+<h3 id="商标注册"><a class="anchor" href="#商标注册"></a><a class="link" href="#商标注册">7.2. 商标注册</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="域名申请"><a class="anchor" href="#域名申请"></a><a class="link" href="#域名申请">3.3. 域名申请</a></h3>
+<h3 id="域名申请"><a class="anchor" href="#域名申请"></a><a class="link" href="#域名申请">7.3. 域名申请</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="参考材料"><a class="anchor" href="#参考材料"></a><a class="link" href="#参考材料">3.4. 参考材料</a></h3>
+<h3 id="参考材料"><a class="anchor" href="#参考材料"></a><a class="link" href="#参考材料">7.4. 参考材料</a></h3>
 <div class="paragraph">
 <p>[1] <a href="https://en.wikipedia.org/wiki/README" class="bare">https://en.wikipedia.org/wiki/README</a></p>
 </div>
@@ -1680,7 +1736,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect1">
-<h2 id="邮件列表"><a class="anchor" href="#邮件列表"></a><a class="link" href="#邮件列表">4. 邮件列表</a></h2>
+<h2 id="邮件列表"><a class="anchor" href="#邮件列表"></a><a class="link" href="#邮件列表">8. 邮件列表</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1751,10 +1807,10 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect1">
-<h2 id="版本控制系统"><a class="anchor" href="#版本控制系统"></a><a class="link" href="#版本控制系统">5. 版本控制系统</a></h2>
+<h2 id="版本控制系统"><a class="anchor" href="#版本控制系统"></a><a class="link" href="#版本控制系统">9. 版本控制系统</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="版本控制系统简介"><a class="anchor" href="#版本控制系统简介"></a><a class="link" href="#版本控制系统简介">5.1. 版本控制系统简介</a></h3>
+<h3 id="版本控制系统简介"><a class="anchor" href="#版本控制系统简介"></a><a class="link" href="#版本控制系统简介">9.1. 版本控制系统简介</a></h3>
 <div class="paragraph">
 <p>在 <code>git</code> 的官方的书籍中如此定义版本控制：<strong>版本控制是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</strong></p>
 </div>
@@ -1782,7 +1838,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect2">
-<h3 id="为什么会有差异"><a class="anchor" href="#为什么会有差异"></a><a class="link" href="#为什么会有差异">5.2. 为什么会有差异？</a></h3>
+<h3 id="为什么会有差异"><a class="anchor" href="#为什么会有差异"></a><a class="link" href="#为什么会有差异">9.2. 为什么会有差异？</a></h3>
 <div class="paragraph">
 <p>在软件开发过程中，大多涉及到多人开发和协作，同一份文件，在不同的开发者的工作台会出现差别，即使是单独的个人，在不同的时间，也会产生不同的版本，日积月累，差异、改进、删除等等都会发生，换句话说：<strong>为了应对这种变化，或者是记录变化本身，我们需要记录差异。</strong></p>
 </div>
@@ -1804,7 +1860,7 @@ Help wanted issues - 比 Beginner 更深度参与的 issues 。
 </div>
 </div>
 <div class="sect2">
-<h3 id="diff-和-patch"><a class="anchor" href="#diff-和-patch"></a><a class="link" href="#diff-和-patch">5.3. diff 和 patch</a></h3>
+<h3 id="diff-和-patch"><a class="anchor" href="#diff-和-patch"></a><a class="link" href="#diff-和-patch">9.3. diff 和 patch</a></h3>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1943,7 +1999,7 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect2">
-<h3 id="参考资料"><a class="anchor" href="#参考资料"></a><a class="link" href="#参考资料">5.4. 参考资料</a></h3>
+<h3 id="参考资料"><a class="anchor" href="#参考资料"></a><a class="link" href="#参考资料">9.4. 参考资料</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1956,9 +2012,9 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect2">
-<h3 id="git-之前的版本控制系统"><a class="anchor" href="#git-之前的版本控制系统"></a><a class="link" href="#git-之前的版本控制系统">5.5. Git 之前的版本控制系统</a></h3>
+<h3 id="git-之前的版本控制系统"><a class="anchor" href="#git-之前的版本控制系统"></a><a class="link" href="#git-之前的版本控制系统">9.5. Git 之前的版本控制系统</a></h3>
 <div class="sect3">
-<h4 id="rcs"><a class="anchor" href="#rcs"></a><a class="link" href="#rcs">5.5.1. RCS</a></h4>
+<h4 id="rcs"><a class="anchor" href="#rcs"></a><a class="link" href="#rcs">9.5.1. RCS</a></h4>
 <div class="paragraph">
 <p>RCS 是由普渡大学的 Walter F. Tichy 教授在1982年所开发。主要语言采用的是C语言。</p>
 </div>
@@ -1967,7 +2023,7 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect3">
-<h4 id="古老的-cvs"><a class="anchor" href="#古老的-cvs"></a><a class="link" href="#古老的-cvs">5.5.2. 古老的 CVS</a></h4>
+<h4 id="古老的-cvs"><a class="anchor" href="#古老的-cvs"></a><a class="link" href="#古老的-cvs">9.5.2. 古老的 CVS</a></h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -1984,7 +2040,7 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect3">
-<h4 id="拥有完整权限控制的-svn"><a class="anchor" href="#拥有完整权限控制的-svn"></a><a class="link" href="#拥有完整权限控制的-svn">5.5.3. 拥有完整权限控制的 SVN</a></h4>
+<h4 id="拥有完整权限控制的-svn"><a class="anchor" href="#拥有完整权限控制的-svn"></a><a class="link" href="#拥有完整权限控制的-svn">9.5.3. 拥有完整权限控制的 SVN</a></h4>
 <div class="paragraph">
 <p>SVN 真正的项目名称叫做： <a href="http://subversion.apache.org">Subversion</a>，目前是 Apache 软件基金会下的顶级项目，在分布式系统Git流行之前，SVN 是开源当中最佳的选择。至于其为什么被业内人士经常简称为svn，大约是命令行为svn 的缘故吧，我们在下文或本书中也会多次提到SVN，
 它没有特别申明的情况下就是指 Subversion。</p>
@@ -1994,7 +2050,7 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect3">
-<h4 id="参考资料-2"><a class="anchor" href="#参考资料-2"></a><a class="link" href="#参考资料-2">5.5.4. 参考资料</a></h4>
+<h4 id="参考资料-2"><a class="anchor" href="#参考资料-2"></a><a class="link" href="#参考资料-2">9.5.4. 参考资料</a></h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2005,7 +2061,7 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect2">
-<h3 id="git"><a class="anchor" href="#git"></a><a class="link" href="#git">5.6. Git</a></h3>
+<h3 id="git"><a class="anchor" href="#git"></a><a class="link" href="#git">9.6. Git</a></h3>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -2016,7 +2072,7 @@ Hello World from my very first patch!
 </div>
 </div>
 <div class="sect2">
-<h3 id="git-的八卦"><a class="anchor" href="#git-的八卦"></a><a class="link" href="#git-的八卦">5.7. Git 的“八卦”</a></h3>
+<h3 id="git-的八卦"><a class="anchor" href="#git-的八卦"></a><a class="link" href="#git-的八卦">9.7. Git 的“八卦”</a></h3>
 <div class="paragraph">
 <p>在Youtube上有一个视频，是Linux 创始人 linus 在为Google的一次内部分享会上讲解Git，其中有一句话的表达特别让人印象深刻：<strong>I Hate CVS</strong>， 这也是我们在这章开头引用Linux29周年的报告的一句话，在2002年之前，Linus 都是使用patch这个程序来维护所有
 Linux的开发代码的。</p>
@@ -2063,7 +2119,7 @@ Linux的开发代码的。</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a><a class="link" href="#git-的常见使用">5.8. Git 的常见使用</a></h3>
+<h3 id="git-的常见使用"><a class="anchor" href="#git-的常见使用"></a><a class="link" href="#git-的常见使用">9.8. Git 的常见使用</a></h3>
 <div class="paragraph">
 <p>如果你不是专业的代码仓库维护者的话，或许像笔者这样，通常执行如下操作即可：</p>
 </div>
@@ -2089,7 +2145,7 @@ change or add some files.
 </div>
 </div>
 <div class="sect2">
-<h3 id="参考资料-3"><a class="anchor" href="#参考资料-3"></a><a class="link" href="#参考资料-3">5.9. 参考资料</a></h3>
+<h3 id="参考资料-3"><a class="anchor" href="#参考资料-3"></a><a class="link" href="#参考资料-3">9.9. 参考资料</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2104,23 +2160,23 @@ change or add some files.
 </div>
 </div>
 <div class="sect1">
-<h2 id="代码仓库"><a class="anchor" href="#代码仓库"></a><a class="link" href="#代码仓库">6. 代码仓库</a></h2>
+<h2 id="代码仓库"><a class="anchor" href="#代码仓库"></a><a class="link" href="#代码仓库">10. 代码仓库</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="代码仓库的基本功能"><a class="anchor" href="#代码仓库的基本功能"></a><a class="link" href="#代码仓库的基本功能">6.1. 代码仓库的基本功能</a></h3>
+<h3 id="代码仓库的基本功能"><a class="anchor" href="#代码仓库的基本功能"></a><a class="link" href="#代码仓库的基本功能">10.1. 代码仓库的基本功能</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="常见代码仓库的使用"><a class="anchor" href="#常见代码仓库的使用"></a><a class="link" href="#常见代码仓库的使用">6.2. 常见代码仓库的使用</a></h3>
+<h3 id="常见代码仓库的使用"><a class="anchor" href="#常见代码仓库的使用"></a><a class="link" href="#常见代码仓库的使用">10.2. 常见代码仓库的使用</a></h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="项目资料"><a class="anchor" href="#项目资料"></a><a class="link" href="#项目资料">7. 项目资料</a></h2>
+<h2 id="项目资料"><a class="anchor" href="#项目资料"></a><a class="link" href="#项目资料">11. 项目资料</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="创建网站"><a class="anchor" href="#创建网站"></a><a class="link" href="#创建网站">7.1. 创建网站</a></h3>
+<h3 id="创建网站"><a class="anchor" href="#创建网站"></a><a class="link" href="#创建网站">11.1. 创建网站</a></h3>
 <div class="paragraph">
 <p>项目本身是需要向世人展示的，在互联网如此发达的今天，如果一个开源项目没有相应的可以使用搜索引擎搜得到的站点，那么很可能潜在的用户和开发者都找不到你的项目。鉴于目前代码协作平台如GitHub等强大的功能，我们特别说明建立网站通常有三种方式：</p>
 </div>
@@ -2157,71 +2213,71 @@ change or add some files.
 </div>
 </div>
 <div class="sect1">
-<h2 id="持续集成系统"><a class="anchor" href="#持续集成系统"></a><a class="link" href="#持续集成系统">8. 持续集成系统</a></h2>
+<h2 id="持续集成系统"><a class="anchor" href="#持续集成系统"></a><a class="link" href="#持续集成系统">12. 持续集成系统</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="持续集成功能与意义"><a class="anchor" href="#持续集成功能与意义"></a><a class="link" href="#持续集成功能与意义">8.1. 持续集成功能与意义</a></h3>
+<h3 id="持续集成功能与意义"><a class="anchor" href="#持续集成功能与意义"></a><a class="link" href="#持续集成功能与意义">12.1. 持续集成功能与意义</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="jenkins开源的持续集成"><a class="anchor" href="#jenkins开源的持续集成"></a><a class="link" href="#jenkins开源的持续集成">8.2. Jenkins&#8201;&#8212;&#8201;开源的持续集成</a></h3>
+<h3 id="jenkins开源的持续集成"><a class="anchor" href="#jenkins开源的持续集成"></a><a class="link" href="#jenkins开源的持续集成">12.2. Jenkins&#8201;&#8212;&#8201;开源的持续集成</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="travisgithub-actions-在线服务"><a class="anchor" href="#travisgithub-actions-在线服务"></a><a class="link" href="#travisgithub-actions-在线服务">8.3. Travis，Github Actions 在线服务</a></h3>
+<h3 id="travisgithub-actions-在线服务"><a class="anchor" href="#travisgithub-actions-在线服务"></a><a class="link" href="#travisgithub-actions-在线服务">12.3. Travis，Github Actions 在线服务</a></h3>
 <div class="paragraph">
 <p>随着web的发展，越来越多的服务可以通过友好的API来进行实现，相比于 Jenkins 部署本地的服务，对于很多项目其实是没有必要的，‘随需随用’、毋需维护基础设施成本、和GitHub等开放式开发平台无缝集成，为什么要拒绝了呢？下面我们就以两个实例为说明持续集成的在线服务。</p>
 </div>
 <div class="sect3">
-<h4 id="travis"><a class="anchor" href="#travis"></a><a class="link" href="#travis">8.3.1. Travis</a></h4>
+<h4 id="travis"><a class="anchor" href="#travis"></a><a class="link" href="#travis">12.3.1. Travis</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="github-action"><a class="anchor" href="#github-action"></a><a class="link" href="#github-action">8.3.2. GitHub Action</a></h4>
+<h4 id="github-action"><a class="anchor" href="#github-action"></a><a class="link" href="#github-action">12.3.2. GitHub Action</a></h4>
 
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="问题追踪系统"><a class="anchor" href="#问题追踪系统"></a><a class="link" href="#问题追踪系统">9. 问题追踪系统</a></h2>
+<h2 id="问题追踪系统"><a class="anchor" href="#问题追踪系统"></a><a class="link" href="#问题追踪系统">13. 问题追踪系统</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="问题追踪的功能"><a class="anchor" href="#问题追踪的功能"></a><a class="link" href="#问题追踪的功能">9.1. 问题追踪的功能</a></h3>
+<h3 id="问题追踪的功能"><a class="anchor" href="#问题追踪的功能"></a><a class="link" href="#问题追踪的功能">13.1. 问题追踪的功能</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="常见的问题追踪系统的使用"><a class="anchor" href="#常见的问题追踪系统的使用"></a><a class="link" href="#常见的问题追踪系统的使用">9.2. 常见的问题追踪系统的使用</a></h3>
+<h3 id="常见的问题追踪系统的使用"><a class="anchor" href="#常见的问题追踪系统的使用"></a><a class="link" href="#常见的问题追踪系统的使用">13.2. 常见的问题追踪系统的使用</a></h3>
 <div class="sect3">
-<h4 id="bugzilla"><a class="anchor" href="#bugzilla"></a><a class="link" href="#bugzilla">9.2.1. Bugzilla</a></h4>
+<h4 id="bugzilla"><a class="anchor" href="#bugzilla"></a><a class="link" href="#bugzilla">13.2.1. Bugzilla</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="jira"><a class="anchor" href="#jira"></a><a class="link" href="#jira">9.2.2. Jira</a></h4>
+<h4 id="jira"><a class="anchor" href="#jira"></a><a class="link" href="#jira">13.2.2. Jira</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="github-issue"><a class="anchor" href="#github-issue"></a><a class="link" href="#github-issue">9.2.3. GitHub Issue</a></h4>
+<h4 id="github-issue"><a class="anchor" href="#github-issue"></a><a class="link" href="#github-issue">13.2.3. GitHub Issue</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="trac-issue"><a class="anchor" href="#trac-issue"></a><a class="link" href="#trac-issue">9.2.4. Trac issue</a></h4>
+<h4 id="trac-issue"><a class="anchor" href="#trac-issue"></a><a class="link" href="#trac-issue">13.2.4. Trac issue</a></h4>
 
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="现代开源项目开发集大成者-github-平台介绍"><a class="anchor" href="#现代开源项目开发集大成者-github-平台介绍"></a><a class="link" href="#现代开源项目开发集大成者-github-平台介绍">10. 现代开源项目开发集大成者 GitHub 平台介绍</a></h2>
+<h2 id="现代开源项目开发集大成者-github-平台介绍"><a class="anchor" href="#现代开源项目开发集大成者-github-平台介绍"></a><a class="link" href="#现代开源项目开发集大成者-github-平台介绍">14. 现代开源项目开发集大成者 GitHub 平台介绍</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="git-与-github"><a class="anchor" href="#git-与-github"></a><a class="link" href="#git-与-github">10.1. Git 与 GitHub</a></h3>
+<h3 id="git-与-github"><a class="anchor" href="#git-与-github"></a><a class="link" href="#git-与-github">14.1. Git 与 GitHub</a></h3>
 <div class="paragraph">
 <p>我们在版本控制系统一节中详细介绍了<a href="#git">Git</a> ，那么基于 <code>git</code> 之上再做些事情，是所有想为开发者做事情的出发点。让我们将时间再往回拨一拨，拨回到围绕 Git 之前的版本控制系统所做的服务
 或产品。</p>
 </div>
 <div class="sect3">
-<h4 id="sourceforge"><a class="anchor" href="#sourceforge"></a><a class="link" href="#sourceforge">10.1.1. SourceForge</a></h4>
+<h4 id="sourceforge"><a class="anchor" href="#sourceforge"></a><a class="link" href="#sourceforge">14.1.1. SourceForge</a></h4>
 <div class="paragraph">
 <p>说起古老的代码托管站点，我们是无法绕过SourceForge的，该站点于1999年由VA 软件公司投资开发，在整个2000~2010年都是开源开发者和用户的主要站点，也诞生了很多知名的开源项目：</p>
 </div>
@@ -2243,7 +2299,7 @@ change or add some files.
 </div>
 </div>
 <div class="sect3">
-<h4 id="google-code"><a class="anchor" href="#google-code"></a><a class="link" href="#google-code">10.1.2. Google code</a></h4>
+<h4 id="google-code"><a class="anchor" href="#google-code"></a><a class="link" href="#google-code">14.1.2. Google code</a></h4>
 <div class="paragraph">
 <p>Google 在2009年推出了开源项目托管平台： <a href="https://code.google.com/hosting/">Google Code</a>，支持的版本控制系统包括 <code>git</code> <code>Subversion</code> 和 <code>Mercurial</code>，还有问题跟踪系统、Wiki用于
 记录文档。</p>
@@ -2253,11 +2309,11 @@ change or add some files.
 </div>
 </div>
 <div class="sect3">
-<h4 id="launchpad"><a class="anchor" href="#launchpad"></a><a class="link" href="#launchpad">10.1.3. Launchpad</a></h4>
+<h4 id="launchpad"><a class="anchor" href="#launchpad"></a><a class="link" href="#launchpad">14.1.3. Launchpad</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="github"><a class="anchor" href="#github"></a><a class="link" href="#github">10.1.4. GitHub</a></h4>
+<h4 id="github"><a class="anchor" href="#github"></a><a class="link" href="#github">14.1.4. GitHub</a></h4>
 <div class="paragraph">
 <p>终于轮到介绍GitHub了，GitHub 服务是由四名 Ruby On Rails 开发者： Chris Wanstrath、P. J. Hyett、Tom Preston-Werner 以及 Scott Chacon 共同开发，在2008年二月开始撰写，
 同年4月10号发布上线，首次较大规模发布是在2009年的2月24日，地点选择是在Yahoo！的总部。</p>
@@ -2265,7 +2321,7 @@ change or add some files.
 </div>
 </div>
 <div class="sect2">
-<h3 id="github-上手指南"><a class="anchor" href="#github-上手指南"></a><a class="link" href="#github-上手指南">10.2. GitHub 上手指南</a></h3>
+<h3 id="github-上手指南"><a class="anchor" href="#github-上手指南"></a><a class="link" href="#github-上手指南">14.2. GitHub 上手指南</a></h3>
 <div class="paragraph">
 <p>首先你需要访问域名为： <a href="http://www.github.com">http://www.github.com</a> 的网站，然后根据指示注册，需要输入可用的邮箱、登陆密码等信息，注册完成后，就可以登录了。</p>
 </div>
@@ -2293,11 +2349,11 @@ change or add some files.
 </div>
 </div>
 <div class="sect2">
-<h3 id="github-开源项目协作和流程"><a class="anchor" href="#github-开源项目协作和流程"></a><a class="link" href="#github-开源项目协作和流程">10.3. GitHub 开源项目协作和流程</a></h3>
+<h3 id="github-开源项目协作和流程"><a class="anchor" href="#github-开源项目协作和流程"></a><a class="link" href="#github-开源项目协作和流程">14.3. GitHub 开源项目协作和流程</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="github-公司github-平台闭源与商业伦理"><a class="anchor" href="#github-公司github-平台闭源与商业伦理"></a><a class="link" href="#github-公司github-平台闭源与商业伦理">10.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></h3>
+<h3 id="github-公司github-平台闭源与商业伦理"><a class="anchor" href="#github-公司github-平台闭源与商业伦理"></a><a class="link" href="#github-公司github-平台闭源与商业伦理">14.4. GitHub 公司、GitHub 平台闭源与商业伦理</a></h3>
 <div class="paragraph">
 <p>GitHub 是一家商业公司，在美国注册，总部位于加利福尼亚州的旧金山。在世界的其它地区，在日本也有相应的办公室，如印度也设立有分部，本来中国是增长非常之大的，首席运营官还在2019年专门来中国低调的进行了实地考察[4],但是终究还是没有来。在2018年，GitHub 公司被微软以高达75亿美金
 收购，在2020年三月，GitHub 收购了JavaScript的包管理 npm 公司。</p>
@@ -2363,7 +2419,7 @@ change or add some files.
 </div>
 </div>
 <div class="sect2">
-<h3 id="参考资料-4"><a class="anchor" href="#参考资料-4"></a><a class="link" href="#参考资料-4">10.5. 参考资料</a></h3>
+<h3 id="参考资料-4"><a class="anchor" href="#参考资料-4"></a><a class="link" href="#参考资料-4">14.5. 参考资料</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2388,7 +2444,7 @@ change or add some files.
 </div>
 <h1 id="开源质量" class="sect0"><a class="anchor" href="#开源质量"></a><a class="link" href="#开源质量">开源质量</a></h1>
 <div class="sect1">
-<h2 id="自动持续构建系统"><a class="anchor" href="#自动持续构建系统"></a><a class="link" href="#自动持续构建系统">11. 自动持续构建系统</a></h2>
+<h2 id="自动持续构建系统"><a class="anchor" href="#自动持续构建系统"></a><a class="link" href="#自动持续构建系统">15. 自动持续构建系统</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2695,7 +2751,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="自动测试代码"><a class="anchor" href="#自动测试代码"></a><a class="link" href="#自动测试代码">12. 自动测试代码</a></h2>
+<h2 id="自动测试代码"><a class="anchor" href="#自动测试代码"></a><a class="link" href="#自动测试代码">16. 自动测试代码</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2710,7 +2766,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="功能测试代码"><a class="anchor" href="#功能测试代码"></a><a class="link" href="#功能测试代码">13. 功能测试代码</a></h2>
+<h2 id="功能测试代码"><a class="anchor" href="#功能测试代码"></a><a class="link" href="#功能测试代码">17. 功能测试代码</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2725,7 +2781,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="代码风格检查"><a class="anchor" href="#代码风格检查"></a><a class="link" href="#代码风格检查">14. 代码风格检查</a></h2>
+<h2 id="代码风格检查"><a class="anchor" href="#代码风格检查"></a><a class="link" href="#代码风格检查">18. 代码风格检查</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2740,7 +2796,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="第三方依赖跟踪"><a class="anchor" href="#第三方依赖跟踪"></a><a class="link" href="#第三方依赖跟踪">15. 第三方依赖跟踪</a></h2>
+<h2 id="第三方依赖跟踪"><a class="anchor" href="#第三方依赖跟踪"></a><a class="link" href="#第三方依赖跟踪">19. 第三方依赖跟踪</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -2756,7 +2812,7 @@ rm hello</code></pre>
 </div>
 <h1 id="开源协作" class="sect0"><a class="anchor" href="#开源协作"></a><a class="link" href="#开源协作">开源协作</a></h1>
 <div class="sect1">
-<h2 id="什么是开源共同体"><a class="anchor" href="#什么是开源共同体"></a><a class="link" href="#什么是开源共同体">16. 什么是开源共同体？</a></h2>
+<h2 id="什么是开源共同体"><a class="anchor" href="#什么是开源共同体"></a><a class="link" href="#什么是开源共同体">20. 什么是开源共同体？</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>根据开源之道的定义如下：</p>
@@ -2772,37 +2828,37 @@ rm hello</code></pre>
 <p>既然为一个社会现象下了一个定义，那么我们就需要为之进行代入式的解释，那么具体的、典型的开源共同体有那些，笔者在这里给大家根据不同的类型进行概要的介绍，不过首先提醒大家的是，开源的共同体大大小小的，犹如现实生活中的生活社区，非常之多，错综复杂、纵横交错，</p>
 </div>
 <div class="sect2">
-<h3 id="gnu-gcc"><a class="anchor" href="#gnu-gcc"></a><a class="link" href="#gnu-gcc">16.1. GNU GCC</a></h3>
+<h3 id="gnu-gcc"><a class="anchor" href="#gnu-gcc"></a><a class="link" href="#gnu-gcc">20.1. GNU GCC</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="linux-kernel"><a class="anchor" href="#linux-kernel"></a><a class="link" href="#linux-kernel">16.2. Linux Kernel</a></h3>
+<h3 id="linux-kernel"><a class="anchor" href="#linux-kernel"></a><a class="link" href="#linux-kernel">20.2. Linux Kernel</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="apache-httpd"><a class="anchor" href="#apache-httpd"></a><a class="link" href="#apache-httpd">16.3. Apache HTTPD</a></h3>
+<h3 id="apache-httpd"><a class="anchor" href="#apache-httpd"></a><a class="link" href="#apache-httpd">20.3. Apache HTTPD</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="python"><a class="anchor" href="#python"></a><a class="link" href="#python">16.4. Python</a></h3>
+<h3 id="python"><a class="anchor" href="#python"></a><a class="link" href="#python">20.4. Python</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="debian"><a class="anchor" href="#debian"></a><a class="link" href="#debian">16.5. Debian</a></h3>
+<h3 id="debian"><a class="anchor" href="#debian"></a><a class="link" href="#debian">20.5. Debian</a></h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源共同体的角色构成"><a class="anchor" href="#开源共同体的角色构成"></a><a class="link" href="#开源共同体的角色构成">17. 开源共同体的角色构成</a></h2>
+<h2 id="开源共同体的角色构成"><a class="anchor" href="#开源共同体的角色构成"></a><a class="link" href="#开源共同体的角色构成">21. 开源共同体的角色构成</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>作为一个存在的社会团体，了解其内部的角色分类是必须要做的事情，否则就无法进一步了解和参与。组成社会团体的是每一个个体，这些个体恰是作为开源发起者特别需要争取的对象，但是对于某一类文化来说，比如奉行集体主义的东方文化里是极难发展个体的，必要的时候还是要将目光</p>
 </div>
 <div class="sect2">
-<h3 id="开源共同体中的作为个人的角色分类"><a class="anchor" href="#开源共同体中的作为个人的角色分类"></a><a class="link" href="#开源共同体中的作为个人的角色分类">17.1. 开源共同体中的作为个人的角色分类</a></h3>
+<h3 id="开源共同体中的作为个人的角色分类"><a class="anchor" href="#开源共同体中的作为个人的角色分类"></a><a class="link" href="#开源共同体中的作为个人的角色分类">21.1. 开源共同体中的作为个人的角色分类</a></h3>
 <div class="sect3">
-<h4 id="领袖"><a class="anchor" href="#领袖"></a><a class="link" href="#领袖">17.1.1. 领袖</a></h4>
+<h4 id="领袖"><a class="anchor" href="#领袖"></a><a class="link" href="#领袖">21.1.1. 领袖</a></h4>
 <div class="paragraph">
 <p>在人类的历史上，从来就不曾缺失过哪些一心致力于自身对于事物的驾驭的追求与能力，古希腊戏剧《普罗米修斯》或者是罗马的建筑大师维特鲁威，在开源共同体中，也不乏这样的人，我们这里不妨列举几位：</p>
 </div>
@@ -2852,7 +2908,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="核心贡献者"><a class="anchor" href="#核心贡献者"></a><a class="link" href="#核心贡献者">17.1.2. 核心贡献者</a></h4>
+<h4 id="核心贡献者"><a class="anchor" href="#核心贡献者"></a><a class="link" href="#核心贡献者">21.1.2. 核心贡献者</a></h4>
 <div class="paragraph">
 <p>每一款开源项目，除了发起者之外，都有核心的贡献者参与，或者提供设计、代码补丁、文档撰写，这是构成开源共同体的核心主力，换句话说：<strong>如果不能理解核心贡献者，那么就无法理解开源共同体</strong>。他们是主要的生产力！</p>
 </div>
@@ -2877,7 +2933,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="律师"><a class="anchor" href="#律师"></a><a class="link" href="#律师">17.1.3. 律师</a></h4>
+<h4 id="律师"><a class="anchor" href="#律师"></a><a class="link" href="#律师">21.1.3. 律师</a></h4>
 <div class="paragraph">
 <p>在自由/开源软件发展的历史上，知识产权相关发挥了重要的作用，也就是说法律才是开源的支柱，在这个共同体当中，维护者开发者的权益，至少不被侵犯，从天才般的Richard Stallman 创立的GPL ，到各式各样的许可证，以及OpenChain、开放发明网络（OIN）等机构的诞生。</p>
 </div>
@@ -2886,7 +2942,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="拥护者和布道师"><a class="anchor" href="#拥护者和布道师"></a><a class="link" href="#拥护者和布道师">17.1.4. 拥护者和布道师</a></h4>
+<h4 id="拥护者和布道师"><a class="anchor" href="#拥护者和布道师"></a><a class="link" href="#拥护者和布道师">21.1.4. 拥护者和布道师</a></h4>
 <div class="paragraph">
 <p>这个世界需要诉说者，著名作家伍尔夫写过“没有被叙述的就等于没有发生过”，开源想要联结成为强大的共同体，最终展现在世人面前“可见的”，是能够提供实用功能的运行在计算机当中的软件，不是每个人都具备上述探索核心贡献者，评估他们的工作成果的能力的。那么传播开源、宣扬开源价值的人就有了ta存在的意义。而随着开源在社会中的地位提升，做这些事的人也越来越紧俏。</p>
 </div>
@@ -2905,7 +2961,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="用户"><a class="anchor" href="#用户"></a><a class="link" href="#用户">17.1.5. 用户</a></h4>
+<h4 id="用户"><a class="anchor" href="#用户"></a><a class="link" href="#用户">21.1.5. 用户</a></h4>
 <div class="paragraph">
 <p>根据开源共同体的定义，这里的用户，我们要除却不懂计算机的其它行业的人士，在如今的信息社会，几乎没有人不是开源软件的使用者，我们如果把这个定义套用到他们身上的话，那简直是过于泛泛了，所以我们这里要区别出来：</p>
 </div>
@@ -2917,7 +2973,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="搭便车者"><a class="anchor" href="#搭便车者"></a><a class="link" href="#搭便车者">17.1.6. 搭便车者</a></h4>
+<h4 id="搭便车者"><a class="anchor" href="#搭便车者"></a><a class="link" href="#搭便车者">21.1.6. 搭便车者</a></h4>
 <div class="paragraph">
 <p>我们不可以强制要求邻居或朋友参与到贡献当中来，或者通过劝诱、胁迫等手段去要求ta人。</p>
 </div>
@@ -2929,7 +2985,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="反对者"><a class="anchor" href="#反对者"></a><a class="link" href="#反对者">17.1.7. 反对者</a></h4>
+<h4 id="反对者"><a class="anchor" href="#反对者"></a><a class="link" href="#反对者">21.1.7. 反对者</a></h4>
 <div class="paragraph">
 <p>反对开源的人也不在少数，尤其是传统上利用专有软件授权赢得了非常高的利润的公司的员工，称开源软件为“搅屎棍”，损坏了他们的利益，违反了知识产权，最有名的就是微软公司的第二任CEO 史蒂夫·鲍尔默（Steve Ballmer）称Linux为癌症的论断了。</p>
 </div>
@@ -2938,7 +2994,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="开源相关研究的学者"><a class="anchor" href="#开源相关研究的学者"></a><a class="link" href="#开源相关研究的学者">17.1.8. 开源相关研究的学者</a></h4>
+<h4 id="开源相关研究的学者"><a class="anchor" href="#开源相关研究的学者"></a><a class="link" href="#开源相关研究的学者">21.1.8. 开源相关研究的学者</a></h4>
 <div class="paragraph">
 <p>就开源这个现象而言，它太过于迷人，以至于很多学科的学者们都为之倾倒，经济学、社会学、人类学、软件工程、心理学、管理、法律等诸多学科都在围绕开源这个主题进行相关的拓展和研究，有兴趣进一步研究的读者可以关注[开源之道论文阅读计划](<a href="https://github.com/OCselected/ttoos/projects/8)，会涉及到很多相关论文的阅读和作者们的介绍。" class="bare">https://github.com/OCselected/ttoos/projects/8)，会涉及到很多相关论文的阅读和作者们的介绍。</a></p>
 </div>
@@ -2951,9 +3007,9 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="开源共同体中的作为机构的角色分类"><a class="anchor" href="#开源共同体中的作为机构的角色分类"></a><a class="link" href="#开源共同体中的作为机构的角色分类">17.2. 开源共同体中的作为机构的角色分类</a></h3>
+<h3 id="开源共同体中的作为机构的角色分类"><a class="anchor" href="#开源共同体中的作为机构的角色分类"></a><a class="link" href="#开源共同体中的作为机构的角色分类">21.2. 开源共同体中的作为机构的角色分类</a></h3>
 <div class="sect3">
-<h4 id="拥抱开源的商业公司"><a class="anchor" href="#拥抱开源的商业公司"></a><a class="link" href="#拥抱开源的商业公司">17.2.1. 拥抱开源的商业公司</a></h4>
+<h4 id="拥抱开源的商业公司"><a class="anchor" href="#拥抱开源的商业公司"></a><a class="link" href="#拥抱开源的商业公司">21.2.1. 拥抱开源的商业公司</a></h4>
 <div class="paragraph">
 <p>有了上面个人的理解，再来理解商业公司就会好很多。一个主要的甄别点就是，商业公司直接雇佣核心贡献者或项目领袖，让这些人发挥自己的智力和能力，至于商业公司如何赢得商业利益，那是另外一件事情，这方面做的非常不错的公司，首屈一指的就是 RedHat 公司，当然还有互联网巨头如Google、Facebook、Linkedin、Netflix等。</p>
 </div>
@@ -2962,13 +3018,13 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="为项目共同体服务的基金会或类似机构"><a class="anchor" href="#为项目共同体服务的基金会或类似机构"></a><a class="link" href="#为项目共同体服务的基金会或类似机构">17.2.2. 为项目共同体服务的基金会或类似机构</a></h4>
+<h4 id="为项目共同体服务的基金会或类似机构"><a class="anchor" href="#为项目共同体服务的基金会或类似机构"></a><a class="link" href="#为项目共同体服务的基金会或类似机构">21.2.2. 为项目共同体服务的基金会或类似机构</a></h4>
 <div class="paragraph">
 <p>开源项目的共同体是一个基于互联网的虚拟组织，并不具备现实的法律实体，也就是说当项目需要资金、或者权益受到伤害到时候，在国家这个层面上，是没有可以维护的，尤其是涉及到多人的时候，然而，这个共同体主要是生产软件的，很多其它的社会性事务是不擅长的，比如组织会议、法律、接受捐赠、寻求赞助等等。那么这样的服务机构应运而生。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="打压开源的商业公司"><a class="anchor" href="#打压开源的商业公司"></a><a class="link" href="#打压开源的商业公司">17.2.3. 打压开源的商业公司</a></h4>
+<h4 id="打压开源的商业公司"><a class="anchor" href="#打压开源的商业公司"></a><a class="link" href="#打压开源的商业公司">21.2.3. 打压开源的商业公司</a></h4>
 <div class="paragraph">
 <p>从比尔.盖茨参加完家酿俱乐部之后发表的《至电脑爱好者的一封信》之后，软件以二进制分发授权的商业模式一发不可收拾，至今仍然是软件商业帝国大厦的支柱。</p>
 </div>
@@ -2980,7 +3036,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="行走在开源和专有软件授权模式之间的灰色地带"><a class="anchor" href="#行走在开源和专有软件授权模式之间的灰色地带"></a><a class="link" href="#行走在开源和专有软件授权模式之间的灰色地带">17.2.4. 行走在开源和专有软件授权模式之间的灰色地带</a></h4>
+<h4 id="行走在开源和专有软件授权模式之间的灰色地带"><a class="anchor" href="#行走在开源和专有软件授权模式之间的灰色地带"></a><a class="link" href="#行走在开源和专有软件授权模式之间的灰色地带">21.2.4. 行走在开源和专有软件授权模式之间的灰色地带</a></h4>
 <div class="paragraph">
 <p>上面提到，软件以二进制分发授权的商业模式已经发展了近40多年了，绝大多数以及主流媒体都对这样的模式是视之为默认的，那么开源的商业创新其实产生革命性的变化可能性不太大，那么介于这二者之间的，必然是大家都能够接受的方式，比如2019年开始火起来的“Open Core”模式，这个模式不能说是开源，但也不能说和开源没有开源，它确确实实是部分开源了，只是在功能或性能上商家做了区分。分两步走：</p>
 </div>
@@ -2996,7 +3052,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="脱离开源共同体的商业公司开源"><a class="anchor" href="#脱离开源共同体的商业公司开源"></a><a class="link" href="#脱离开源共同体的商业公司开源">17.2.5. 脱离开源共同体的商业公司开源</a></h4>
+<h4 id="脱离开源共同体的商业公司开源"><a class="anchor" href="#脱离开源共同体的商业公司开源"></a><a class="link" href="#脱离开源共同体的商业公司开源">21.2.5. 脱离开源共同体的商业公司开源</a></h4>
 <div class="paragraph">
 <p>开源共同体，是一个想象中的概念，现实当中并没有一个类似政府的机构代表这一实体，也就是说，任何人都可以称自己是开源的一份子。那么对于商业公司来讲，搭上开源分发的便车是个不错的营销手段，那么就有很多新的公司有效的利用到了这点，它有可能是刚刚打进软件这个市场，并没有在技术上和开源共同体形成一个有效的技术栈（参考上面提及的产业链的视角看开源软件），或者说在现有的开源共同体中是一个新的实体，从来没有人听说过他们，他们也没有对现有的共同体下的项目做任何的贡献。即使是这样，他们“开源”自己的产品，使自己始终处于游离的状态，使自身是处于一种“孤岛”的状态，虽然开源了，但是并没有融入到开源共同体当中，从技术、文化等诸多角度来看都是。</p>
 </div>
@@ -3008,7 +3064,7 @@ rm hello</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="开放式开发平台的崛起"><a class="anchor" href="#开放式开发平台的崛起"></a><a class="link" href="#开放式开发平台的崛起">18. 开放式开发平台的崛起</a></h2>
+<h2 id="开放式开发平台的崛起"><a class="anchor" href="#开放式开发平台的崛起"></a><a class="link" href="#开放式开发平台的崛起">22. 开放式开发平台的崛起</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>当然，伴随着开源的崛起，大大小小的开源共同体所生产的开源项目水涨船高，逐渐的开始被社会所认可，并获得了更多的资助。那么人类这么聪明的物种，从来不会放过任何能够可以复制成功的机会。于是有人开始总结开源项目的开发模式，并进行了整理。并开发了相应的平台：</p>
@@ -3110,7 +3166,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://source.android.com/images/workflow-0.png" alt="workflow 0">
+<img src="./android-workflow-0.png" alt="android workflow 0">
 </div>
 </div>
 <div class="paragraph">
@@ -3173,7 +3229,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 <p>Gitee 针对个人开发者是比较友好的，完全免费，可以拥有私有仓库。</p>
 </div>
 <div class="sect2">
-<h3 id="小结"><a class="anchor" href="#小结"></a><a class="link" href="#小结">18.1. 小结</a></h3>
+<h3 id="小结"><a class="anchor" href="#小结"></a><a class="link" href="#小结">22.1. 小结</a></h3>
 <div class="paragraph">
 <p>分布式带来的人类协作，从来没有像 Git 这样彻底解放了人类的限制，就软件开发这件重要的信息时代的生产力，完完全全的释放了！ 围绕 Git 的生产工具水涨船高，一路高歌猛进，不仅获得了几乎全世界所有的开发者的青睐，也赢得了资本、商人、创新者的关注。</p>
 </div>
@@ -3200,7 +3256,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源社交礼仪"><a class="anchor" href="#开源社交礼仪"></a><a class="link" href="#开源社交礼仪">19. 开源社交礼仪</a></h2>
+<h2 id="开源社交礼仪"><a class="anchor" href="#开源社交礼仪"></a><a class="link" href="#开源社交礼仪">23. 开源社交礼仪</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>因为是共同体，没有强约束关系，所以全凭是人类的高级认知来进行沟通、协商，进而形成默契。所以一些基本的，人类进化到目前为止的所有优秀的内容都应该在此得到最好的展现。</p>
@@ -3219,28 +3275,41 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 <p>开源共同体毕竟是由现代人构成的，凡是人组成的社会，都是由一定的规矩，否则的话，就会处于熵增，陷入无序而混乱的状态。</p>
 </div>
 <div class="sect2">
-<h3 id="开源共同体中鼓励和倡导做什么"><a class="anchor" href="#开源共同体中鼓励和倡导做什么"></a><a class="link" href="#开源共同体中鼓励和倡导做什么">19.1. 开源共同体中鼓励和倡导做什么？</a></h3>
+<h3 id="开源共同体中鼓励和倡导做什么"><a class="anchor" href="#开源共同体中鼓励和倡导做什么"></a><a class="link" href="#开源共同体中鼓励和倡导做什么">23.1. 开源共同体中鼓励和倡导做什么？</a></h3>
 <div class="paragraph">
 <p>人类社会是复杂的，划分的边界也是五花八门，常见的有文化、国家、地域、城市、宗教、风俗、种族、民族等等，如果是讲究差别的话，那么就根本不用谈合作，什么基于互联网的全球化简直是不可能的事，但是我们终究是人类，再大的差别也能找到共同的元素，尤其是良善的内容。</p>
 </div>
 <div class="sect3">
-<h4 id="使用开源共同体所倡导的语言"><a class="anchor" href="#使用开源共同体所倡导的语言"></a><a class="link" href="#使用开源共同体所倡导的语言">19.1.1. 使用开源共同体所倡导的语言</a></h4>
+<h4 id="使用开源共同体所倡导的语言"><a class="anchor" href="#使用开源共同体所倡导的语言"></a><a class="link" href="#使用开源共同体所倡导的语言">23.1.1. 使用开源共同体所倡导的语言</a></h4>
+<div class="paragraph">
+<p>此处的语言可以理解为两层意思，第一个意思是我们所使用的文字描述，如汉语、英语等，第二个意思是某些文化类型的风格。下面一一进行说明：</p>
+</div>
+<div class="paragraph">
+<p>===</p>
+</div>
+<div class="paragraph">
+<p>如何学习</p>
+</div>
+<div class="paragraph">
+<p>所谓的“物以类聚，人以群分。” 是说人是会自己自动划分出</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="保持开放透明"><a class="anchor" href="#保持开放透明"></a><a class="link" href="#保持开放透明">23.1.2. 保持开放、透明</a></h4>
+<div class="paragraph">
+<p>includ::keep-open-stupid.adoc[]</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="保持友好"><a class="anchor" href="#保持友好"></a><a class="link" href="#保持友好">23.1.3. 保持友好</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="保持开放透明"><a class="anchor" href="#保持开放透明"></a><a class="link" href="#保持开放透明">19.1.2. 保持开放、透明</a></h4>
+<h4 id="尽可能的说明问题的上下文"><a class="anchor" href="#尽可能的说明问题的上下文"></a><a class="link" href="#尽可能的说明问题的上下文">23.1.4. 尽可能的说明问题的上下文</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="保持友好"><a class="anchor" href="#保持友好"></a><a class="link" href="#保持友好">19.1.3. 保持友好</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="尽可能的说明问题的上下文"><a class="anchor" href="#尽可能的说明问题的上下文"></a><a class="link" href="#尽可能的说明问题的上下文">19.1.4. 尽可能的说明问题的上下文</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="学会提问"><a class="anchor" href="#学会提问"></a><a class="link" href="#学会提问">19.1.5. 学会提问</a></h4>
+<h4 id="学会提问"><a class="anchor" href="#学会提问"></a><a class="link" href="#学会提问">23.1.5. 学会提问</a></h4>
 <div class="paragraph">
 <p>尽管在开源的世界里，关于如何提问这个问题的最佳描述，我们有着无法逾越的巅峰描述和解答，即Eric Steven Raymond 所撰写的如何指挥的问问题[1]，中文也有非常好的翻译。[2]。但即使是这样，仍然有非常多的不是那么优质的问题存在。这是一个更为复杂的关于教育的问题，
 我们不妨在这里引用一句话：</p>
@@ -3262,7 +3331,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect3">
-<h4 id="使用google-和-wikipedia"><a class="anchor" href="#使用google-和-wikipedia"></a><a class="link" href="#使用google-和-wikipedia">19.1.6. 使用Google 和 Wikipedia</a></h4>
+<h4 id="使用google-和-wikipedia"><a class="anchor" href="#使用google-和-wikipedia"></a><a class="link" href="#使用google-和-wikipedia">23.1.6. 使用Google 和 Wikipedia</a></h4>
 <div class="paragraph">
 <p>这个世界的复杂远远超出了我们的想象，比如内容审查制度的存在，这些内容有兴趣的读者，可以自行查阅相关资料。这里不打算为大家阐述其好处坏处。尤其是作为互联网的入口处：搜索引擎的重要性。</p>
 </div>
@@ -3271,7 +3340,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="./google-opensourceway.png" alt="google opensourceway">
+<img src="./googel-opensourceway.png" alt="googel opensourceway">
 </div>
 </div>
 <div class="paragraph">
@@ -3323,11 +3392,72 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect3">
-<h4 id="何为隐性知识"><a class="anchor" href="#何为隐性知识"></a><a class="link" href="#何为隐性知识">19.1.7. 何为隐性知识</a></h4>
-
+<h4 id="何为隐性知识"><a class="anchor" href="#何为隐性知识"></a><a class="link" href="#何为隐性知识">23.1.7. 何为隐性知识</a></h4>
+<div class="paragraph">
+<p>隐性知识(Tacit knowledge)是迈克尔·波兰尼（Michael Polanyi）在1958年从哲学领域提出的概念(同年他出版的《个人知识》一书中有详细的描述)。他在对人类知识的哪些方面依赖于信仰的考查中，偶然地发现这样一个事实，即这种信仰的因素是知识的隐性部分所固有的。波兰尼认为：“人类的知识有两种。通常被描述为知识的，即以书面文字、图表和数学公式加以表述的，只是一种类型的知识。而未被表述的知识，像我们在做某事的行动中所拥有的知识，是另一种知识。”他把前者称为显性知识，而将后者称为隐性知识，按照波兰尼的理解，显性知识是能够被人类以一定符码系统（最典型的是语言，也包括数学公式、各类图表、盲文、手势语、旗语等诸种符号形式）加以完整表述的知识。隐性知识和显性知识相对，是指那种我们知道但难以言述的知识。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>默会性：不能通过语言、文字、图表或符号明确表述：隐性知识一般很难进行明确表述与逻辑说明，它是人类非语言智力活动的成果。这是隐性知识最本质的特性。</p>
+</li>
+<li>
+<p>个体性：隐性知识是存在于个人头脑中的，它的主要载体是个人，它不能通过正规的形式（例如，学校教育、大众媒体等形式）进行传递，因为隐性知识的拥有者和使用者都很难清晰表达。但是隐性知识并不是不能传递的，只不过它的传递方式特殊一些，例如通过“师传徒授”的方式进行。另外，这里需要区别“个体性”与“主观性”。波兰尼认为，和主观心理状态之局限于一己的、私人的感受不同，个体知识是认识者以高度的责任心（responsibility），带着普遍的意图（universal intent），在接触外部实在（external reality）的基础上获得的认识成果。可见，个体的不同于主观的，关键在于前者包含了一个普遍的、外在的维度 。</p>
+</li>
+<li>
+<p>非理性：显性知识是通过人们的“逻辑推理”过程获得的，因此它能够理性地进行反思，而隐性知识是通过人们的身体的感官或者直觉、领悟获得的，因此不是经过逻辑推理获得。由于隐性知识的非理性特征，所以人们不能对它进行理性地批判。</p>
+</li>
+<li>
+<p>情境性：隐性知识总是与特定的情景紧密相联系的，它总是依托特定情境中存在的，是对特定的任务和情境的整体把握。这也是隐性知识的很重要的特征。</p>
+</li>
+<li>
+<p>文化性：隐性知识比显性知识更具有强烈的文化特征，与一定文化传统中人们所分析那个的概念、符号、知识体系分不开，或者说，处于不同文化传统中的人们往往分享了不同的隐性知识“体系”，包括隐性的自然知识“体系”，也包括隐性的社会和人文知识“体系”。</p>
+</li>
+<li>
+<p>偶然性与随意性：隐性知识比较偶然、比较随意，很难捕捉，所以获取的时候就比显性知识要困难。</p>
+</li>
+<li>
+<p>相对性：这里的相对性有两层含义：一是隐性知识在一定条件下可以转化为显性知识，二是相对于一个人来说是隐性知识，但是同时对另一个人来说可能已经是显性知识，反之亦然。</p>
+</li>
+<li>
+<p>稳定性：与显性知识相比，隐性知识与观念、信仰等一样，不易受环境的影响改变；它较少受年龄影响，不易消退遗忘；也就意味着个体一旦拥有某种隐性知识就难以对其进行改造。这意味着隐性知识的建构需要在潜移默化中进行。</p>
+</li>
+<li>
+<p>整体性：尽管隐性知识往往显得缺乏逻辑结构，然而，它是个体内部认知整合的结果，是完整、和谐、统一的主体人格的有机组成部分，对个体在环境中的行为起着主要的决定作用，其本身也是整体统一，不可分割的。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>在软件开发的过程中，存在大量的隐性知识，这也是为什么作为开发者需要受训多年才能在项目中发挥作用的重要原因所在。软件开发有几个特征是无法用显性知识覆盖的：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>实践性非常强的知识劳动</p>
+</li>
+<li>
+<p>需要大量的沟通，即大规模的多人协作</p>
+</li>
+<li>
+<p>软件是流动的、动态的</p>
+</li>
+<li>
+<p>需要即时的反馈，因为源代码到软件执行和使用，是有一个需要跨越的过程的</p>
+</li>
+<li>
+<p>需求的提出，和开发者的理解，中间需要大量的正式、非正式的沟通</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>这就是为什么我们在前面特别提到一定要保证开放和透明的重要原因，因为隐性知识的存在，所以需要开发者们进行大量的沟通，以及日常的交谈，显得尤为的重要。</p>
+</div>
+<div class="paragraph">
+<p>那么想要学习到这些“意会”，需要躬身亲自动手，也需要找到合适到导师，那么赢得导师本身就是最大到提问，一个好的问题，可以获得导师的青睐有加，然后建立长时间的信任和”师徒”关系，进而在实践中获得隐性知识。这就是开源的诀窍所在。</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="对话的精神"><a class="anchor" href="#对话的精神"></a><a class="link" href="#对话的精神">19.1.8. 对话的精神</a></h4>
+<h4 id="对话的精神"><a class="anchor" href="#对话的精神"></a><a class="link" href="#对话的精神">23.1.8. 对话的精神</a></h4>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -3389,19 +3519,22 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 <p><a href="https://github.com/tvvocold/How-To-Ask-Questions-The-Smart-Way">提问的智慧</a></p>
 </li>
 <li>
-<p><a href="https://www.zhihu.com/question/19577811">为什么中国大学生在课堂上不喜欢提问和质疑？</a></p>
+<p><a href="https://www.zhihu.com/question/19577811">为什么中国大学生在课堂上不喜欢提问和质疑?</a></p>
+</li>
+<li>
+<p><a href="https://zh.wikipedia.org/wiki/%E9%9A%90%E6%80%A7%E7%9F%A5%E8%AF%86">隐性知识</a></p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="兼容并包"><a class="anchor" href="#兼容并包"></a><a class="link" href="#兼容并包">19.1.9. 兼容并包</a></h4>
+<h4 id="兼容并包"><a class="anchor" href="#兼容并包"></a><a class="link" href="#兼容并包">23.1.9. 兼容并包</a></h4>
 
 </div>
 </div>
 <div class="sect2">
-<h3 id="开源共同体中不可以做什么"><a class="anchor" href="#开源共同体中不可以做什么"></a><a class="link" href="#开源共同体中不可以做什么">19.2. 开源共同体中不可以做什么？</a></h3>
+<h3 id="开源共同体中不可以做什么"><a class="anchor" href="#开源共同体中不可以做什么"></a><a class="link" href="#开源共同体中不可以做什么">23.2. 开源共同体中不可以做什么？</a></h3>
 <div class="paragraph">
 <p>我们先来说说通常的开源项目所建立的共同体，需要大家遵守的一般法则，这意味着作为要参与的你不能够做什么，这是一个非常清晰的边界：</p>
 </div>
@@ -3437,7 +3570,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect1">
-<h2 id="community-共同体治理模型"><a class="anchor" href="#community-共同体治理模型"></a><a class="link" href="#community-共同体治理模型">20. Community (共同体)治理模型</a></h2>
+<h2 id="community-共同体治理模型"><a class="anchor" href="#community-共同体治理模型"></a><a class="link" href="#community-共同体治理模型">24. Community (共同体)治理模型</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>我们在这里讲述共同体的治理模型，其实很难和项目相区分开来，正如我们在本章开头所为开源共同体下的定义一样，离开了开源项目，开源共同体的意义就不复存在。</p>
@@ -3510,7 +3643,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </ul>
 </div>
 <div class="sect2">
-<h3 id="概览"><a class="anchor" href="#概览"></a><a class="link" href="#概览">20.1. 概览</a></h3>
+<h3 id="概览"><a class="anchor" href="#概览"></a><a class="link" href="#概览">24.1. 概览</a></h3>
 <div class="paragraph">
 <p>治理文档的概览部分，应该提及的有项目的目标、项目管理方式等简要概述，而且要将它们适当的联系起来。另外就是一些关键的信息，如项目最终采用的许可证、版权的所有者、以及用户该如何参与项目的开发等。</p>
 </div>
@@ -3519,7 +3652,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="角色和责任"><a class="anchor" href="#角色和责任"></a><a class="link" href="#角色和责任">20.2. 角色和责任</a></h3>
+<h3 id="角色和责任"><a class="anchor" href="#角色和责任"></a><a class="link" href="#角色和责任">24.2. 角色和责任</a></h3>
 <div class="paragraph">
 <p>本节内容描述了项目中的正式角色及其权限。它还应该涵盖所需要的承诺水平以及每个寻求参与的角色。本部分的目标是明确谁管理项目、谁可以贡献、以及如何贡献，乃至于如果希望直接影响项目的话，该如何积极的表现。</p>
 </div>
@@ -3531,7 +3664,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="支持"><a class="anchor" href="#支持"></a><a class="link" href="#支持">20.3. 支持</a></h3>
+<h3 id="支持"><a class="anchor" href="#支持"></a><a class="link" href="#支持">24.3. 支持</a></h3>
 <div class="paragraph">
 <p>本小节描述了关于项目内部的支持流程，对于绝大多数开源项目来讲，支持的渠道也是项目用户的主要联系方式，这些用户在未来可能会成为项目的贡献者，也可能成为商业提供商的客户，这些都是项目获得可持续性发展的关键之所在，开源项目尤其要照顾到这些用户。</p>
 </div>
@@ -3540,7 +3673,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="决策流程"><a class="anchor" href="#决策流程"></a><a class="link" href="#决策流程">20.4. 决策流程</a></h3>
+<h3 id="决策流程"><a class="anchor" href="#决策流程"></a><a class="link" href="#决策流程">24.4. 决策流程</a></h3>
 <div class="paragraph">
 <p>对于开放式开发来讲，做决策的方式是项目成功的关键因素，一个过于耗时的流程会导致决策的延迟，从而导致整个项目的延迟，更为糟糕的是，这个流程可能会被忽略，进而社区的一部分权力被剥夺了。另外，一个定义不够明确的流程，可能会导致关于决策是否有效的争论，再次导致社区内的延迟和分裂。</p>
 </div>
@@ -3549,7 +3682,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="贡献流程"><a class="anchor" href="#贡献流程"></a><a class="link" href="#贡献流程">20.5. 贡献流程</a></h3>
+<h3 id="贡献流程"><a class="anchor" href="#贡献流程"></a><a class="link" href="#贡献流程">24.5. 贡献流程</a></h3>
 <div class="paragraph">
 <p>本小节介绍人们应如何为项目做出自己的贡献，关于贡献流程的文档应该介绍各种类型的贡献是可以接受的，以及让这些贡献可以被管理的工具等，本节不应提供工具的完整描述，而应提供工具提供支持的过程的清晰说明。</p>
 </div>
@@ -3573,7 +3706,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect1">
-<h2 id="开源开发协作流程"><a class="anchor" href="#开源开发协作流程"></a><a class="link" href="#开源开发协作流程">21. 开源开发协作流程</a></h2>
+<h2 id="开源开发协作流程"><a class="anchor" href="#开源开发协作流程"></a><a class="link" href="#开源开发协作流程">25. 开源开发协作流程</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>这里提及这章其实是因为顾及一般单独的开发团队，尤其是传统软件工程的做法，在开放式开发当中，是没有固定流程的。理想的状态是，所有人都是根据自身的努力和获得的社会资本来进行相应的贡献的。</p>
@@ -3584,7 +3717,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect1">
-<h2 id="维护者的最佳实践"><a class="anchor" href="#维护者的最佳实践"></a><a class="link" href="#维护者的最佳实践">22. 维护者的最佳实践</a></h2>
+<h2 id="维护者的最佳实践"><a class="anchor" href="#维护者的最佳实践"></a><a class="link" href="#维护者的最佳实践">26. 维护者的最佳实践</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>维护者是非常关键的角色，不仅是技术上的，还有共同体方面的，可以说是集多种角色于一身，是“Hub”式的关键人物所在。 具体的技术笔者在这里就不和大家多谈了，要根据具体的问题具体去谈，这里和大家主要介绍的还是一些基本的沟通的问题。</p>
@@ -3598,7 +3731,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </blockquote>
 </div>
 <div class="sect2">
-<h3 id="免责申明"><a class="anchor" href="#免责申明"></a><a class="link" href="#免责申明">22.1. 免责申明</a></h3>
+<h3 id="免责申明"><a class="anchor" href="#免责申明"></a><a class="link" href="#免责申明">26.1. 免责申明</a></h3>
 <div class="paragraph">
 <p>我们在市面上经常会看到，《如何做一个好爸爸/妈妈》、《十招教会你做一个好父亲/母亲》之类的，笔者并不知道这些书能不能帮到那些可怜的父母亲们，但大致翻翻他们书里的内容，觉得基本上说的都是有用的废话。</p>
 </div>
@@ -3607,7 +3740,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="身为一名维护者意味着什么"><a class="anchor" href="#身为一名维护者意味着什么"></a><a class="link" href="#身为一名维护者意味着什么">22.2. 身为一名维护者意味着什么？</a></h3>
+<h3 id="身为一名维护者意味着什么"><a class="anchor" href="#身为一名维护者意味着什么"></a><a class="link" href="#身为一名维护者意味着什么">26.2. 身为一名维护者意味着什么？</a></h3>
 <div class="paragraph">
 <p>作为一名维护者有什么显著的变化了呢？这里给大家举一个例子：来自 <a href="http://apisix.apache.org/">APISIX</a>的创始人—— <a href="https://github.com/moonming">温铭</a>在2018～2020三年的 GitHub Profile 变化即是最好的说明：</p>
 </div>
@@ -3652,7 +3785,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="将流程撰文档化"><a class="anchor" href="#将流程撰文档化"></a><a class="link" href="#将流程撰文档化">22.3. 将流程撰文档化</a></h3>
+<h3 id="将流程撰文档化"><a class="anchor" href="#将流程撰文档化"></a><a class="link" href="#将流程撰文档化">26.3. 将流程撰文档化</a></h3>
 <div class="paragraph">
 <p>对于一个项目的维护者来说写文档是最重要的事情之一。</p>
 </div>
@@ -3667,7 +3800,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="写下你的项目的发展方向"><a class="anchor" href="#写下你的项目的发展方向"></a><a class="link" href="#写下你的项目的发展方向">22.4. 写下你的项目的发展方向</a></h3>
+<h3 id="写下你的项目的发展方向"><a class="anchor" href="#写下你的项目的发展方向"></a><a class="link" href="#写下你的项目的发展方向">26.4. 写下你的项目的发展方向</a></h3>
 <div class="paragraph">
 <p>请在项目启动时就写下项目目标，并将之加到 README 文件中， 或者创建一个单独的 <strong>VISION</strong> 文件，其它的内容，如项目管理路线图，也可以帮助人们了解到更多的信息，最好是也把他们公开发布。</p>
 </div>
@@ -3679,7 +3812,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="和大家交流你自己对项目的期望"><a class="anchor" href="#和大家交流你自己对项目的期望"></a><a class="link" href="#和大家交流你自己对项目的期望">22.5. 和大家交流你自己对项目的期望</a></h3>
+<h3 id="和大家交流你自己对项目的期望"><a class="anchor" href="#和大家交流你自己对项目的期望"></a><a class="link" href="#和大家交流你自己对项目的期望">26.5. 和大家交流你自己对项目的期望</a></h3>
 <div class="paragraph">
 <p>制定规则是很伤脑筋的。有时候你可能觉得你像是在限制别人的行为，或者说把好玩的东西都搞没了。</p>
 </div>
@@ -3719,7 +3852,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="保证所有的交流都是公开进行的"><a class="anchor" href="#保证所有的交流都是公开进行的"></a><a class="link" href="#保证所有的交流都是公开进行的">22.6. 保证所有的交流都是公开进行的</a></h3>
+<h3 id="保证所有的交流都是公开进行的"><a class="anchor" href="#保证所有的交流都是公开进行的"></a><a class="link" href="#保证所有的交流都是公开进行的">26.6. 保证所有的交流都是公开进行的</a></h3>
 <div class="paragraph">
 <p>不管是什么时候，保证你的交流是在公共的场合（就是大家都能看到的地方）。如果有人尝试和你私聊，哪怕是讨论一个新的需求或者功能，请礼貌的引导Ta到公共的交流场合，比如邮件列表或者iuuse tracker。</p>
 </div>
@@ -3734,7 +3867,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="学会拒绝他人"><a class="anchor" href="#学会拒绝他人"></a><a class="link" href="#学会拒绝他人">22.7. 学会拒绝他人</a></h3>
+<h3 id="学会拒绝他人"><a class="anchor" href="#学会拒绝他人"></a><a class="link" href="#学会拒绝他人">26.7. 学会拒绝他人</a></h3>
 <div class="paragraph">
 <p>把所有的事情都写下来，当然，对于你个人来说，执行自己制定的规则的时候客观分析实际情况也有帮助。</p>
 </div>
@@ -3762,7 +3895,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="保持友好沟通"><a class="anchor" href="#保持友好沟通"></a><a class="link" href="#保持友好沟通">22.8. 保持友好沟通</a></h3>
+<h3 id="保持友好沟通"><a class="anchor" href="#保持友好沟通"></a><a class="link" href="#保持友好沟通">26.8. 保持友好沟通</a></h3>
 <div class="paragraph">
 <p>你要学会拒绝的最重要的地方就是 issue 和 PR 请求。作为一个项目的维护者, 你会不可避免的收到你不想接受的建议。</p>
 </div>
@@ -3824,7 +3957,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="保持主动"><a class="anchor" href="#保持主动"></a><a class="link" href="#保持主动">22.9. 保持主动</a></h3>
+<h3 id="保持主动"><a class="anchor" href="#保持主动"></a><a class="link" href="#保持主动">26.9. 保持主动</a></h3>
 <div class="paragraph">
 <p>要想减少你不想接受的贡献的数量，首先，在你项目的贡献指南中解释如何提交贡献以及描述清楚什么样的贡献会被接受。</p>
 </div>
@@ -3849,7 +3982,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="成为导师"><a class="anchor" href="#成为导师"></a><a class="link" href="#成为导师">22.10. 成为导师</a></h3>
+<h3 id="成为导师"><a class="anchor" href="#成为导师"></a><a class="link" href="#成为导师">26.10. 成为导师</a></h3>
 <div class="paragraph">
 <p>可能在你的社区里有人不断提交一些不符合项目需求的贡献。对你们双方来说，不停的拒绝他的提交，会令双方都很尴尬。</p>
 </div>
@@ -3858,13 +3991,13 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="有效利用社区"><a class="anchor" href="#有效利用社区"></a><a class="link" href="#有效利用社区">22.11. 有效利用社区</a></h3>
+<h3 id="有效利用社区"><a class="anchor" href="#有效利用社区"></a><a class="link" href="#有效利用社区">26.11. 有效利用社区</a></h3>
 <div class="paragraph">
 <p>你不需要凡事亲力亲为。这就是社区存在的原因！即使你没有一个活跃的贡献者社区，但是如果你有很多用户的话，拉他们来干活儿。</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="分担工作量"><a class="anchor" href="#分担工作量"></a><a class="link" href="#分担工作量">22.12. 分担工作量</a></h3>
+<h3 id="分担工作量"><a class="anchor" href="#分担工作量"></a><a class="link" href="#分担工作量">26.12. 分担工作量</a></h3>
 <div class="paragraph">
 <p>如果你正在寻找其他人来参与, 从身边的人开始。</p>
 </div>
@@ -3892,7 +4025,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="让别人尝试他们自己想要的解决方案"><a class="anchor" href="#让别人尝试他们自己想要的解决方案"></a><a class="link" href="#让别人尝试他们自己想要的解决方案">22.13. 让别人尝试他们自己想要的解决方案</a></h3>
+<h3 id="让别人尝试他们自己想要的解决方案"><a class="anchor" href="#让别人尝试他们自己想要的解决方案"></a><a class="link" href="#让别人尝试他们自己想要的解决方案">26.13. 让别人尝试他们自己想要的解决方案</a></h3>
 <div class="paragraph">
 <p>如果有贡献者关于项目有不同的意见，你可以礼貌的鼓励它在他自己 fork 的版本上继续工作。</p>
 </div>
@@ -3911,13 +4044,13 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="使用机器人"><a class="anchor" href="#使用机器人"></a><a class="link" href="#使用机器人">22.14. 使用机器人</a></h3>
+<h3 id="使用机器人"><a class="anchor" href="#使用机器人"></a><a class="link" href="#使用机器人">26.14. 使用机器人</a></h3>
 <div class="paragraph">
 <p>就像很多工作别人可以帮你做一样，也有很多工作不需要人来做。因为有机器可以替代人工，尤其是那些重复、无聊的工作，用好它们能够让你的生活变得更轻松。</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="引进测试和别的检查来改善你的代码质量"><a class="anchor" href="#引进测试和别的检查来改善你的代码质量"></a><a class="link" href="#引进测试和别的检查来改善你的代码质量">22.15. 引进测试和别的检查来改善你的代码质量</a></h3>
+<h3 id="引进测试和别的检查来改善你的代码质量"><a class="anchor" href="#引进测试和别的检查来改善你的代码质量"></a><a class="link" href="#引进测试和别的检查来改善你的代码质量">26.15. 引进测试和别的检查来改善你的代码质量</a></h3>
 <div class="paragraph">
 <p>让你项目自动化的最重要的方法之一就是引进测试。</p>
 </div>
@@ -3932,7 +4065,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="用工具来自动化日常的维护工作"><a class="anchor" href="#用工具来自动化日常的维护工作"></a><a class="link" href="#用工具来自动化日常的维护工作">22.16. 用工具来自动化日常的维护工作</a></h3>
+<h3 id="用工具来自动化日常的维护工作"><a class="anchor" href="#用工具来自动化日常的维护工作"></a><a class="link" href="#用工具来自动化日常的维护工作">26.16. 用工具来自动化日常的维护工作</a></h3>
 <div class="paragraph">
 <p>对于维护一个流行的项目来说，一个利好消息是别的维护者也可能遇到过类似的问题而且已经找到一个解决方案。</p>
 </div>
@@ -3966,7 +4099,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="不干了也没关系"><a class="anchor" href="#不干了也没关系"></a><a class="link" href="#不干了也没关系">22.17. 不干了也没关系</a></h3>
+<h3 id="不干了也没关系"><a class="anchor" href="#不干了也没关系"></a><a class="link" href="#不干了也没关系">26.17. 不干了也没关系</a></h3>
 <div class="paragraph">
 <p>开源项目曾经让你开心，但可能现在开始让你不开心了。</p>
 </div>
@@ -3993,13 +4126,13 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect2">
-<h3 id="首先照顾好自己"><a class="anchor" href="#首先照顾好自己"></a><a class="link" href="#首先照顾好自己">22.18. 首先照顾好自己！</a></h3>
+<h3 id="首先照顾好自己"><a class="anchor" href="#首先照顾好自己"></a><a class="link" href="#首先照顾好自己">26.18. 首先照顾好自己！</a></h3>
 <div class="paragraph">
 <p>维护一个大型项目时，相比早期的增长阶段，是需要更多的不一样的技能，作为一个维护者，你会将自己的领导力和个人能力提高一个层次，而这是很少人能体会的到的。但是与此同时，要挑战管理项目，以及设定清晰的界限。只做你感到舒服的事情，能够让你保持开心、充满活力、且高效输出的状态。</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="参考资料-6"><a class="anchor" href="#参考资料-6"></a><a class="link" href="#参考资料-6">22.19. 参考资料</a></h3>
+<h3 id="参考资料-6"><a class="anchor" href="#参考资料-6"></a><a class="link" href="#参考资料-6">26.19. 参考资料</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -4011,7 +4144,7 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 </div>
 </div>
 <div class="sect1">
-<h2 id="参考资料-7"><a class="anchor" href="#参考资料-7"></a><a class="link" href="#参考资料-7">23. 参考资料</a></h2>
+<h2 id="参考资料-7"><a class="anchor" href="#参考资料-7"></a><a class="link" href="#参考资料-7">27. 参考资料</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -4052,18 +4185,8 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 <div class="sect1">
 <h2 id="术语表"><a class="anchor" href="#术语表"></a><a class="link" href="#术语表">Appendix A: 术语表</a></h2>
 <div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="名词解释"><a class="anchor" href="#名词解释"></a><a class="link" href="#名词解释">名词解释</a></h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="开源-open-source"><a class="anchor" href="#开源-open-source"></a><a class="link" href="#开源-open-source">24. 开源 （Open Source）</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="开源-open-source"><a class="anchor" href="#开源-open-source"></a><a class="link" href="#开源-open-source">开源 （Open Source）</a></h3>
 <div class="paragraph">
 <p>开源隶属于开放这个大的范畴，意指一款产品或制品，其不仅提供最终可用的实体，还应该提供源代码、设计文档、交流过程等，最初的意思来自于[#开源软件]的模式，随着开源软件运动的逐步胜利
 和崛起，开源这个词汇的范畴也在扩大，在社会中的其它行业也有了较为广泛的应用，如开放式协作、开放内容、开放设计等。</p>
@@ -4072,10 +4195,8 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 <p>在中国本土，开源还有另外的一个意思：“开源节流”，通常指的是让自己的收入有尽可能的多样化，与非软件行业的人交流的时候要特别的注意。</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="开源软件open-source-software"><a class="anchor" href="#开源软件open-source-software"></a><a class="link" href="#开源软件open-source-software">25. 开源软件（Open Source Software）</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="开源软件open-source-software"><a class="anchor" href="#开源软件open-source-software"></a><a class="link" href="#开源软件open-source-software">A.1. 开源软件（Open Source Software）</a></h3>
 <div class="paragraph">
 <p>我们这次选择了两种解释风格，一种是正式的、举世公认的定义，即开放源代码促进会（Open Source Initative)的定义：</p>
 </div>
@@ -4126,53 +4247,27 @@ GitLab 由乌克兰程序员 Dmitriy Zaporozhets 和 Valery Sizov 开发，它�
 权所有者等拥有程序的源代码。</code>&#8221;</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="开源软件共同体-open-source-software-community"><a class="anchor" href="#开源软件共同体-open-source-software-community"></a><a class="link" href="#开源软件共同体-open-source-software-community">26. 开源软件共同体 （Open Source software community）</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="开源软件共同体-open-source-software-community"><a class="anchor" href="#开源软件共同体-open-source-software-community"></a><a class="link" href="#开源软件共同体-open-source-software-community">A.2. 开源软件共同体 （Open Source software community）</a></h3>
 <div class="paragraph">
 <p>为了实现一个开源软件项目，基于互联网，由企业、个人、非营利组织等形成的团体成员，在文化上能够达成一定共识，来去自由，进行一定的社会治理、活动、交流等。该共同体由计算机相关
 专业领域中的工作者组成。在一种绝大多数其他领域无法比拟的程度上，他们都经受过近似的教育和专业训练。</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="开源软件基金会-open-source-software-foundation"><a class="anchor" href="#开源软件基金会-open-source-software-foundation"></a><a class="link" href="#开源软件基金会-open-source-software-foundation">27. 开源软件基金会（ Open Source software Foundation）</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="开源软件基金会-open-source-software-foundation"><a class="anchor" href="#开源软件基金会-open-source-software-foundation"></a><a class="link" href="#开源软件基金会-open-source-software-foundation">A.3. 开源软件基金会（ Open Source software Foundation）</a></h3>
 <div class="paragraph">
 <p>由非政府的、非营利的、自有资金（通常来自单一的个人、家庭或公司）并自设董事会管理工作规划的组织，其创办的目的是为了支持发展开源软件项目，以服务于公共福利，主要途径是通过对其他
 非营利机构的赞助。自身的资金来源主要是通过接受捐赠、监管下的营销、举办会议等。</p>
 </div>
 </div>
 </div>
-<h1 id="贡献者列表" class="sect0"><a class="anchor" href="#贡献者列表"></a><a class="link" href="#贡献者列表">贡献者列表</a></h1>
-<div class="sect1">
-<h2 id="参与本书的作者列表"><a class="anchor" href="#参与本书的作者列表"></a><a class="link" href="#参与本书的作者列表">28. 参与本书的作者列表</a></h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="l"><a class="anchor" href="#l"></a><a class="link" href="#l">29. L</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>李建盛 ，别名适兕，开源布道师，开源之道（opensourceway.community)发起者，ALC Beijing 成员。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="j"><a class="anchor" href="#j"></a><a class="link" href="#j">30. J</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>姜宁 - 华为开源软件中心技术专家，前红帽软件首席软件工程师，Apache软件基金会成员，Apache软件基金孵化器导师，参与了绝大多个中国发起的Apache基金会项目的孵化。本人06年开始加入到Apache社区项目开发，就被社区开放协作的氛围深深吸引，成为开源深度信徒。现在致力于开源社区建设，以及开源文化推广，尽其所能帮助国内开源项目成功。</p>
-</div>
-</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0.0-SNAPSHOT<br>
-Last updated 2020-09-17 12:04:26 UTC
+Version 0.1<br>
+Last updated 2020-10-01 14:43:59 UTC
 </div>
 </div>
 <style>
